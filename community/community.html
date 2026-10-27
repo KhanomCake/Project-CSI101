@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaMha - ชุมชนคนรักสุนัข</title>
+    <!-- เรียกใช้ FontAwesome สำหรับไอคอนน่ารักๆ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- เชื่อมโยงไปยังไฟล์ CSS ที่แยกไว้ -->
+    <link rel="stylesheet" href="community.css">
+    <link rel="stylesheet" href="../shared/navbar.css">
+</head>
+<body class="app-body">
+
+    <!-- ========================================== -->
+    <!-- ส่วนหัวของเว็บ (Navbar & Logo) -->
+    <!-- ========================================== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <!-- โลโก้และชื่อเว็บ -->
+            <div class="brand" onclick="switchPage('feed')">
+                <div class="brand-logo">
+                    <img src="img/13575ed35025ca2.jpg" alt="MaMha" class="brand-image">
+                </div>
+                <div>
+                    
+                    <h1>MaMha</h1>
+                    <p>พื้นที่ของคนรักน้องหมา </p>
+                    
+                </div>
+            </div>
+            <!-- ปุ่มแจ้งเตือนสมมติ -->
+            <button class="notification-button">
+                <i class="fa-regular fa-bell"></i>
+                <span class="notification-dot"></span>
+            </button>
+        </div>
+
+        <!-- เมนูนำทางหลัก (Navigation Tabs) -->
+        <nav class="site-nav">
+            <div class="nav-inner">
+                <button id="nav-feed" onclick="switchPage('feed')" class="nav-btn active">
+                    <i class="fa-solid fa-newspaper"></i> <span>โพสต์พูดคุย</span>
+                </button>
+                <button id="nav-vaccine" onclick="switchPage('vaccine')" class="nav-btn">
+                    <i class="fa-solid fa-syringe"></i> <span>ตารางวัคซีน</span>
+                </button>
+                <button id="nav-hospital" onclick="switchPage('hospital')" class="nav-btn">
+                    <i class="fa-solid fa-hospital"></i> <span>แนะนำ รพ.สัตว์</span>
+                </button>
+                <button id="nav-info" onclick="switchPage('info')" class="nav-btn">
+                    <i class="fa-solid fa-circle-info"></i> <span>ความรู้ & ขอข้อมูล</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- พื้นที่แสดงเนื้อหา (Main Content Area) -->
+    <!-- ========================================== -->
+    <main class="app-main">
+
+        <!-- หน้า 1: โพสต์พูดคุย (Community Feed) -->
+        <section id="page-feed" class="page-content page-stack">
+            <!-- กล่องสร้างโพสต์ใหม่ -->
+            <div class="panel composer">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-pen-to-square"></i> พูดคุยและแปะรูปน้องหมา
+                </h2>
+                <textarea id="post-input" rows="3" class="form-control post-input" placeholder="วันนี้มีอะไรเกี่ยวกับน้องหมาอยากแชร์กับเพื่อนๆ ไหม..."></textarea>
+                
+                <!-- ตัวพรีวิวรูปภาพก่อนโพสต์ -->
+                <div id="image-preview-container" class="hidden image-preview-container">
+                    <img id="image-preview" src="" alt="Preview" class="image-preview">
+                    <button onclick="removeSelectedImage()" class="remove-image-button">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="composer-actions">
+                    <label class="button secondary-button">
+                        <i class="fa-solid fa-image"></i> แปะรูปภาพ
+                        <input type="file" id="post-image-file" accept="image/*" class="hidden" onchange="previewImage(event)">
+                    </label>
+                    <button onclick="addPost()" class="button primary-button">
+                        <i class="fa-solid fa-paper-plane"></i> โพสต์เลย
+                    </button>
+                </div>
+            </div>
+
+            <!-- รายการโพสต์ทั้งหมด (จะถูกเติมด้วย JavaScript) -->
+            <div id="posts-container" class="post-list"></div>
+        </section>
+
+        <!-- หน้า 2: ตารางวัคซีน (Vaccine Schedule) -->
+        <section id="page-vaccine" class="page-content page-stack hidden">
+            <div class="hero-banner">
+                <h2><i class="fa-solid fa-syringe"></i> คู่มือและบันทึกฉีดวัคซีน</h2>
+                <p>การฉีดวัคซีนช่วยปกป้องน้องหมาที่คุณรักจากโรคร้ายแรง</p>
+            </div>
+
+            <!-- ฟอร์มเพิ่มบันทึกวัคซีนของตัวเอง -->
+            <div class="panel">
+                <h3 class="section-title">
+                    <i class="fa-solid fa-plus-circle"></i> บันทึกประวัติวัคซีนของน้องหมา
+                </h3>
+                <form id="vaccine-form" class="vaccine-form" onsubmit="saveVaccineRecord(event)">
+                    <input type="text" id="dog-name-input" placeholder="ชื่อน้องหมา" required class="form-control">
+                    <input type="text" id="vaccine-name-input" placeholder="ชื่อวัคซีน (เช่น พิษสุนัขบ้า)" required class="form-control">
+                    <input type="date" id="vaccine-date-input" required class="form-control">
+                    <button type="submit" class="button save-button">
+                        บันทึกข้อมูลวัคซีน
+                    </button>
+                </form>
+            </div>
+
+            <!-- ตารางประวัติวัคซีนที่บันทึกไว้น้องหมาเรา -->
+            <div class="panel">
+                <h3 class="section-title">
+                    <i class="fa-solid fa-book-medical"></i> ประวัติการได้รับวัคซีน
+                </h3>
+                <div class="table-wrapper">
+                    <table class="vaccine-table">
+                        <thead>
+                            <tr>
+                                <th>ชื่อน้องหมา</th>
+                                <th>วัคซีนที่ได้รับ</th>
+                                <th>วันที่ฉีด</th>
+                                <th>จัดการ</th>
+                            </tr>
+                        </thead>
+                        <tbody id="vaccine-history-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ตารางแนะนำการฉีดวัคซีนมาตรฐาน -->
+            <div class="panel">
+                <h3 class="section-title">
+                    <i class="fa-solid fa-calendar-check"></i> ตารางวัคซีนแนะนำตามอายุสุนัข
+                </h3>
+                <div class="vaccine-guidelines">
+                    <div class="guideline">
+                        <p class="guideline-title">อายุ 6 - 8 สัปดาห์</p>
+                        <p>วัคซีนป้องกันโรคหัด, ลำไส้อักเสบ, ตับอักเสบ, หลอดลมอักเสบ (เข็มที่ 1)</p>
+                    </div>
+                    <div class="guideline">
+                        <p class="guideline-title">อายุ 10 - 12 สัปดาห์</p>
+                        <p>วัคซีนรวมป้องกันโรค 5 โรค (เข็มที่ 2) + วัคซีนโรคฉี่หนู</p>
+                    </div>
+                    <div class="guideline">
+                        <p class="guideline-title">อายุ 12 - 16 สัปดาห์</p>
+                        <p>วัคซีนป้องกันโรคพิษสุนัขบ้า (เข็มที่ 1)</p>
+                    </div>
+                    <div class="guideline">
+                        <p class="guideline-title">กระตุ้นเป็นประจำทุกปี</p>
+                        <p>วัคซีนรวมประจำปี และ วัคซีนพิษสุนัขบ้า ปีละ 1 ครั้ง</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- หน้า 3: แนะนำ รพ.สัตว์ (Hospital Recommendation) -->
+        <section id="page-hospital" class="page-content page-stack hidden">
+            <div class="panel">
+                <h2 class="section-heading">โรงพยาบาลและคลินิกสัตว์แนะนำ</h2>
+                <p class="muted small intro-text">ค้นหาโรงพยาบาลสัตว์ใกล้คุณเพื่อการรักษาที่ทันท่วงที</p>
+                
+                <!-- ช่องค้นหาและตัวกรอง -->
+                <div class="search-controls">
+                    <div class="search-field">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="hospital-search" oninput="filterHospitals()" placeholder="ค้นหาชื่อ รพ. หรือพื้นที่..." class="form-control">
+                    </div>
+                    <select id="hospital-type" onchange="filterHospitals()" class="form-control">
+                        <option value="all">เปิดให้บริการทั้งหมด</option>
+                        <option value="24h">เปิด 24 ชั่วโมง</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- รายการ รพ. สัตว์ -->
+            <div id="hospital-list" class="card-grid"></div>
+        </section>
+
+        <!-- หน้า 4: ความรู้ & ขอข้อมูล (Knowledge & Inquiry) -->
+        <section id="page-info" class="page-content page-stack hidden">
+            <!-- คลังความรู้เรื่องน้องหมา -->
+            <div class="panel">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-book-open"></i> คลังความรู้สายพันธุ์และการดูแล
+                </h2>
+                <div class="knowledge-grid" id="knowledge-cards"></div>
+            </div>
+
+            <!-- ฟอร์มสอบถาม/ขอข้อมูลเพิ่มเติม -->
+            <div class="panel">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-paper-plane"></i> สอบถามข้อมูลเพิ่มเติม
+                </h2>
+                <p class="muted small intro-text">สงสัยเรื่องการเลี้ยงดู หรือต้องการขอข้อมูลเฉพาะ ส่งคำถามหาเราได้เลย</p>
+                <form id="inquiry-form" onsubmit="submitInquiry(event)" class="inquiry-form">
+                    <div>
+                        <label>ชื่อผู้ติดต่อ</label>
+                        <input type="text" id="inquiry-name" required placeholder="ชื่อของคุณ" class="form-control">
+                    </div>
+                    <div>
+                        <label>อีเมล หรือ เบอร์โทรติดต่อ</label>
+                        <input type="text" id="inquiry-contact" required placeholder="example@email.com / 08X-XXX-XXXX" class="form-control">
+                    </div>
+                    <div>
+                        <label>เรื่องที่ต้องการสอบถาม</label>
+                        <textarea id="inquiry-message" rows="3" required placeholder="พิมพ์ข้อความคำถามของคุณที่นี่..." class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="button submit-button">
+                        ส่งข้อความขอข้อมูล
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ส่วนท้ายของเว็บ (Footer) -->
+    <footer class="site-footer">
+        <p>© 2026 MaMha 🐶💙</p>
+    </footer>
+
+    <!-- เชื่อมโยงไปยังไฟล์ JavaScript ที่แยกไว้ -->
+    <script src="community.js"></script>
+    <script src="../shared/navbar.js"></script>
+</body>
+</html>

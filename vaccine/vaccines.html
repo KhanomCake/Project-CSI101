@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaMha - ข้อมูลวัคซีน</title>
+    <link rel="stylesheet" href="vaccines.css">
+    <link rel="stylesheet" href="../shared/navbar.css">
+</head>
+<body>
+    <h1>MaMha</h1>
+    <p>ข้อมูลวัคซีน</p>
+
+    <input type="text" id="searchInput" placeholder="ค้นหาสุนัข">
+    <button onclick="searchDog()">ค้นหา</button>
+    <button onclick="showAllDogs()">แสดงทั้งหมด</button>
+
+    <div id="dogList"></div>
+
+    <div id="detailSection" class="modal" onclick="closeDetail(event)">
+        <div class="modal-content">
+            <button class="close-button" onclick="closeDetail()">×</button>
+            <h2 id="dogName"></h2>
+            <p id="dogEnglish"></p>
+            <h3>วัคซีน</h3>
+            <div id="vaccineList"></div>
+        </div>
+    </div>
+
+    <script src="vaccines.js"></script>
+    <script src="../shared/navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#123c32">
+    <meta name="description"
+        content="คู่มือดูแลสุนัข ครอบคลุมโภชนาการ สุขภาพ การฝึก การออกกำลังกาย กรูมมิ่ง และความปลอดภัย">
+    <title>DogCare — คู่มือดูแลน้องหมา</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="dogcare.css">
+    <script src="dogcare.js" defer></script>
+    <link rel="stylesheet" href="../shared/navbar.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <a class="logo" href="#guide" aria-label="DogCare ไปยังคู่มือ"><span class="logo-paw"
+                aria-hidden="true">🐾</span> DogCare</a>
+        <a class="nav-cta" href="#guide">เลือกคู่มือ <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+        <!-- ข้อความก่อนข้อมูล -->
+        <section class="page-intro" aria-labelledby="pageTitle">
+            <span class="section-kicker">DOG CARE GUIDE</span>
+            <h1 id="pageTitle">คู่มือดูแลน้องหมา<br><span>เริ่มต้นได้จากเรื่องใกล้ตัว</span></h1>
+            <p>รวมแนวทางพื้นฐานสำหรับคนรักสุนัข เลือกหัวข้อที่ต้องการอ่าน แล้วกด “อ่านรายละเอียด”
+                เพื่อดูคำแนะนำในแต่ละเรื่อง</p>
+        </section>
+
+        <!-- เลือกหัวข้อว่าจะเลือกคู่มืออันไหน -->
+        <section class="guide-section" id="guide" aria-labelledby="guideHeading">
+            <div class="section-heading">
+                <div><span class="section-kicker">EXPLORE THE GUIDES</span>
+                    <h2 id="guideHeading">คู่มือทั้งหมด</h2>
+                </div>
+                <p>มี 6 หัวข้อหลัก<br>เลือกอ่านได้ตามต้องการ</p>
+            </div>
+            <div class="guide-grid" id="guideGrid">
+                <article class="guide-card" data-category="nutrition">
+                    <div class="card-topline"><span class="card-icon food-icon">🥣</span><span
+                            class="card-number">01</span></div>
+                    <span class="card-label">NUTRITION</span>
+                    <h3>โภชนาการและอาหาร</h3>
+                    <p>เลือกอาหารให้เหมาะกับช่วงวัย พร้อมรู้วิธีให้อาหาร น้ำดื่ม และสิ่งที่เป็นอันตราย</p>
+                    <ul class="topic-preview">
+                        <li>วิธีเลือกอาหาร</li>
+                        <li>เวลาและปริมาณอาหาร</li>
+                        <li>อาหารที่ห้ามกิน</li>
+                    </ul>
+                    <button class="read-guide-btn" type="button" data-target="nutrition-details">อ่านรายละเอียด <span
+                            aria-hidden="true">↗</span></button>
+                </article>
+                <article class="guide-card" data-category="healthcare">
+                    <div class="card-topline"><span class="card-icon health-icon">🩺</span><span
+                            class="card-number">02</span></div>
+                    <span class="card-label">HEALTHCARE</span>
+                    <h3>การดูแลสุขภาพและการแพทย์</h3>
+                    <p>ทำความเข้าใจวัคซีน การป้องกันปรสิต และสัญญาณอันตรายที่ไม่ควรมองข้าม</p>
+                    <ul class="topic-preview">
+                        <li>วัคซีนลูกสุนัข</li>
+                        <li>การป้องกันปรสิต</li>
+                        <li>อาการฉุกเฉิน</li>
+                    </ul>
+                    <button class="read-guide-btn" type="button" data-target="healthcare-details">อ่านรายละเอียด <span
+                            aria-hidden="true">↗</span></button>
+                </article>
+                <article class="guide-card" data-category="training">
+                    <div class="card-topline"><span class="card-icon training-icon">🎓</span><span
+                            class="card-number">03</span></div>
+                    <span class="card-label">TRAINING & SOCIALIZATION</span>
+                    <h3>การฝึกวินัยและการเข้าสังคม</h3>
+                    <p>ฝึกพฤติกรรมพื้นฐานด้วยความสม่ำเสมอและการให้รางวัลอย่างเหมาะสม</p>
+                    <ul class="topic-preview">
+                        <li>ฝึกขับถ่ายให้เป็นที่</li>
+                        <li>ฝึกคำสั่ง “นั่ง”</li>
+                        <li>การเข้าสังคมอย่างปลอดภัย</li>
+                    </ul>
+                    <button class="read-guide-btn" type="button" data-target="training-details">อ่านรายละเอียด <span
+                            aria-hidden="true">↗</span></button>
+                </article>
+                <article class="guide-card" data-category="exercise">
+                    <div class="card-topline"><span class="card-icon exercise-icon">🐕</span><span
+                            class="card-number">04</span></div>
+                    <span class="card-label">EXERCISE & MENTAL STIMULATION</span>
+                    <h3>การออกกำลังกายและกิจกรรม</h3>
+                    <p>ให้ร่างกายได้เคลื่อนไหวและฝึกสมอง เพื่อลดความเบื่อและช่วยให้มีสุขภาวะที่ดี</p>
+                    <ul class="topic-preview">
+                        <li>ระยะเวลาออกกำลังกาย</li>
+                        <li>กิจกรรมฝึกสมอง</li>
+                        <li>ของเล่นสำหรับกัดแทะ</li>
+                    </ul>
+                    <button class="read-guide-btn" type="button" data-target="exercise-details">อ่านรายละเอียด <span
+                            aria-hidden="true">↗</span></button>
+                </article>
+                <article class="guide-card" data-category="grooming">
+                    <div class="card-topline"><span class="card-icon grooming-icon">🛁</span><span
+                            class="card-number">05</span></div>
+                    <span class="card-label">GROOMING & HYGIENE</span>
+                    <h3>การดูแลความสะอาดและกรูมมิ่ง</h3>
+                    <p>ดูแลขน หู เล็บ และฟัน เพื่อสุขอนามัยที่ดีและช่วยสังเกตความผิดปกติได้เร็วขึ้น</p>
+                    <ul class="topic-preview">
+                        <li>อาบน้ำและแปรงขน</li>
+                        <li>ทำความสะอาดหูและตัดเล็บ</li>
+                        <li>แปรงฟัน</li>
+                    </ul>
+                    <button class="read-guide-btn" type="button" data-target="grooming-details">อ่านรายละเอียด <span
+                            aria-hidden="true">↗</span></button>
+                </article>
+                <article class="guide-card" data-category="safety">
+                    <div class="card-topline"><span class="card-icon safety-icon">🏡</span><span
+                            class="card-number">06</span></div>
+                    <span class="card-label">ENVIRONMENT & SAFETY</span>
+                    <h3>สภาพแวดล้อมและความปลอดภัย</h3>
+                    <p>จัดพื้นที่พักผ่อนและเก็บสิ่งของอันตราย เพื่อให้บ้านเป็นพื้นที่ปลอดภัยสำหรับน้องหมา</p>
+                    <ul class="topic-preview">
+                        <li>มุมพักผ่อนที่ปลอดภัย</li>
+                        <li>เก็บสิ่งของอันตราย</li>
+                        <li>ตรวจประตูรั้วและระเบียง</li>
+                    </ul>
+                    <button class="read-guide-btn" type="button" data-target="safety-details">อ่านรายละเอียด <span
+                            aria-hidden="true">↗</span></button>
+                </article>
+            </div>
+        </section>
+
+        <!--  รายละเอียด -->
+        <section class="details-section" id="guideDetails" aria-labelledby="detailsHeading" aria-live="polite">
+            <div class="details-intro">
+                <span class="section-kicker">YOUR SELECTED GUIDE</span>
+                <h2 id="detailsHeading">รายละเอียดคู่มือ</h2>
+                <p>เลือกคู่มือด้านบนเพื่อเปิดอ่านเนื้อหา</p>
+            </div>
+
+            <article class="detail-panel" id="nutrition-details" hidden>
+                <div class="detail-title"><span class="detail-icon food-icon">🥣</span>
+                    <div><span class="section-kicker">NUTRITION</span>
+                        <h3>โภชนาการและอาหาร</h3>
+                    </div>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>01</span> วิธีเลือกอาหาร</h4>
+                    <p>อ่านฉลากหลังถุงและเลือกสูตรตามช่วงวัย: Puppy สำหรับลูกสุนัข, Adult สำหรับสุนัขโต และ Senior
+                        สำหรับสุนัขสูงวัย มองหาข้อความ “Complete & Balanced”
+                        หรือข้อความที่ระบุว่าอาหารครบถ้วนและสมดุลตามมาตรฐานโภชนาการที่เกี่ยวข้อง
+                        เลือกสูตรให้เหมาะกับขนาดตัว สุขภาพ และคำแนะนำของสัตวแพทย์ด้วย</p>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>02</span> เวลาและปริมาณอาหาร</h4>
+                    <p>กำหนดเวลาให้อาหารเป็นกิจวัตร เช่น 08:00 น. และ 18:00 น. สำหรับสุนัขโตที่เหมาะกับการกินวันละ 2
+                        มื้อ ไม่จำเป็นต้องใช้ตารางเดียวกันกับลูกสุนัขหรือสุนัขที่มีโรคประจำตัว
+                        ชั่งหรือตวงอาหารตามคำแนะนำบนฉลากโดยพิจารณาน้ำหนักและสภาพร่างกาย ไม่กะด้วยตาเปล่า
+                        หากกินไม่หมดภายในประมาณ 15–20 นาทีอาจเก็บชามได้ในสุนัขสุขภาพดีที่เหมาะกับการให้อาหารเป็นมื้อ
+                        แต่ไม่ควรใช้วิธีนี้กับลูกสุนัขหรือสุนัขที่ต้องกินตามแผนเฉพาะโดยไม่ปรึกษาสัตวแพทย์
+                        เปลี่ยนน้ำสะอาดและให้เข้าถึงได้ตลอด 24 ชั่วโมง ใช้ชามสแตนเลสหรือเซรามิกที่ล้างง่าย</p>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>03</span> อาหารที่เป็นอันตราย</h4>
+                    <p>ห้ามให้ช็อกโกแลต หัวหอม กระเทียม องุ่น และลูกเกด เพราะอาจทำให้เกิดพิษรุนแรง
+                        รวมถึงหลีกเลี่ยงแอลกอฮอล์ ผลิตภัณฑ์ที่มีไซลิทอล
+                        และกระดูกที่ปรุงสุกซึ่งอาจแตกเป็นเสี้ยนและทำให้บาดเจ็บ หากน้องหมากินสิ่งเหล่านี้เข้าไป
+                        ให้ติดต่อสัตวแพทย์หรือโรงพยาบาลสัตว์ทันที อย่ารอให้อาการปรากฏ</p>
+                </div>
+                <p class="guide-disclaimer">ความต้องการอาหารแตกต่างกันตามอายุ น้ำหนัก กิจกรรม และสุขภาพ
+                    คำแนะนำบนถุงเป็นจุดเริ่มต้น ไม่ใช่ปริมาณที่เหมาะกับสุนัขทุกตัว</p>
+            </article>
+            <article class="detail-panel" id="healthcare-details" hidden>
+                <div class="detail-title"><span class="detail-icon health-icon">🩺</span>
+                    <div><span class="section-kicker">HEALTHCARE</span>
+                        <h3>การดูแลสุขภาพและการแพทย์</h3>
+                    </div>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>01</span> ตารางวัคซีนสำหรับลูกสุนัข</h4>
+                    <p>ลูกสุนัขมักเริ่มวัคซีนรวมเมื่ออายุประมาณ 6–8 สัปดาห์ หรือราว 2 เดือน
+                        โดยสัตวแพทย์จะกำหนดชนิดวัคซีนและนัดกระตุ้นทุก 2–4 สัปดาห์จนถึงอายุอย่างน้อย 16
+                        สัปดาห์ตามความเสี่ยงและแนวทางที่ใช้ วัคซีนพิษสุนัขบ้าให้ตามอายุที่กฎหมายและผลิตภัณฑ์กำหนด
+                        รวมถึงคำแนะนำของสัตวแพทย์ เมื่อโตเต็มวัยให้ฉีดกระตุ้นตามกำหนด
+                        ซึ่งอาจเป็นทุกปีหรือช่วงอื่นตามชนิดวัคซีนและความเสี่ยง ควรวางแผนถ่ายพยาธิร่วมกับสัตวแพทย์</p>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>02</span> การป้องกันเห็บ หมัด และพยาธิหนอนหัวใจ</h4>
+                    <p>เลือกยาป้องกันที่เหมาะกับน้ำหนัก อายุ และสุขภาพ เช่น ยาหยอดหลัง ยากิน
+                        หรือปลอกคอสำหรับปรสิตบางชนิด ใช้ตามฉลากและกำหนดนัดของผลิตภัณฑ์ ไม่ใช่ทุกชนิดที่ใช้ทุก 30
+                        วันเหมือนกัน และผลิตภัณฑ์ป้องกันเห็บหมัดทุกชนิดไม่ได้ป้องกันพยาธิหนอนหัวใจด้วย
+                        ควรถามสัตวแพทย์ถึงแผนป้องกันที่ครอบคลุมและการตรวจที่จำเป็น</p>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>03</span> สัญญาณอาการป่วยฉุกเฉิน</h4>
+                    <p>หากซึมมาก ไม่กินอาหารร่วมกับอาการผิดปกติ ท้องเสียเหลวปนเลือด อาเจียนซ้ำหลายครั้ง
+                        หายใจลำบากหรือหอบแรงผิดปกติ เหงือกซีด ชัก หมดสติ หรือสงสัยว่ากินสารพิษ
+                        ให้ติดต่อหรือพาไปโรงพยาบาลสัตว์ทันที อย่ารอดูอาการข้ามวันในกรณีที่มีสัญญาณอันตราย</p>
+                </div>
+                <p class="guide-disclaimer">กำหนดวัคซีนและยาป้องกันปรสิตขึ้นอยู่กับพื้นที่ ความเสี่ยง อายุ
+                    และประวัติของสุนัข ควรใช้แผนที่สัตวแพทย์จัดให้</p>
+            </article>
+            <article class="detail-panel" id="training-details" hidden>
+                <div class="detail-title"><span class="detail-icon training-icon">🎓</span>
+                    <div><span class="section-kicker">TRAINING & SOCIALIZATION</span>
+                        <h3>การฝึกวินัยและการเข้าสังคม</h3>
+                    </div>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>01</span> ฝึกขับถ่ายให้เป็นที่</h4>
+                    <p>พาน้องหมาไปยังจุดขับถ่ายทันทีหลังตื่นนอน หลังกินอาหารประมาณ 10–15 นาที หลังเล่นหรือตื่นจากการงีบ
+                        และก่อนนอน ช่วงลูกสุนัขอาจต้องพาไปบ่อยกว่านี้
+                        เมื่อขับถ่ายถูกที่ให้ชมด้วยน้ำเสียงอ่อนโยนและให้ขนมชิ้นเล็กทันที
+                        หากขับถ่ายผิดที่ให้ทำความสะอาดด้วยผลิตภัณฑ์กำจัดกลิ่นที่เหมาะสม หลีกเลี่ยงการตีหรือลงโทษ
+                        เพราะอาจทำให้กลัวและไม่ช่วยให้เรียนรู้จุดที่ถูกต้อง</p>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>02</span> ฝึกคำสั่งพื้นฐาน “นั่ง” (Sit)</h4>
+                    <p>ถือขนมใกล้จมูก แล้วค่อย ๆ เลื่อนมือขึ้นและไปด้านหลังเล็กน้อยเพื่อชวนให้สุนัขนั่ง
+                        เมื่อสะโพกแตะพื้น ให้พูดว่า “นั่ง” แล้วให้ขนมและชมทันที ฝึกครั้งละประมาณ 5–10 นาทีในช่วงสั้น ๆ
+                        และจบด้วยประสบการณ์ที่ดี หากสุนัขไม่เข้าใจ ให้ลดความยากและลองใหม่โดยไม่บังคับ</p>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>03</span> การเข้าสังคมอย่างปลอดภัย</h4>
+                    <p>ให้สุนัขค่อย ๆ คุ้นเคยกับผู้คน เสียงรถ พื้นผิว และสุนัขตัวอื่นในระยะที่ยังรู้สึกปลอดภัย
+                        ใช้ขนมและคำชมสร้างประสบการณ์ที่ดี ไม่บังคับให้เข้าใกล้สิ่งที่กลัว
+                        ลูกสุนัขยังสามารถเริ่มเรียนรู้สิ่งแวดล้อมอย่างควบคุมความเสี่ยงได้ก่อนฉีดวัคซีนครบ เช่น
+                        อุ้มชมโลกภายนอกหรือพบสุนัขสุขภาพดีที่ฉีดวัคซีนแล้วในพื้นที่สะอาด
+                        โดยปรึกษาสัตวแพทย์เรื่องความเสี่ยงในพื้นที่ก่อนพาเดินในที่สาธารณะ</p>
+                </div>
+                <p class="guide-disclaimer">การฝึกที่ได้ผลเน้นความสม่ำเสมอ ความอดทน และการเสริมแรงเชิงบวก
+                    หลีกเลี่ยงการตี ตะคอก หรือทำให้สุนัขหวาดกลัว</p>
+            </article>
+            <article class="detail-panel" id="exercise-details" hidden>
+                <div class="detail-title"><span class="detail-icon exercise-icon">🐕</span>
+                    <div><span class="section-kicker">EXERCISE & MENTAL STIMULATION</span>
+                        <h3>การออกกำลังกายและกิจกรรม</h3>
+                    </div>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>01</span> ระยะเวลาออกกำลังกาย</h4>
+                    <p>สุนัขพลังงานสูงบางตัว เช่น โกลเด้นรีทรีฟเวอร์ บีเกิ้ล หรือไซบีเรียนฮัสกี
+                        อาจต้องการการเดินและเล่นอย่างกระฉับกระเฉงมากกว่าสุนัขบางตัว ส่วนสุนัขโตทั่วไปอาจเริ่มจากการเดิน
+                        15–30 นาทีต่อครั้ง วันละ 1–2 ครั้งได้ แต่เวลา 30–45 นาทีหรือ 15–30 นาทีไม่ใช่กฎตายตัว
+                        ต้องปรับตามสายพันธุ์ อายุ สุขภาพ อากาศ และความฟิต ลูกสุนัข สุนัขสูงวัย
+                        หรือสุนัขที่มีโรคประจำตัวควรทำกิจกรรมตามคำแนะนำของสัตวแพทย์ หลีกเลี่ยงการออกแรงหนักในอากาศร้อน
+                    </p>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>02</span> กิจกรรมที่ช่วยฝึกสมอง</h4>
+                    <p>สลับกิจกรรม เช่น เกมดมกลิ่น ซ่อนขนม ฝึกคำสั่งสั้น ๆ เกมคาบของ
+                        หรือของเล่นที่ให้สุนัขคิดหาวิธีเล่นต่อ กิจกรรมทางสมองช่วยให้สุนัขได้ใช้พลังงานและลดความเบื่อ
+                        แม้ในวันที่ออกไปเดินนานไม่ได้</p>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>03</span> แก้ปัญหากัดแทะสิ่งของ</h4>
+                    <p>เตรียมของเล่นยางสำหรับกัดแทะหรือของเล่นลับสมองที่ใส่อาหารได้
+                        เลือกขนาดที่เหมาะสมและวัสดุที่ทนต่อแรงกัด ตรวจดูความเสียหายเป็นประจำและเก็บของเล่นที่แตกหัก
+                        เพื่อป้องกันการกลืนชิ้นส่วน เก็บรองเท้า สายไฟ
+                        และสิ่งของที่ไม่ต้องการให้กัดออกจากบริเวณที่สุนัขเข้าถึง</p>
+                </div>
+                <p class="guide-disclaimer">ปรับกิจกรรมให้เหมาะกับสุนัขแต่ละตัว สังเกตอาการเหนื่อยผิดปกติ หอบมาก
+                    เดินกะเผลก หรือไม่อยากเล่น และหยุดพักเมื่อจำเป็น</p>
+            </article>
+            <article class="detail-panel" id="grooming-details" hidden>
+                <div class="detail-title"><span class="detail-icon grooming-icon">🛁</span>
+                    <div><span class="section-kicker">GROOMING & HYGIENE</span>
+                        <h3>การดูแลความสะอาดและกรูมมิ่ง</h3>
+                    </div>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>01</span> การอาบน้ำและแปรงขน</h4>
+                    <p>แปรงขนทุกวันหรืออย่างน้อยสัปดาห์ละ 2–3 ครั้งตามชนิดขน เพื่อช่วยสางขนตายและลดการพันกัน
+                        ความถี่ในการอาบน้ำขึ้นอยู่กับสายพันธุ์ สภาพผิว และกิจกรรม บางตัวอาจอาบทุก 1–2 สัปดาห์
+                        แต่ไม่จำเป็นต้องอาบสัปดาห์ละครั้งสำหรับสุนัขทุกตัว ใช้แชมพูสำหรับสุนัขโดยเฉพาะ ล้างออกให้หมด
+                        และเช็ดหรือเป่าขนให้แห้งสนิทด้วยความร้อนที่ไม่สูงเกินไป</p>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>02</span> ทำความสะอาดหูและตัดเล็บ</h4>
+                    <p>ตรวจหูเป็นประจำ หากจำเป็นให้ใช้น้ำยาทำความสะอาดหูสำหรับสัตว์เลี้ยงตามคำแนะนำ หยดตามวิธีใช้
+                        นวดโคนหูเบา ๆ แล้วเช็ดเฉพาะส่วนที่มองเห็นด้วยสำลีหรือแผ่นเช็ด ห้ามแหย่คัตตอนบัดลึกเข้าไปในช่องหู
+                        หากหูแดง มีกลิ่น เจ็บ หรือมีสิ่งคัดหลั่งควรพบสัตวแพทย์ ตัดเล็บเมื่อเริ่มยาว
+                        โดยตัดปลายทีละน้อยและหลีกเลี่ยงส่วนเนื้อสีชมพูที่มีเส้นเลือดและเส้นประสาท
+                        หากไม่มั่นใจให้ผู้เชี่ยวชาญช่วย</p>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>03</span> การแปรงฟัน</h4>
+                    <p>ใช้แปรงและยาสีฟันสำหรับสุนัขโดยเฉพาะ ห้ามใช้ยาสีฟันคน เพราะส่วนผสมบางชนิด เช่น ไซลิทอล
+                        อาจเป็นพิษต่อสุนัข ค่อย ๆ ฝึกให้คุ้นกับการสัมผัสปากและแปรงฟันอย่างสม่ำเสมอ
+                        โดยการแปรงทุกวันเป็นเป้าหมายที่ดี หากเริ่มต้นให้ทำทีละน้อยและเพิ่มความถี่ตามที่สุนัขยอมรับ
+                        หากเหงือกเลือดออกหรือมีอาการเจ็บควรปรึกษาสัตวแพทย์</p>
+                </div>
+                <p class="guide-disclaimer">ความถี่ในการอาบน้ำ แปรงขน ทำความสะอาดหู และตัดเล็บขึ้นอยู่กับสุนัขแต่ละตัว
+                    อย่าฝืนทำหากสุนัขเจ็บหรือเครียดมาก</p>
+            </article>
+            <article class="detail-panel" id="safety-details" hidden>
+                <div class="detail-title"><span class="detail-icon safety-icon">🏡</span>
+                    <div><span class="section-kicker">ENVIRONMENT & SAFETY</span>
+                        <h3>สภาพแวดล้อมและความปลอดภัย</h3>
+                    </div>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>01</span> จัดเตรียมมุมปลอดภัย (Crate / Bedding)</h4>
+                    <p>วางเบาะหรือกรงพักในบริเวณสงบ อากาศถ่ายเทสะดวก ไม่โดนแดดตรง ๆ และไม่โดนฝนสาด เลือกขนาดที่สุนัขยืน
+                        หมุนตัว และนอนได้สบาย ทำให้พื้นที่นี้เป็นมุมพักผ่อนที่ดีด้วยขนม ของเล่น
+                        และการฝึกอย่างค่อยเป็นค่อยไป ไม่ใช้กรงเป็นที่ลงโทษ
+                        และไม่ปล่อยสุนัขไว้ในที่ร้อนหรืออากาศไม่ถ่ายเท</p>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>02</span> จัดบ้านป้องกันอันตราย (Dog-proofing)</h4>
+                    <p>เก็บสายไฟให้พ้นปากสุนัขหรือใช้ท่อครอบสายไฟ เก็บน้ำยาล้างห้องน้ำ ผงซักฟอก ยา
+                        และสารเคมีไว้ในตู้ที่ปิดมิดชิด เก็บของชิ้นเล็ก เช่น หนังยาง ถ่าน กระดุม
+                        และของเล่นที่กลืนได้ง่ายให้พ้นมือ รวมถึงตรวจสอบถังขยะและอาหารคนที่อาจเป็นอันตราย</p>
+                </div>
+                <div class="detail-topic">
+                    <h4><span>03</span> ความปลอดภัยรอบบ้าน</h4>
+                    <p>ตรวจประตูรั้ว ประตูบ้าน และระเบียงให้แน่ใจว่าไม่มีช่องที่สุนัขมุดหรือลอดออกไปได้
+                        ใช้สายจูงหรืออุปกรณ์ควบคุมที่พอดีเมื่ออยู่นอกพื้นที่ปิด และตรวจตาข่ายหรือรั้วเป็นประจำ
+                        หากอยู่คอนโดควรระวังช่องระหว่างราวระเบียงและไม่ปล่อยสุนัขอยู่บนระเบียงโดยไม่มีผู้ดูแล</p>
+                </div>
+                <p class="guide-disclaimer">ตรวจพื้นที่ในระดับสายตาของสุนัขเป็นประจำ
+                    เพราะสิ่งของที่ดูปลอดภัยสำหรับคนอาจกลายเป็นอันตรายเมื่อถูกกัดหรือกลืน</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- ส่วนท้าย -->
+    <footer class="footer">
+        <a class="logo footer-logo" href="#guide"><span class="logo-paw" aria-hidden="true">🐾</span> DogCare</a>
+        <p>คู่มือพื้นฐานเพื่อการดูแลน้องหมาอย่างใส่ใจ</p>
+        <span>© 2026 DogCare · Learn with care</span>
+    </footer>
+    <script src="../shared/navbar.js"></script>
+</body>
+
+</html>

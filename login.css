@@ -1,0 +1,106 @@
+/* ===== พื้นฐานของหน้า: จัดการ์ดให้อยู่กลางจอทั้งแนวตั้งและแนวนอน ===== */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #faf7f2;
+    color: #2b2b2b;
+    font-family: "Kanit", sans-serif;
+}
+
+.card {
+    width: 100%;
+    max-width: 360px;
+    margin: 16px;
+    padding: 32px 28px;
+    border: 1px solid #e5ddd1;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+/* ===== โลโก้ ===== */
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo h1 {
+    margin: 0 0 4px;
+    font-size: 28px;
+    color: #b5651d;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 14px;
+    color: #666666;
+}
+
+h3, h4 {
+    margin: 0 0 16px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ===== ช่องกรอกข้อมูล ===== */
+.input-group {
+    margin-bottom: 14px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #d6cfc4;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #b5651d;
+}
+
+/* ===== ปุ่ม ===== */
+.btn {
+    width: 100%;
+    margin-top: 6px;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    background: #b5651d;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #96521a;
+}
+
+/* ===== ลิงก์ลืมรหัสผ่าน / สมัครสมาชิก ===== */
+.links {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+}
+
+.links a {
+    color: #b5651d;
+}
+
+/* ซ่อนฟอร์มที่ยังไม่ได้เลือก (login.js ใส่/เอาคลาสนี้ออกเพื่อสลับฟอร์ม) */
+.hidden {
+    display: none;
+}

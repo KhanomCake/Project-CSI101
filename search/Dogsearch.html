@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dogsearch | MaMha</title>
+    <meta name="description" content="ค้นหาสายพันธุ์สุนัข ทำความรู้จักนิสัย และค้นหาเพื่อนสี่ขาที่คุณชื่นชอบ">   
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="Customdogsearch.css">
+   
+    <link rel="stylesheet" href="../shared/navbar.css">
+</head>
+
+<body>
+    
+    <div class="dogsearch">
+        <h1 class="dogsearch-logo">MaMha</h1>
+        <h2 class="dogsearch-title">โลกของน้องหมา เริ่มต้นที่นี่</h2>
+        <p class="dogsearch-description">ค้นพบสายพันธุ์ที่ใช่ ทำความรู้จักนิสัย และค้นหาเพื่อนสี่ขาที่คุณชื่นชอบ</p>
+
+       <form action="../breeds/DogBreedsIndex.html" method="GET" class="search-Dog">
+
+          <div class="dogsearch-input-wrapper">
+             
+            <svg class="dogsearch-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.8">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+             </svg>
+
+             <input 
+              type="text"
+              name="q"
+              placeholder="ลองค้นหา เช่น โกลเด้น รีทรีฟเวอร์ บีเกิ้ล..."
+              required
+              />
+
+              <button type="reset"  id="dogsearch-clear-btn" aria-label="ล้างข้อความ">
+                <svg class="dogsearch-clear-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+
+              <button type="submit" class="dogsearch-btn">
+               <span>ค้นหา</span>
+              </button>
+
+         </div>
+       </form>
+    </div>
+
+    <script src="../shared/navbar.js"></script>
+</body>
+</html>

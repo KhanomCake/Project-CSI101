@@ -1,0 +1,144 @@
+:root {
+    --green: #baff75;
+    --green-hover: #d0ff9e;
+    --white: #ffffff;
+    --muted: rgba(255, 255, 255, 0.7);
+    --glass: rgba(255, 255, 255, 0.09);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --dark: #152019;
+}
+body {
+    font-family:"Kanit",sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;   /* เรียงจากบนลงล่าง: เมนูอยู่บน แล้วค่อยเป็นกล่องค้นหา */
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background-color: var(--dark);
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(8, 15, 10, 0.4),
+            rgba(8, 15, 10, 0.48) 50%,
+            rgba(8, 15, 10, 0.8)
+        ),
+        url("Dog.jpg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.dogsearch {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;   /* auto ทุกด้าน = ดันกล่องค้นหาไปอยู่กลางพื้นที่ที่เหลือใต้เมนู */
+    position: relative;
+}
+.dogsearch-logo {
+    font-family:"Oswald", sans-serif;
+    color: var(--white);
+    font-size: clamp(80px, 12vw, 155px);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1px;
+    line-height: 1;
+    letter-spacing: -1px;
+    transform: translateY(-70px);
+}
+.dogsearch-title {
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: clamp(21px, 3vw, 28px);
+    color: rgba(255, 255, 255, 0.88);
+    transform: translateY(-50px);
+}
+.dogsearch-description {
+    font-weight: 300;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.80);
+    transform: translateY(-60px);
+}
+.dogsearch-input-wrapper  {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 64px;
+    padding: 6px 12px 6px 20px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.97);
+    color: var(--dark);
+    border: 2px solid transparent;
+    border-radius: 22px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+    transform: translateY(-60px);
+}
+.dogsearch-input-wrapper:focus-within {
+    border-color: var(--green);
+    box-shadow:
+        0 0 0 4px rgba(186, 255, 117, 0.13),
+        0 18px 55px rgba(0, 0, 0, 0.25);
+}
+.dogsearch-icon {
+    font-weight: 300;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #94a3b8;
+}
+.dogsearch-input-wrapper input {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--dark);
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+}
+.dogsearch-input-wrapper input::placeholder {
+    color: #94a3b8;
+}
+#dogsearch-clear-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 6px;
+    border: none;
+    background: transparent;
+    color:#94a3b8;
+    cursor: pointer;
+}
+.dogsearch-clear-icon {
+    width: 16px;
+    height: 16px; 
+}
+.dogsearch-btn {
+    flex-shrink: 0;
+    background-color: var(--green);
+    color: var(--dark);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.dogsearch-btn:hover {
+    background-color: var(--green-hover);
+}

@@ -1,0 +1,65 @@
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  background: white;
+  border: 2px solid #eadfd4;
+  border-radius: 12px;
+  color: #b85a24;
+  text-decoration: none;
+}
+.back-btn:hover {
+  border-color: #e07a3f;
+}
+
+.DogBreeds {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+
+#name {
+  margin: 12px 0 0;
+}
+#en {
+  text-align: center;
+  color: gray;
+  margin: 0;
+}
+
+
+.DogBreeds h2 {
+  color: #b85a24;
+  font-size: 20px;
+  margin-top: 28px;
+}
+
+
+#traits {
+  list-style: none;
+  padding: 0;
+}
+#traits li {
+  background: #fdf8f3;
+  border-left: 4px solid #e07a3f;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border-radius: 0 10px 10px 0;
+}
+
+
+.lifespan-box {
+  margin-top: 28px;
+  background: #fff1e6;
+  padding: 4px 20px 16px;
+  border-radius: 16px;
+}
+#lifespan {
+  font-size: 28px;
+  font-weight: bold;
+  color: #b85a24;
+  margin: 0;
+}

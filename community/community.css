@@ -1,0 +1,785 @@
+:root {
+    font-family: Arial, "Noto Sans Thai", sans-serif;
+    color: #1e293b;
+    background: #f0f9ff;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    --sky-50: #f0f9ff;
+    --sky-100: #e0f2fe;
+    --sky-200: #bae6fd;
+    --sky-400: #38bdf8;
+    --sky-500: #0ea5e9;
+    --sky-600: #0284c7;
+    --sky-800: #075985;
+    --sky-900: #0c4a6e;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.app-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--sky-50);
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    color: #fff;
+    background: linear-gradient(110deg, #0284c7, #2563eb, #3730a3);
+    box-shadow: 0 2px 8px #0f172a20;
+}
+
+.header-inner,
+.nav-inner {
+    width: min(100% - 32px, 1152px);
+    margin: 0 auto;
+}
+
+.header-inner {
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.brand-image {
+    width: 42px;
+    height: 42px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.brand h1,
+.brand p {
+    margin: 0;
+}
+
+.brand h1 {
+    font-size: 20px;
+    letter-spacing: 0.04em;
+}
+
+.brand p {
+    margin-top: 2px;
+    color: #bae6fd;
+    font-size: 12px;
+}
+
+.notification-button {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    color: #fff;
+    background: #38bdf855;
+    font-size: 18px;
+}
+
+.notification-button:hover {
+    background: #38bdf880;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #1d4ed8;
+    border-radius: 50%;
+    background: #fbbf24;
+}
+
+.site-nav {
+    border-top: 1px solid #7dd3fc55;
+    background: #1e40af55;
+    backdrop-filter: blur(8px);
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 10px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    color: #e0f2fe;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    color: #fde68a;
+    border-bottom-color: #fde68a;
+}
+
+.app-main {
+    width: min(100% - 32px, 896px);
+    margin: 0 auto;
+    padding: 24px 0;
+    flex: 1;
+}
+
+.page-content {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.page-stack,
+.post-list {
+    display: grid;
+    gap: 24px;
+}
+
+.post-list {
+    gap: 16px;
+}
+
+.panel,
+.post-card,
+.hospital-card {
+    padding: 20px;
+    border: 1px solid #e0f2fe;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 1px 3px #0f172a0d;
+}
+
+.composer {
+    padding: 16px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 12px;
+    color: var(--sky-900);
+    font-size: 15px;
+}
+
+.section-title i,
+.hospital-detail i {
+    color: var(--sky-500);
+}
+
+.form-control {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--sky-200);
+    border-radius: 10px;
+    outline: none;
+    color: #334155;
+    background: var(--sky-50);
+    font-size: 14px;
+}
+
+.form-control:focus {
+    border-color: var(--sky-400);
+    box-shadow: 0 0 0 2px #38bdf833;
+}
+
+.post-input {
+    min-height: 86px;
+    resize: vertical;
+}
+
+.image-preview-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.image-preview {
+    display: block;
+    width: auto;
+    height: 128px;
+    border: 1px solid var(--sky-200);
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.remove-image-button {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: grid;
+    width: 26px;
+    height: 26px;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    color: #fff;
+    background: #ef4444;
+    box-shadow: 0 1px 4px #0f172a33;
+}
+
+.remove-image-button:hover {
+    background: #dc2626;
+}
+
+.composer-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.secondary-button {
+    padding: 8px 12px;
+    color: #0369a1;
+    background: var(--sky-100);
+}
+
+.secondary-button:hover {
+    background: var(--sky-200);
+}
+
+.secondary-button i {
+    color: var(--sky-500);
+}
+
+.primary-button {
+    padding: 8px 20px;
+    color: #fff;
+    background: var(--blue-600);
+    box-shadow: 0 1px 3px #0f172a20;
+}
+
+.primary-button:hover {
+    background: var(--blue-700);
+}
+
+.hero-banner {
+    padding: 24px;
+    border-radius: 16px;
+    color: #fff;
+    background: linear-gradient(120deg, #1e3a8a, #075985);
+    box-shadow: 0 1px 3px #0f172a1a;
+}
+
+.hero-banner h2 {
+    margin: 0 0 6px;
+    font-size: 20px;
+}
+
+.hero-banner h2 i {
+    color: #7dd3fc;
+}
+
+.hero-banner p {
+    margin: 0;
+    color: #bae6fd;
+    font-size: 14px;
+}
+
+.vaccine-form {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.save-button {
+    grid-column: 1 / -1;
+    padding: 9px 12px;
+    color: #fff;
+    background: var(--sky-500);
+}
+
+.save-button:hover,
+.comment-submit:hover {
+    background: var(--sky-600);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.vaccine-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+.vaccine-table thead {
+    color: var(--sky-800);
+    background: var(--sky-50);
+}
+
+.vaccine-table th,
+.vaccine-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--sky-100);
+}
+
+.vaccine-table th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.vaccine-table th:last-child,
+.table-action {
+    text-align: center;
+}
+
+.vaccine-table tbody tr:hover {
+    background: #f0f9ff80;
+}
+
+.empty-table-message {
+    padding: 16px !important;
+    color: #94a3b8;
+    text-align: center;
+    font-size: 12px;
+}
+
+.delete-button {
+    border: 0;
+    color: #f87171;
+    background: transparent;
+}
+
+.delete-button:hover {
+    color: #dc2626;
+}
+
+.vaccine-guidelines {
+    display: grid;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.guideline {
+    padding: 12px;
+    border-left: 4px solid var(--sky-400);
+    border-radius: 0 10px 10px 0;
+    background: var(--sky-50);
+}
+
+.guideline:nth-child(2) {
+    border-left-color: var(--sky-500);
+}
+
+.guideline:nth-child(3) {
+    border-left-color: var(--blue-600);
+}
+
+.guideline:nth-child(4) {
+    border-left-color: #4f46e5;
+}
+
+.guideline p {
+    margin: 0;
+    color: var(--slate-600);
+    font-size: 12px;
+}
+
+.guideline .guideline-title {
+    margin-bottom: 4px;
+    color: var(--sky-900);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.section-heading {
+    margin: 0 0 4px;
+    color: var(--sky-900);
+    font-size: 18px;
+}
+
+.muted {
+    color: var(--slate-500);
+}
+
+.small {
+    font-size: 12px;
+}
+
+.intro-text {
+    margin: 0 0 16px;
+}
+
+.search-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.search-field {
+    position: relative;
+    flex: 1;
+}
+
+.search-field > i {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.search-field .form-control {
+    padding-left: 36px;
+}
+
+.card-grid,
+.knowledge-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.knowledge-grid {
+    gap: 12px;
+}
+
+.hospital-card {
+    display: grid;
+    align-content: start;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.hospital-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.hospital-heading h3,
+.knowledge-card h4 {
+    margin: 0;
+    color: var(--sky-900);
+    font-size: 14px;
+}
+
+.open-badge {
+    flex: none;
+    padding: 3px 8px;
+    border-radius: 999px;
+    color: #047857;
+    background: #d1fae5;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.hospital-detail,
+.hospital-phone {
+    margin: 0;
+    color: var(--slate-500);
+    font-size: 12px;
+}
+
+.hospital-phone {
+    padding-top: 4px;
+    color: var(--blue-600);
+    font-weight: 600;
+}
+
+.hospital-phone i {
+    color: #3b82f6;
+}
+
+.knowledge-card {
+    padding: 12px;
+    border: 1px solid var(--sky-100);
+    border-radius: 12px;
+    background: #f0f9ff99;
+}
+
+.knowledge-card h4 {
+    margin-bottom: 4px;
+}
+
+.knowledge-card p {
+    margin: 0;
+    color: var(--slate-600);
+    font-size: 12px;
+}
+
+.inquiry-form {
+    display: grid;
+    gap: 12px;
+}
+
+.inquiry-form label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--slate-600);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px 12px;
+    color: #fff;
+    background: linear-gradient(100deg, var(--sky-500), var(--blue-600));
+    box-shadow: 0 2px 5px #0f172a22;
+}
+
+.submit-button:hover {
+    background: linear-gradient(100deg, var(--sky-600), var(--blue-700));
+}
+
+.post-card {
+    display: grid;
+    gap: 12px;
+    padding: 16px;
+}
+
+.post-image {
+    width: 100%;
+    max-height: 320px;
+    border: 1px solid var(--sky-100);
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.post-header,
+.post-author {
+    display: flex;
+    align-items: center;
+}
+
+.post-header {
+    justify-content: space-between;
+}
+
+.post-author {
+    gap: 8px;
+}
+
+.author-avatar {
+    display: grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    border-radius: 50%;
+    color: #fff;
+    background: linear-gradient(135deg, var(--sky-400), var(--blue-600));
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.author-name,
+.post-time,
+.post-content {
+    margin: 0;
+}
+
+.author-name {
+    color: #082f49;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.post-time {
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+.post-content {
+    color: #334155;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.post-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 8px;
+    border-top: 1px solid #f1f5f9;
+    color: var(--slate-500);
+    font-size: 12px;
+}
+
+.like-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    border: 0;
+    color: var(--slate-500);
+    background: transparent;
+    font-weight: 600;
+}
+
+.like-button:hover,
+.like-button.liked {
+    color: #f43f5e;
+}
+
+.comment-section {
+    padding-top: 8px;
+    border-top: 1px dashed var(--sky-100);
+}
+
+.comment-item {
+    margin-top: 4px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #334155;
+    background: #f0f9ffb3;
+    font-size: 12px;
+}
+
+.comment-author {
+    color: var(--sky-900);
+    font-weight: 700;
+}
+
+.comment-form {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.comment-form .form-control {
+    flex: 1;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.comment-submit {
+    padding: 6px 12px;
+    color: #fff;
+    background: var(--sky-500);
+    font-size: 12px;
+}
+
+.site-footer {
+    padding: 16px;
+    border-top: 1px solid #164e63;
+    color: #bae6fd;
+    background: var(--sky-900);
+    text-align: center;
+    font-size: 12px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--sky-50);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #7dd3fc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--sky-400);
+}
+
+@media (max-width: 640px) {
+    .nav-inner {
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .nav-btn {
+        flex-direction: column;
+        gap: 4px;
+        padding: 10px 6px;
+        font-size: 11px;
+    }
+
+    .vaccine-form,
+    .card-grid,
+    .knowledge-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-controls {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 641px) {
+    .composer {
+        padding: 20px;
+    }
+}

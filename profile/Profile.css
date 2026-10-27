@@ -1,0 +1,59 @@
+/* นำเข้าฟอนต์ Kanit เพื่อใช้เป็นฟอนต์หลักของเว็บ */
+body {
+    font-family: 'Kanit', sans-serif;
+}
+
+/* Custom Scrollbar ให้ดูสะอาดตาและเข้ากับโทนเว็บ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #fdf6e3; 
+}
+::-webkit-scrollbar-thumb {
+    background: #fbd38d; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #f6ad55; 
+}
+
+/* เอฟเฟกต์ซูมภาพในการ์ดเวลาเอาเมาส์ไปชี้ (Hover Effect) */
+.dog-card:hover .dog-card-img {
+    transform: scale(1.05);
+}
+.dog-card-img {
+    transition: transform 0.4s ease-in-out;
+}
+
+/* การตกแต่งปุ่มเลือกแท็กนิสัยของน้องหมา */
+.trait-chip {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+.trait-chip:hover {
+    transform: translateY(-2px);
+}
+.trait-chip.selected {
+    background-color: #f59e0b; /* สีส้ม Amber */
+    color: white;
+    border-color: #f59e0b;
+    box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.3);
+}
+
+/* แอนิเมชันสำหรับการ์ดตอนโหลดหน้าเว็บ (ค่อยๆ โผล่ขึ้นมา) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-fade-in-up {
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0; /* เริ่มต้นด้วยการซ่อนไว้ก่อน */
+}

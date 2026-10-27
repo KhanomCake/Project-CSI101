@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaMha - เข้าสู่ระบบ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="card">
+        <div class="logo">
+            <h1>MaMha</h1>
+            <p>โลกของน้องหมา ที่ทำให้การเลี้ยงเป็นเรื่องง่าย</p>
+        </div>
+
+        <div id="login-form">
+            <h4 style="text-align: center;">เข้าสู่ระบบ</h4>
+            
+            <div class="input-group">
+                <label for="login-email">อีเมล / ชื่อผู้ใช้</label>
+                <input type="email" id="login-email" placeholder="กรอกอีเมลของคุณ" required>
+            </div>
+
+            <div class="input-group">
+                <label for="login-password">รหัสผ่าน</label>
+                <input type="password" id="login-password" placeholder="กรอกรหัสผ่าน" required>
+            </div>
+
+            <button onclick="login()" class="btn">เข้าสู่ระบบ</button>
+
+            <div class="links">
+                <a href="#" onclick="showPage('forgot-form')">ลืมรหัสผ่าน?</a> | 
+                <a href="#" onclick="showPage('register-form')">สมัครสมาชิก</a>
+            </div>
+        </div>
+
+        <div id="register-form" class="hidden">
+            <h4 style="text-align: center;">สมัครสมาชิก</h4>
+
+            <div class="input-group">
+                <label for="reg-username">ชื่อผู้ใช้</label>
+                <input type="text" id="reg-username" placeholder="ตั้งชื่อผู้ใช้" required>
+            </div>
+
+            <div class="input-group">
+                <label for="reg-email">อีเมล</label>
+                <input type="email" id="reg-email" placeholder="example@mamha.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="reg-password">รหัสผ่าน</label>
+                <input type="password" id="reg-password" placeholder="ตั้งรหัสผ่าน" required>
+            </div>
+
+            <button onclick="register()" class="btn">สมัครสมาชิก</button>
+
+            <div class="links">
+                มีบัญชีอยู่แล้ว? <a href="#" onclick="showPage('login-form')">เข้าสู่ระบบ</a>
+            </div>
+        </div>
+
+        <div id="forgot-form" class="hidden">
+            <h3 style="text-align: center;">ลืมรหัสผ่าน</h3>
+            <p style="font-size: 12px; color: #666; text-align: center;">กรอกอีเมลที่ใช้สมัคร</p>
+
+            <div class="input-group">
+                <label for="forgot-email">อีเมลของคุณ</label>
+                <input type="email" id="forgot-email" required>
+            </div>
+
+            <button class="btn" onclick="showPage('login-form')">รับลิงก์รีเซ็ตรหัสผ่าน</button>
+
+            <div class="links">
+                <a href="#" onclick="showPage('login-form')">กลับหน้าเข้าสู่ระบบ</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+</html>

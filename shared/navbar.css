@@ -1,0 +1,38 @@
+/* สไตล์พื้นฐานของเมนูกลาง ให้พอใช้งานได้ ทีมตกแต่งต่อได้เลย */
+.mamha-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   /* จัดทุกอย่างในเมนูให้อยู่กลาง */
+    align-items: center;
+    gap: 8px 16px;
+    width: 100%;               /* กว้างเต็มจอเสมอ แม้หน้านั้นจะจัด body แบบ flex */
+    box-sizing: border-box;
+    padding: 10px 16px;
+    background: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    color: #333333;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.mamha-nav a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.mamha-nav-logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.mamha-nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 14px;
+}
+
+.mamha-nav-links a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}

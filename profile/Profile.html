@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogProfile - ระบบบันทึกโปรไฟล์น้องหมา</title>
+    <!-- Tailwind CSS (ใช้ผ่าน CDN เพื่อความสะดวก) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome สำหรับไอคอน -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Kanit) -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- เชื่อมต่อไฟล์ CSS ของเราเอง -->
+    <link rel="stylesheet" href="Profile.css">
+    <link rel="stylesheet" href="../shared/navbar.css">
+</head>
+<body class="bg-amber-50/30 text-gray-800 min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-40 border-b border-orange-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-amber-500 text-white p-2 rounded-xl shadow-md transform -rotate-6">
+                    <i class="fa-solid fa-dog text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800 leading-tight">DogProfile <span class="text-amber-500">Hub</span></h1>
+                    <p class="text-xs text-gray-500 font-medium">สมุดพกความน่ารักของน้องหมา</p>
+                </div>
+            </div>
+            <button onclick="openFormModal()" class="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2.5 rounded-full font-semibold shadow-md hover:shadow-lg transition-all flex items-center gap-2 transform hover:scale-105">
+                <i class="fa-solid fa-plus"></i> <span class="hidden sm:inline">เพิ่มน้องหมา</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Header & Search/Filter Section -->
+        <div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-5 rounded-3xl shadow-sm border border-orange-100">
+            <div class="flex items-center gap-4">
+                <div class="bg-orange-100/50 p-3 rounded-2xl">
+                    <i class="fa-solid fa-bone text-orange-400 text-xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-lg font-bold text-gray-800">แกลเลอรีแก๊งสี่ขา</h2>
+                    <p class="text-sm text-gray-500">น้องหมาทั้งหมด <span id="total-count" class="font-bold text-amber-600">0</span> ตัว | สายพันธุ์ <span id="breed-count" class="font-bold text-amber-600">0</span> ชนิด</p>
+                </div>
+            </div>
+
+            <!-- กล่องค้นหาและกรองข้อมูล -->
+            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <div class="relative w-full sm:w-64">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" id="search-input" placeholder="ค้นหาชื่อ หรือ สายพันธุ์..." 
+                        class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none text-sm transition"
+                        oninput="handleSearchFilter()">
+                </div>
+                <select id="gender-filter" class="w-full sm:w-36 px-4 py-2.5 rounded-xl border border-gray-200 focus:ring-2 focus:ring-amber-400 outline-none text-sm bg-white cursor-pointer" onchange="handleSearchFilter()">
+                    <option value="all">ทุกเพศ</option>
+                    <option value="ผู้">เพศผู้ ♂</option>
+                    <option value="เมีย">เพศเมีย ♀</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div id="dog-gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- การ์ดน้องหมาจะถูกสร้างและแทรกตรงนี้ผ่าน JavaScript -->
+        </div>
+
+        <!-- Empty State (แสดงเมื่อไม่มีข้อมูล) -->
+        <div id="empty-state" class="hidden flex-col items-center justify-center py-16 text-center">
+            <div class="bg-gray-100 w-24 h-24 rounded-full flex items-center justify-center mb-4">
+                <i class="fa-solid fa-dog text-4xl text-gray-300"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-700 mb-1">ยังไม่มีโปรไฟล์น้องหมา</h3>
+            <p class="text-sm text-gray-500 mb-4">มาสร้างสมุดพกประจำตัวให้น้องหมาของคุณกันเถอะ!</p>
+            <button onclick="openFormModal()" class="text-amber-600 font-semibold hover:underline">
+                + สร้างโปรไฟล์แรกเลย
+            </button>
+        </div>
+
+    </main>
+
+    <!-- MODAL 1: ฟอร์มเพิ่ม/แก้ไขโปรไฟล์ -->
+    <div id="form-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-orange-100 transform scale-95 transition-transform duration-300">
+            <div class="sticky top-0 bg-white z-10 px-6 py-4 border-b border-gray-100 flex justify-between items-center rounded-t-3xl">
+                <h2 id="modal-title" class="text-xl font-bold text-gray-800 flex items-center gap-2">
+                    <i class="fa-solid fa-paw text-amber-500"></i> เพิ่มโปรไฟล์น้องหมาใหม่
+                </h2>
+                <button onclick="closeFormModal()" class="text-gray-400 hover:text-red-500 transition w-8 h-8 rounded-full hover:bg-red-50 flex items-center justify-center">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <form id="dog-form" class="p-6 space-y-6" onsubmit="handleFormSubmit(event)">
+                <input type="hidden" id="dog-id">
+
+                <!-- 1. ข้อมูลพื้นฐาน -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">ชื่อน้องหมา <span class="text-red-500">*</span></label>
+                        <input type="text" id="dog-name" required placeholder="เช่น โบ้, ลัคกี้, ชิโร่" 
+                            class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">สายพันธุ์ <span class="text-red-500">*</span></label>
+                        <input type="text" id="dog-breed" required placeholder="เช่น โกลเด้น, ปั๊ก, พันธุ์ทาง" 
+                            class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">อายุ <span class="text-red-500">*</span></label>
+                        <input type="text" id="dog-age" required placeholder="เช่น 2 เดือน, 3 ปี" 
+                            class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">เพศ <span class="text-red-500">*</span></label>
+                        <select id="dog-gender" required class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-400 outline-none text-sm bg-white">
+                            <option value="" disabled selected>เลือกเพศ</option>
+                            <option value="ผู้">เพศผู้ ♂</option>
+                            <option value="เมีย">เพศเมีย ♀</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 2. รูปภาพ -->
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">รูปถ่ายน้องหมา</label>
+                    <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                        <div class="relative w-24 h-24 rounded-2xl overflow-hidden bg-gray-100 border-2 border-dashed border-gray-300 shrink-0">
+                            <img id="photo-preview" src="https://placehold.co/100x100/f6ad55/white?text=Preview" alt="Preview" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-full space-y-2">
+                            <input type="file" id="dog-photo-file" accept="image/*" onchange="handleFileSelect(event)" 
+                                class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-amber-50 file:text-amber-700 hover:file:bg-amber-100 transition cursor-pointer">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs text-gray-400">หรือ</span>
+                                <input type="url" id="dog-photo-url" placeholder="วางลิงก์ (URL) รูปภาพที่นี่..." oninput="handleUrlInput(event)"
+                                    class="w-full px-3 py-1.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-amber-400 outline-none text-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. ลักษณะนิสัย (Tags) -->
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">ลักษณะนิสัย (เลือกได้มากกว่า 1)</label>
+                    <div id="traits-container" class="flex flex-wrap gap-2">
+                        <!-- แท็กจะถูกสร้างด้วย JS -->
+                    </div>
+                </div>
+
+                <!-- 4 & 5. ของโปรด -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">อาหาร/ขนมโปรด</label>
+                        <input type="text" id="dog-food" placeholder="เช่น ไก่อบแห้ง, ตับปิ้ง" 
+                            class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">ของเล่นชิ้นโปรด</label>
+                        <input type="text" id="dog-toy" placeholder="เช่น ลูกบอลยาง, ตุ๊กตาเป็ด" 
+                            class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none text-sm">
+                    </div>
+                </div>
+
+                <!-- 6. ประวัติ / ข้อความแนะนำตัว -->
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">เกี่ยวกับน้องหมา (Bio)</label>
+                    <textarea id="dog-bio" rows="3" placeholder="บอกเล่าเรื่องราวความน่ารัก วีรกรรม หรือลักษณะเด่น..." 
+                        class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-400 focus:border-amber-400 outline-none text-sm resize-none"></textarea>
+                </div>
+
+                <!-- 7. สถานะสุขภาพ (Health Checkboxes) -->
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">สถานะสุขภาพและการดูแล</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-amber-50/50 p-3 rounded-xl border border-amber-200/50">
+                        <label class="flex items-center gap-2 cursor-pointer text-sm text-gray-700">
+                            <input type="checkbox" id="health-vaccinated" class="rounded text-amber-500 focus:ring-amber-400 w-4 h-4">
+                            <span><i class="fa-solid fa-syringe text-emerald-500 mr-1"></i> ฉีดวัคซีนครบแล้ว</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm text-gray-700">
+                            <input type="checkbox" id="health-chipped" class="rounded text-amber-500 focus:ring-amber-400 w-4 h-4">
+                            <span><i class="fa-solid fa-microchip text-blue-500 mr-1"></i> ฝังไมโครชิป</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer text-sm text-gray-700">
+                            <input type="checkbox" id="health-neutered" class="rounded text-amber-500 focus:ring-amber-400 w-4 h-4">
+                            <span><i class="fa-solid fa-scissors text-purple-500 mr-1"></i> ทำหมันแล้ว</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Footer Buttons -->
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-end gap-3">
+                    <button type="button" onclick="closeFormModal()" class="px-5 py-2.5 rounded-xl border border-gray-300 text-gray-600 hover:bg-gray-100 text-sm font-medium transition">
+                        ยกเลิก
+                    </button>
+                    <button type="submit" class="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold shadow-md hover:shadow-lg transition flex items-center gap-2">
+                        <i class="fa-solid fa-floppy-disk"></i> บันทึกข้อมูล
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 2: แสดงรายละเอียดโปรไฟล์น้องหมาอย่างละเอียด -->
+    <div id="detail-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl max-w-xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-orange-100 transform scale-95 transition-transform duration-300 relative">
+            <button onclick="closeDetailModal()" class="absolute top-4 right-4 z-20 bg-black/40 hover:bg-black/60 text-white w-9 h-9 rounded-full flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-gray-100">
+                <img id="detail-photo" src="" alt="Dog Detail Photo" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-4 left-6 right-6 text-white">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span id="detail-gender-badge" class="px-3 py-0.5 rounded-full text-xs font-semibold"></span>
+                        <span id="detail-breed-badge" class="bg-white/20 backdrop-blur-md px-3 py-0.5 rounded-full text-xs font-light"></span>
+                    </div>
+                    <h2 id="detail-name" class="text-3xl font-bold"></h2>
+                </div>
+            </div>
+            <div class="p-6 space-y-5">
+                <div class="grid grid-cols-2 gap-3 text-center">
+                    <div class="bg-orange-50 p-3 rounded-2xl border border-orange-100">
+                        <span class="text-xs text-gray-500 block">อายุ</span>
+                        <span id="detail-age" class="text-lg font-bold text-amber-900"></span>
+                    </div>
+                    <div class="bg-amber-50 p-3 rounded-2xl border border-amber-100">
+                        <span class="text-xs text-gray-500 block">เพศ</span>
+                        <span id="detail-gender" class="text-lg font-bold text-amber-900"></span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">เกี่ยวกับน้องหมา</h4>
+                    <p id="detail-bio" class="text-gray-700 text-sm leading-relaxed bg-gray-50 p-3.5 rounded-xl border border-gray-100"></p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">ลักษณะนิสัย</h4>
+                    <div id="detail-traits" class="flex flex-wrap gap-2"></div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="flex items-start gap-3 bg-amber-50/60 p-3 rounded-xl border border-amber-100">
+                        <div class="bg-amber-100 p-2 rounded-lg text-amber-600"><i class="fa-solid fa-bone text-base"></i></div>
+                        <div>
+                            <span class="text-xs font-semibold text-gray-500 block">อาหาร/ขนมโปรด</span>
+                            <span id="detail-food" class="text-sm font-medium text-gray-800"></span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 bg-orange-50/60 p-3 rounded-xl border border-orange-100">
+                        <div class="bg-orange-100 p-2 rounded-lg text-orange-600"><i class="fa-solid fa-baseball text-base"></i></div>
+                        <div>
+                            <span class="text-xs font-semibold text-gray-500 block">ของเล่นชิ้นโปรด</span>
+                            <span id="detail-toy" class="text-sm font-medium text-gray-800"></span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">สถานะสุขภาพ</h4>
+                    <div id="detail-health" class="flex flex-wrap gap-2"></div>
+                </div>
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+                    <button id="detail-delete-btn" class="text-red-500 hover:text-red-600 hover:bg-red-50 px-3 py-2 rounded-xl text-sm font-medium transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-trash-can"></i> ลบโปรไฟล์
+                    </button>
+                    <button id="detail-edit-btn" class="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2 rounded-xl text-sm font-semibold shadow transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-pen-to-square"></i> แก้ไขข้อมูล
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-3 bg-gray-900 text-white px-5 py-3.5 rounded-2xl shadow-xl border border-gray-700 pointer-events-none">
+        <i id="toast-icon" class="fa-solid fa-circle-check text-emerald-400 text-xl"></i>
+        <span id="toast-message" class="text-sm font-medium">บันทึกข้อมูลเรียบร้อยแล้ว</span>
+    </div>
+
+    <!-- เชื่อมต่อไฟล์ JS ของเราเอง -->
+    <script src="Profile.js"></script>
+    <script src="../shared/navbar.js"></script>
+</body>
+</html>

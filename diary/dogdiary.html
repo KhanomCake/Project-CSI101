@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>บันทึกของน้องหมา</title>
+  <link rel="stylesheet" href="dogdiary.css">
+  <script src="dogdiary.js" defer></script>
+    <link rel="stylesheet" href="../shared/navbar.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">     
+        <span>
+          <strong>บันทึก<br>ของน้องหมา <b>♥</b></strong>
+          
+        </span>
+
+      <nav class="side-nav">
+        <button class="nav-link active" data-page="daily">
+          <span>⌂</span> บันทึกประจำวัน
+        </button>
+        <button class="nav-link" data-page="vaccine">
+          <span>♢</span> บันทึกวัคซีน
+        </button> 
+      </nav>
+      
+    </aside>
+    <div class="main-area">
+      <header class="topbar">
+        <div class="mobile-brand">
+          <strong>บันทึกของน้องหมา <b>♥</b></strong>
+        </div>
+        <div class="top-spacer"></div>
+        <button class="guest-pill" type="button">♙ &nbsp; Guest &nbsp;⌄</button>
+      </header>
+
+      <main>
+        <!-- หน้าบันทึกประจำวัน -->
+        <section class="page" id="daily">
+          <div class="hero hero-daily">
+            <div>
+              <span class="tag">Daily Log</span>
+              <h1>วันนี้น้องเป็นยังไงบ้าง?</h1>
+              <p>บันทึกชีวิตประจำวัน เพื่อสุขภาพที่ดีของน้องหมา </p>
+            </div>
+            <div class="hero-picture" aria-hidden="true"></div>
+          </div>
+
+          <div class="date-row">
+            <label for="dailyDate"> &nbsp; วันที่บันทึก</label>
+            <input type="date" id="dailyDate">
+          </div>
+
+          <div class="daily-layout">
+            <section class="card daily-form-card">
+              <div class="card-title">
+                <div>
+                  <h2> &nbsp;บันทึกประจำวัน</h2>
+                  <p>เลือกข้อมูลตามที่สังเกตเห็นในวันนี้</p>
+                </div>
+              </div>
+
+              <form id="dailyForm">
+                <input type="hidden" id="dailyId">
+
+                <div class="choice-grid">
+                  <fieldset class="choice-card">
+                    <legend> &nbsp;เวลานอน</legend>
+                    <label><input type="radio" name="sleep" value="น้อยกว่า 8 ชม."> น้อยกว่า 8 ชม.</label>
+                    <label><input type="radio" name="sleep" value="8–12 ชม." checked> 8–12 ชม.</label>
+                    <label><input type="radio" name="sleep" value="มากกว่า 12 ชม."> มากกว่า 12 ชม.</label>
+                  </fieldset>
+
+                  <fieldset class="choice-card">
+                    <legend> &nbsp;การกินอาหาร</legend>
+                    <label><input type="radio" name="food" value="กินน้อย"> กินน้อย</label>
+                    <label><input type="radio" name="food" value="กินปกติ" checked> กินปกติ</label>
+                    <label><input type="radio" name="food" value="กินเยอะ"> กินเยอะ</label>
+                    <label><input type="radio" name="food" value="ไม่กินอาหาร"> ไม่กินอาหาร</label>
+                  </fieldset>
+
+                  <fieldset class="choice-card">
+                    <legend> &nbsp;การขับถ่าย</legend>
+                    <label><input type="radio" name="toilet" value="ปกติ" checked> ปกติ</label>
+                    <label><input type="radio" name="toilet" value="ท้องเสีย"> ท้องเสีย</label>
+                    <label><input type="radio" name="toilet" value="ท้องผูก"> ท้องผูก</label>
+                    <label><input type="radio" name="toilet" value="ผิดปกติอื่น ๆ"> ผิดปกติอื่น ๆ</label>
+                  </fieldset>
+
+                  <fieldset class="choice-card">
+                    <legend> &nbsp;การออกกำลังกาย</legend>
+                    <label><input type="radio" name="activity" value="น้อยกว่า 15 นาที"> น้อยกว่า 15 นาที</label>
+                    <label><input type="radio" name="activity" value="15–30 นาที" checked> 15–30 นาที</label>
+                    <label><input type="radio" name="activity" value="มากกว่า 30 นาที"> มากกว่า 30 นาที</label>
+                    <label><input type="radio" name="activity" value="ไม่ได้ออกกำลังกาย"> ไม่ได้ออกกำลังกาย</label>
+                  </fieldset>
+                </div>
+
+                <fieldset class="mood-field">
+                  <legend> &nbsp;อารมณ์ / พฤติกรรม</legend>
+                  <div class="mood-options">
+                    <label><input type="radio" name="mood" value="ร่าเริง" checked> ร่าเริง</label>
+                    <label><input type="radio" name="mood" value="ปกติ"> ปกติ</label>
+                    <label><input type="radio" name="mood" value="ซึม"> ซึม</label>
+                    <label><input type="radio" name="mood" value="กระวนกระวาย"> กระวนกระวาย</label>
+                  </div>
+                </fieldset>
+
+                <label class="notes-label" for="dailyNotes">
+                   &nbsp;สุขภาพและหมายเหตุเพิ่มเติม
+                </label>
+                <textarea id="dailyNotes" rows="3"
+                  placeholder="เช่น มีอาการไอ กินขนมเพิ่ม หรือวันนี้พาไปเดินเล่นที่ไหน..."></textarea>
+
+                <button class="primary-btn" type="submit"> &nbsp;บันทึกข้อมูล</button>
+                <button class="cancel-btn hidden" type="button" id="cancelEdit">
+                  ยกเลิกการแก้ไข
+                </button>
+              </form>
+            </section>
+
+            <aside class="card day-history">
+              <div class="card-title history-heading">
+                <div>
+                  <h2> &nbsp;ประวัติวันนี้</h2>
+                  <p>ข้อมูลของวันที่เลือก</p>
+                </div>
+              </div>
+
+              <div id="dailyHistory" class="history-list">
+                <p class="empty">ยังไม่มีบันทึกของวันนี้ </p>
+              </div>
+
+              <div class="tip-box">
+                <strong> เคล็ดลับ</strong>
+                <p>ลองสังเกตพฤติกรรมของน้องเป็นประจำ จะช่วยให้เห็นความเปลี่ยนแปลงได้เร็วขึ้น</p>
+              </div>
+            </aside>
+          </div>
+
+          <div class="bottom-banner">
+            <span>🐾</span>
+            <div>
+              <strong>ทุกวันคือการดูแล</strong>
+              <p>บันทึกเล็ก ๆ ทุกวัน อาจช่วยให้เราดูแลน้องได้ดียิ่งขึ้นในวันหน้า</p>
+            </div>
+           
+          </div>
+        </section>
+
+        <!-- หน้าบันทึกวัคซีน -->
+        <section class="page hidden" id="vaccine">
+          <div class="hero hero-vaccine">
+            <div>
+              <span class="tag blue-tag">Vaccine Record</span>
+              <h1>สุขภาพดี เริ่มจากการป้องกัน</h1>
+              <p>เก็บประวัติวัคซีนและวันนัดครั้งต่อไปของน้องหมา</p>
+            </div>
+          </div>
+
+          <div class="vaccine-top">
+            <section class="card pet-mini">
+              <div class="pet-avatar"></div>
+              <div class="pet-mini-content">
+                <h2>ข้อมูลน้องหมา</h2>
+                <label>ชื่อน้อง
+                  <input id="dogName" placeholder="ชื่อน้องหมา">
+                </label>
+                <label>สายพันธุ์
+                  <input id="dogBreed" placeholder="เช่น Golden Retriever">
+                </label>
+                <button type="button" class="primary-btn small-btn" id="savePet">
+                   &nbsp;บันทึกข้อมูล
+                </button>
+              </div>
+            </section>
+
+            <section class="card next-card">
+              <h2> &nbsp;วันนัดวัคซีนครั้งถัดไป</h2>
+              <strong id="nextDateDisplay">ยังไม่มีวันนัด</strong>
+              <p id="nextVaccineDisplay">เพิ่มข้อมูลวัคซีนเพื่อเริ่มต้น</p>
+              <span class="calendar-art"></span>
+            </section>
+          </div>
+
+          <section class="card vaccine-form-card">
+            <div class="card-title">
+              <div>
+                <h2> &nbsp;เพิ่มประวัติวัคซีน</h2>
+                <p>กรอกข้อมูลตามสมุดวัคซีนของน้อง</p>
+              </div>
+            </div>
+
+            <form id="vaccineForm">
+              <input type="hidden" id="vaccineId">
+
+              <div class="vaccine-fields">
+                <label>ชื่อวัคซีน
+                  <select id="vaccineName" required>
+                    <option value="">เลือกวัคซีน</option>
+                    <option>วัคซีนรวมสุนัข</option>
+                    <option>วัคซีนพิษสุนัขบ้า</option>
+                    <option>วัคซีนไข้หัดสุนัข</option>
+                    <option>วัคซีนอื่น ๆ</option>
+                  </select>
+                </label>
+
+                <label>วันที่ฉีด
+                  <input type="date" id="vaccineDate" required>
+                </label>
+
+                <label>เข็มที่
+                  <input type="number" id="dose" min="1" value="1" required>
+                </label>
+
+                <label class="wide-field">คลินิกหรือสถานพยาบาล
+                  <input id="clinic" placeholder="ชื่อคลินิกสัตวแพทย์">
+                </label>
+
+                <label class="wide-field">วันนัดครั้งถัดไป (ถ้ามี)
+                  <input type="date" id="nextDate">
+                </label>
+
+                <label class="wide-field">หมายเหตุ
+                  <textarea id="vaccineNotes" rows="2"
+                    placeholder="เช่น อาการหลังฉีด หรือคำแนะนำจากสัตวแพทย์"></textarea>
+                </label>
+              </div>
+
+              <button class="primary-btn" type="submit"> &nbsp;บันทึกประวัติวัคซีน</button>
+              <button class="cancel-btn hidden" type="button" id="cancelVaccineEdit">
+                ยกเลิกการแก้ไข
+              </button>
+            </form>
+          </section>
+
+          <section class="card vaccine-history-card">
+            <div class="card-title history-heading">
+              <div>
+                <h2> &nbsp;ประวัติวัคซีน</h2>
+                <p>รายการวัคซีนที่บันทึกไว้</p>
+              </div>
+              <span class="table-hint">ดูทั้งหมด ↓</span>
+            </div>
+
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>วัคซีน</th>
+                    <th>วันที่ฉีด</th>
+                    <th>เข็มที่</th>
+                    <th>คลินิก</th>
+                    <th>วันนัดครั้งถัดไป</th>
+                    <th>จัดการ</th>
+                  </tr>
+                </thead>
+                <tbody id="vaccineHistory">
+                  <tr><td colspan="6" class="empty">ยังไม่มีประวัติวัคซีน</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <div class="bottom-banner blue-banner">
+            <span></span>
+            <div>
+              <strong>อย่าลืมตรวจสอบวันนัด</strong>
+              <p>ควรยืนยันตารางวัคซีนกับสัตวแพทย์และดูแลน้องอย่างสม่ำเสมอ</p>
+            </div>
+            
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+    <script src="../shared/navbar.js"></script>
+</body>
+</html>

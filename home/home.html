@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaMha - หน้าหลัก</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../shared/navbar.css">
+</head>
+<body>
+    <!-- เมนูด้านบนมาจาก ../shared/navbar.js (ใช้ร่วมกันทุกหน้า) -->
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>ค้นพบโลกของน้องหมา<br>ให้การเลี้ยงเป็นเรื่องง่ายสำหรับคุณ</h1>
+                <p>ไม่ว่าคุณจะอยากหาสายพันธุ์ที่ใช่ หรือแค่อยากเรียนรู้วิธีดูแล...</p>
+                <div class="search-box">
+                    <input type="text" id="breedSearch" placeholder="ค้นหาสายพันธุ์สุนัข เช่น โกลเด้น รีทรีฟเวอร์">
+                    <button onclick="searchBreed()">ค้นหา</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-grid">
+            <a href="../breeds/DogBreedsIndex.html" class="feature-card">สายพันธุ์สุนัข</a>
+            <a href="../search/Dogsearch.html" class="feature-card">ค้นหาสุนัข</a>
+            <a href="../match/recommend-dog.html" class="feature-card">Dog Match</a>
+            <a href="../dog-care/dogcare.html" class="feature-card">คู่มือการเลี้ยง</a>
+            <a href="../vaccine/vaccines.html" class="feature-card">วัคซีน</a>
+        </section>
+
+        <section class="recommended-breeds">
+            <h2>🐾 สายพันธุ์แนะนำ</h2>
+            <div class="breed-cards">
+                <div class="breed-card">
+                    <h3>Thai Bangkaew</h3>
+                    <p>น้ำหนัก: 16-20 กก.</p>
+                    <p>อายุเฉลี่ย: 10-12 ปี</p>
+                    <p>นิสัย: ซื่อสัตย์, หวงถิ่น</p>
+                    <a href="../breeds/DogBreedsDetail.html?id=thai-bangkaew">ดูรายละเอียด</a>
+                </div>
+                <div class="breed-card">
+                    <h3>Thai Ridgeback</h3>
+                    <p>น้ำหนัก: 16-34 กก.</p>
+                    <p>อายุเฉลี่ย: 12-15 ปี</p>
+                    <p>นิสัย: ปราดเปรียว, รักอิสระ</p>
+                    <a href="../breeds/DogBreedsDetail.html?id=thai-ridgeback">ดูรายละเอียด</a>
+                </div>
+                <div class="breed-card">
+                    <h3>Golden Retriever</h3>
+                    <p>น้ำหนัก: 25-34 กก.</p>
+                    <p>อายุเฉลี่ย: 10-12 ปี</p>
+                    <p>นิสัย: เป็นมิตร, ฉลาด</p>
+                    <a href="../breeds/DogBreedsDetail.html?id=golden-retriever">ดูรายละเอียด</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="dog-match-promo">
+            <div class="promo-text">
+                <h2>หมาตัวไหนเหมาะกับคุณ?</h2>
+                <p>ทำแบบทดสอบสั้นๆ 5-10 ข้อ แล้วดูผลลัพธ์ว่า สายพันธุ์ไหนเหมาะกับไลฟ์สไตล์คุณ</p>
+                <button onclick="startQuiz()" class="btn-primary">เริ่มทำแบบทดสอบ &rarr;</button>
+            </div>
+        </section>
+
+        <section class="bottom-sections">
+            <div class="cost-calculator">
+                <h3>คำนวณค่าใช้จ่ายในการเลี้ยง</h3>
+                <p>กรอกข้อมูลคร่าวๆ เพื่อดูค่าใช้จ่ายโดยประมาณ</p>
+                <select id="dogSize"><option>ขนาดสุนัข (กลาง)</option></select>
+                <select id="dogAge"><option>ลูกสุนัข (0-1 ปี)</option></select>
+                <button onclick="calculateCost()" class="btn-secondary">คำนวณค่าใช้จ่าย</button>
+                <div id="costResult" class="cost-result">฿ 2,500 - 5,000 / เดือน</div>
+            </div>
+
+            <div class="my-dog-profile">
+                <h3>🐾 น้องหมาของฉัน</h3>
+                <p>บันทึกข้อมูลน้องหมา พร้อมตั้งเตือนวัคซีนและการดูแล</p>
+                <div class="dog-info">
+                    <div class="dog-name">Mochi ♂</div>
+                    <div class="dog-details">Golden Retriever | อายุ 2 ปี 4 เดือน</div>
+                    <div class="dog-vaccine">📅 วัคซีนครั้งถัดไป : 12 ต.ค. 2568</div>
+                </div>
+                <div class="my-dog-actions">
+                    <a href="../profile/Profile.html">ข้อมูลน้องหมา</a>
+                    <a href="../diary/dogdiary.html#vaccine">ตารางวัคซีน</a>
+                    <a href="../diary/dogdiary.html">บันทึกการดูแล</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="home.js"></script>
+    <script src="../shared/navbar.js"></script>
+</body>
+</html>
