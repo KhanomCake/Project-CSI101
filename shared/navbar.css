@@ -1,17 +1,18 @@
-/* สไตล์พื้นฐานของเมนูกลาง ให้พอใช้งานได้ ทีมตกแต่งต่อได้เลย */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap');
+
 .mamha-nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;   /* จัดทุกอย่างในเมนูให้อยู่กลาง */
     align-items: center;
     gap: 8px 16px;
-    width: 100%;               /* กว้างเต็มจอเสมอ แม้หน้านั้นจะจัด body แบบ flex */
+    width: 100%;               /* กว้างเต็มจอเสมอ จัด body แบบ flex */
     box-sizing: border-box;
     padding: 10px 16px;
     background: #ffffff;
     border-bottom: 1px solid #dddddd;
     color: #333333;
-    font-family: sans-serif;
+    font-family: 'Prompt', sans-serif;
     font-size: 14px;
 }
 
