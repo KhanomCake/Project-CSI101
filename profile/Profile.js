@@ -116,15 +116,15 @@ function renderGallery() {
 // สร้าง DOM สำหรับการ์ด
 function createDogCardHTML(dog, index) {
     const card = document.createElement('div');
-    card.className = 'dog-card bg-white rounded-3xl overflow-hidden shadow-sm border border-orange-100 flex flex-col justify-between animate-fade-in-up';
+    card.className = 'dog-card bg-white rounded-3xl overflow-hidden shadow-sm border border-blue-100 flex flex-col justify-between animate-fade-in-up';
     card.style.animationDelay = `${index * 0.05}s`;
 
     const genderBadgeClass = dog.gender === 'ผู้' ? 'bg-blue-100 text-blue-700' : 'bg-pink-100 text-pink-700';
     const genderSymbol = dog.gender === 'ผู้' ? '♂' : '♀';
-    const photoUrl = dog.photo || 'https://placehold.co/400x300/f6ad55/white?text=No+Photo';
+    const photoUrl = dog.photo || 'https://placehold.co/400x300/4399f5/white?text=No+Photo';
     
     const traitsDisplay = (dog.traits || []).slice(0, 3).map(trait => 
-        `<span class="bg-amber-50 text-amber-800 border border-amber-200/60 text-[11px] px-2.5 py-0.5 rounded-full">${trait}</span>`
+        `<span class="bg-sky-50 text-sky-800 border border-sky-200/60 text-[11px] px-2.5 py-0.5 rounded-full">${trait}</span>`
     ).join('');
 
     card.innerHTML = `
@@ -136,18 +136,18 @@ function createDogCardHTML(dog, index) {
                 </div>
             </div>
             <div class="p-5">
-                <h3 class="text-xl font-bold text-gray-800 cursor-pointer hover:text-amber-600 mb-1" onclick="openDetailModal('${dog.id}')">${dog.name}</h3>
-                <p class="text-xs font-medium text-amber-700 mb-3"><i class="fa-solid fa-paw mr-1"></i> ${dog.breed} • ${dog.age}</p>
+                <h3 class="text-xl font-bold text-gray-800 cursor-pointer hover:text-sky-600 mb-1" onclick="openDetailModal('${dog.id}')">${dog.name}</h3>
+                <p class="text-xs font-medium text-sky-700 mb-3"><i class="fa-solid fa-paw mr-1"></i> ${dog.breed} • ${dog.age}</p>
                 <p class="text-gray-600 text-xs line-clamp-2 mb-4 leading-relaxed">${dog.bio || 'ยังไม่มีรายละเอียดประวัติ...'}</p>
                 <div class="flex flex-wrap gap-1.5">${traitsDisplay}</div>
             </div>
         </div>
         <div class="px-5 py-3.5 bg-gray-50 border-t border-gray-100 flex items-center justify-between text-xs">
-            <button onclick="openDetailModal('${dog.id}')" class="text-amber-600 font-semibold flex items-center gap-1">
+            <button onclick="openDetailModal('${dog.id}')" class="text-sky-600 font-semibold flex items-center gap-1">
                 <span>ดูรายละเอียด</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
             </button>
             <div class="flex items-center gap-2">
-                <button onclick="openEditFormModal('${dog.id}')" class="text-gray-500 hover:text-amber-600 p-1.5"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button onclick="openEditFormModal('${dog.id}')" class="text-gray-500 hover:text-sky-600 p-1.5"><i class="fa-solid fa-pen-to-square"></i></button>
                 <button onclick="deleteDogProfile('${dog.id}')" class="text-gray-400 hover:text-red-500 p-1.5"><i class="fa-solid fa-trash-can"></i></button>
             </div>
         </div>
@@ -202,7 +202,7 @@ function handleUrlInput(event) {
         preview.src = url;
         document.getElementById('dog-photo-file').value = '';
     } else {
-        preview.src = 'https://placehold.co/100x100/f6ad55/white?text=Preview';
+        preview.src = 'https://placehold.co/100x100/4399f5/white?text=Preview';
     }
 }
 
@@ -213,7 +213,7 @@ function openFormModal() {
     document.getElementById('modal-title').innerHTML = '<i class="fa-solid fa-paw"></i> เพิ่มโปรไฟล์น้องหมาใหม่';
     document.getElementById('dog-form').reset();
     document.getElementById('dog-id').value = '';
-    document.getElementById('photo-preview').src = 'https://placehold.co/100x100/f6ad55/white?text=Preview';
+    document.getElementById('photo-preview').src = 'https://placehold.co/100x100/4399f5/white?text=Preview';
     renderTraitsChips();
     showModal('form-modal');
 }
@@ -317,7 +317,7 @@ function openDetailModal(id) {
     traitsContainer.innerHTML = '';
     if (dog.traits?.length > 0) {
         dog.traits.forEach(trait => {
-            traitsContainer.innerHTML += `<span class="bg-amber-100 text-amber-900 border border-amber-200 text-xs px-3 py-1 rounded-full">${trait}</span>`;
+            traitsContainer.innerHTML += `<span class="bg-sky-100 text-sky-900 border border-sky-200 text-xs px-3 py-1 rounded-full">${trait}</span>`;
         });
     }
 

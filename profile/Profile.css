@@ -8,14 +8,14 @@ body {
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: #fdf6e3; 
+    background: #e7f4ff; 
 }
 ::-webkit-scrollbar-thumb {
-    background: #fbd38d; 
+    background: #a9d0fa; 
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #f6ad55; 
+    background: #4399f5; 
 }
 
 /* เอฟเฟกต์ซูมภาพในการ์ดเวลาเอาเมาส์ไปชี้ (Hover Effect) */
@@ -36,10 +36,10 @@ body {
     transform: translateY(-2px);
 }
 .trait-chip.selected {
-    background-color: #f59e0b; /* สีส้ม Amber */
+    background-color: #4399f5; /* สีฟ้า */
     color: white;
-    border-color: #f59e0b;
-    box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.3);
+    border-color: #4399f5;
+    box-shadow: 0 4px 6px -1px rgba(67, 153, 245, 0.3);
 }
 
 /* แอนิเมชันสำหรับการ์ดตอนโหลดหน้าเว็บ (ค่อยๆ โผล่ขึ้นมา) */

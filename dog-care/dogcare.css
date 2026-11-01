@@ -1,12 +1,12 @@
 /* ===== Global ===== */
 
 :root {
-    --background: #f7f7f5;
+    --background: #f8fcff;
     --white: #ffffff;
-    --green: #29483b;
-    --text: #292d2a;
-    --gray: #777d78;
-    --border: #e6e8e5;
+    --green: #1f6fc4;
+    --text: #163e68;
+    --gray: #59799b;
+    --border: #d9eaf9;
 }
 
 * {

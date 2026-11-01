@@ -3,21 +3,21 @@
 .mamha-nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;   /* จัดทุกอย่างในเมนูให้อยู่กลาง */
+    justify-content: center;   
     align-items: center;
     gap: 8px 16px;
     width: 100%;               /* กว้างเต็มจอเสมอ จัด body แบบ flex */
     box-sizing: border-box;
     padding: 10px 16px;
     background: #ffffff;
-    border-bottom: 1px solid #dddddd;
-    color: #333333;
+    border-bottom: 1px solid #d9eaf9;
+    color: #163e68;
     font-family: 'Prompt', sans-serif;
     font-size: 14px;
 }
 
 .mamha-nav a {
-    color: #333333;
+    color: #163e68;
     text-decoration: none;
 }
 
@@ -36,4 +36,5 @@
 .mamha-nav-links a.active {
     font-weight: bold;
     text-decoration: underline;
+    color: #4399f5;
 }

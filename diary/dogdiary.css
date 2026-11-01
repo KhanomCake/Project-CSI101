@@ -2,7 +2,7 @@
 :root {
   --ink: #203e61;
   --muted: #77879b;
-  --pink: #f45e91;
+  --accent: #4399f5;
   --line: #e8edf3;
 }
 * {
@@ -44,7 +44,7 @@ button {
 }
 
 .brand b, .mobile-brand b {
-  color: #f45e91;
+  color: #4399f5;
 }
 .side-nav {
   display: grid;
@@ -306,7 +306,7 @@ input[type="radio"] {
   color: white;
   font-weight: 500;
   padding: 12px 14px;
-  box-shadow: 0 4px 9px #f45e9120;
+  box-shadow: 0 4px 9px #4399f520;
 }
 
 .primary-btn:hover {
@@ -521,7 +521,7 @@ input[type="radio"] {
   right: 18px;
   bottom: 15px;
   font-size: 35px;
-  color: #f45e91;
+  color: #4399f5;
 }
 
 .vaccine-form-card {

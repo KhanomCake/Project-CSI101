@@ -4,13 +4,13 @@
   margin-bottom: 16px;
   padding: 8px 16px;
   background: white;
-  border: 2px solid #eadfd4;
+  border: 2px solid #d9eaf9;
   border-radius: 12px;
-  color: #b85a24;
+  color: #4399f5;
   text-decoration: none;
 }
 .back-btn:hover {
-  border-color: #e07a3f;
+  border-color: #2f86e6;
 }
 
 .DogBreeds {
@@ -32,7 +32,7 @@
 
 
 .DogBreeds h2 {
-  color: #b85a24;
+  color: #4399f5;
   font-size: 20px;
   margin-top: 28px;
 }
@@ -43,8 +43,8 @@
   padding: 0;
 }
 #traits li {
-  background: #fdf8f3;
-  border-left: 4px solid #e07a3f;
+  background: #f8fcff;
+  border-left: 4px solid #2f86e6;
   padding: 10px 14px;
   margin-bottom: 8px;
   border-radius: 0 10px 10px 0;
@@ -53,13 +53,13 @@
 
 .lifespan-box {
   margin-top: 28px;
-  background: #fff1e6;
+  background: #e7f4ff;
   padding: 4px 20px 16px;
   border-radius: 16px;
 }
 #lifespan {
   font-size: 28px;
   font-weight: bold;
-  color: #b85a24;
+  color: #4399f5;
   margin: 0;
 }

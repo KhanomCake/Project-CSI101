@@ -1,12 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    font-family: "Kanit", sans-serif;
+    color: #163e68;
+    background-color: #f8fcff;
     text-align: center;
     margin: 0;
 }
 
 h1 {
-    background-color: #4caf80;
+    background-color: #4399f5;
     color: white;
     padding: 20px;
 }
@@ -17,7 +18,7 @@ input, button {
 }
 
 button {
-    background-color: #4caf80;
+    background-color: #4399f5;
     color: white;
     border: none;
     cursor: pointer;
@@ -45,7 +46,7 @@ button {
 }
 
 .dog-card:hover {
-    background-color: #e8f5ed;
+    background-color: #e7f4ff;
 }
 
 /* หน้าต่างย่อยแสดงข้อมูลวัคซีน */
@@ -89,7 +90,7 @@ button {
 }
 
 #vaccineList p {
-    background-color: #f2f8f4;
+    background-color: #eaf6ff;
     padding: 12px;
     border-radius: 6px;
     line-height: 1.6;
