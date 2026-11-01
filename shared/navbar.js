@@ -24,6 +24,7 @@ const currentFolder = decodeURIComponent(pathParts[pathParts.length - 2]);
 
 // สร้าง HTML ของเมนู
 // ทุกหน้าอยู่ในโฟลเดอร์ลึก 1 ชั้น เลยใช้ "../" ถอยออกมา 1 ชั้นก่อน แล้วค่อยเข้าโฟลเดอร์ปลายทาง
+//part traversal เดี๋ยวลืมขอคอมเม้นไว้นะทุกคน 
 let linksHTML = "";
 MENU_ITEMS.forEach(function (item) {
     const activeClass = item.folder === currentFolder ? ' class="active"' : "";

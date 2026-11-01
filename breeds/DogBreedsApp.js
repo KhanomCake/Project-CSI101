@@ -12,19 +12,11 @@ function DogBreeds(list) {
     grid.appendChild(card);
   });
 }
-function filterBreeds() {
+search.addEventListener("input", function () {
   const word = search.value.toLowerCase();
   const result = BREEDS.filter(function (dog) {
     return (dog.th + dog.en).toLowerCase().includes(word);
   });
   DogBreeds(result);
-}
-
-search.addEventListener("input", filterBreeds);
-
-// ถ้ามาจากหน้าอื่นพร้อมคำค้น (เช่น DogBreedsIndex.html?q=โกลเด้น) ให้ใส่คำค้นลงช่องค้นหาให้เลย
-const queryFromUrl = new URLSearchParams(location.search).get("q");
-if (queryFromUrl) {
-  search.value = queryFromUrl;
-}
-filterBreeds();
+});
+DogBreeds(BREEDS);
