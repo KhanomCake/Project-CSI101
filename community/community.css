@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap");
+
 :root {
-    font-family: Arial, "Noto Sans Thai", sans-serif;
+    font-family: "Kanit", sans-serif;
     color: #1e293b;
     background: #f0f9ff;
     font-synthesis: none;
@@ -782,4 +784,9 @@ button {
     .composer {
         padding: 20px;
     }
+}
+
+/* ให้ช่องกรอกและปุ่มใช้ฟอนต์เดียวกับหน้า (ปกติเบราว์เซอร์จะไม่ส่งต่อฟอนต์ให้) */
+button, input, select, textarea {
+    font-family: inherit;
 }

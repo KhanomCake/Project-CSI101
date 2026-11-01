@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap");
+
 body {
-  font-family: "Leelawadee UI", "Thonburi", Tahoma, sans-serif;
+  font-family: "Kanit", sans-serif;
   background: #f8fcff;
   max-width: 900px;
   margin: 0 auto;
@@ -43,4 +45,8 @@ h1 {
 .card p {
   color: gray;
   margin: 4px 0 0;
+}
+/* ให้ช่องกรอกและปุ่มใช้ฟอนต์เดียวกับหน้า (ปกติเบราว์เซอร์จะไม่ส่งต่อฟอนต์ให้) */
+button, input, select, textarea {
+    font-family: inherit;
 }

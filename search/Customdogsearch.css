@@ -107,7 +107,7 @@ body {
     outline: none;
     background: transparent;
     color: var(--dark);
-    font-family: "Open Sans", sans-serif;
+    font-family: "Kanit", sans-serif;
     font-size: 14px;
 }
 .dogsearch-input-wrapper input::placeholder {
@@ -135,7 +135,7 @@ body {
     border: none;
     padding: 8px 16px;
     border-radius: 10px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Kanit", sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
