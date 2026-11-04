@@ -1,14 +1,11 @@
-// ==========================================
 // เมนูนำทางกลางของเว็บ MaMha
 // ทุกหน้าเรียกไฟล์นี้ไฟล์เดียว ถ้าจะเพิ่ม/แก้เมนู แก้ที่นี่ที่เดียว ทุกหน้าเปลี่ยนตาม
-// ==========================================
-
 // รายการเมนู: folder = ชื่อโฟลเดอร์ของหน้านั้น, file = ชื่อไฟล์ html, label = ข้อความบนเมนู
 const MENU_ITEMS = [
     { folder: "home",      file: "home.html",           label: "หน้าแรก" },
     { folder: "menu",      file: "menu.html",           label: "สารบัญ" },
     { folder: "breeds",    file: "DogBreedsIndex.html", label: "สายพันธุ์สุนัข" },
-    { folder: "search",    file: "Dogsearch.html",      label: "ค้นหาสุนัข" },
+    // { folder: "search",    file: "Dogsearch.html",      label: "ค้นหาสุนัข" },
     { folder: "match",     file: "recommend-dog.html",  label: "Dog Match" },
     { folder: "dog-care",  file: "dogcare.html",        label: "คู่มือการเลี้ยง" },
     { folder: "vaccine",   file: "vaccines.html",       label: "วัคซีน" },
@@ -38,5 +35,4 @@ nav.innerHTML =
     '<div class="mamha-nav-links">' + linksHTML + "</div>" +
     '<a href="../index.html" class="mamha-nav-logout">ออกจากระบบ</a>';
 
-// ใส่เมนูไว้บนสุดของ <body>
 document.body.prepend(nav);

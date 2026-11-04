@@ -3,6 +3,12 @@
 body {
   font-family: "Kanit", sans-serif;
   background: #f8fcff;
+  margin: 0;
+}
+
+/* กล่องเนื้อหาของหน้า: จำกัดความกว้างและจัดกลางที่ตรงนี้ แทนที่จะทำที่ body
+   เมนูกลาง (navbar) จะได้กว้างเต็มจอ ไม่โดนบีบไปด้วย */
+.page-content {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
