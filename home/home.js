@@ -11,13 +11,3 @@ function searchBreed() {
 function startQuiz() {
     window.location.href = '../match/recommend-dog.html';
 }
-
-function calculateCost() {
-    const resultBox = document.getElementById('costResult');
-    resultBox.style.opacity = '0.5';
-    
-    setTimeout(() => {
-        resultBox.innerHTML = '฿ 3,000 - 5,500 / เดือน';
-        resultBox.style.opacity = '1';
-    }, 500);
-}

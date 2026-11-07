@@ -57,9 +57,7 @@ section {
 }
 
 /* ===== ปุ่ม ===== */
-button,
-.my-dog-actions a,
-.breed-card a {
+button {
     display: inline-block;
     padding: 10px 18px;
     border: none;
@@ -72,16 +70,14 @@ button,
     cursor: pointer;
 }
 
-button:hover,
-.my-dog-actions a:hover,
-.breed-card a:hover {
+button:hover {
     background: #2f86e6;
 }
 
-/* ===== การ์ดฟีเจอร์ 5 อัน ===== */
+/* ===== การ์ดฟีเจอร์ 4 อัน ===== */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 12px;
 }
 
@@ -112,9 +108,7 @@ button:hover,
     gap: 16px;
 }
 
-.breed-card,
-.cost-calculator,
-.my-dog-profile {
+.breed-card {
     padding: 20px;
     border: 1px solid #d9eaf9;
     border-radius: 10px;
@@ -123,12 +117,6 @@ button:hover,
 
 .breed-card p {
     color: #59799b;
-    font-size: 14px;
-}
-
-.breed-card a {
-    margin-top: 8px;
-    padding: 6px 14px;
     font-size: 14px;
 }
 
@@ -143,68 +131,13 @@ button:hover,
     margin-top: 8px;
 }
 
-/* ===== คำนวณค่าใช้จ่าย + น้องหมาของฉัน ===== */
-.bottom-sections {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-}
-
-.cost-calculator select {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #c9dff3;
-    border-radius: 8px;
-    font-family: inherit;
-}
-
-.cost-result {
-    margin-top: 12px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #4399f5;
-    transition: opacity 0.3s;
-}
-
-.dog-info {
-    margin: 12px 0;
-    padding: 12px;
-    border-radius: 8px;
-    background: #f8fcff;
-}
-
-.dog-name {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.dog-details,
-.dog-vaccine {
-    color: #59799b;
-    font-size: 14px;
-}
-
-.my-dog-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.my-dog-actions a {
-    padding: 8px 12px;
-    font-size: 14px;
-}
-
 /* ===== จอเล็ก (มือถือ) ===== */
 @media (max-width: 700px) {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .breed-cards,
-    .bottom-sections {
+    .breed-cards {
         grid-template-columns: 1fr;
     }
 

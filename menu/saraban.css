@@ -349,9 +349,14 @@ a {
     line-height: 1;
 }
 
-.community-card,
+/* หลังเอาการ์ด "ค้นหา" ออก เหลือ 7 ใบ: ให้คอมมูนิตี้กว้างเท่าการ์ดอื่น (เติมแถว 2 ให้เต็ม)
+   แล้วให้การ์ดหน้าหลักกว้างเต็มแถวสุดท้าย */
+.community-card {
+    grid-column: span 2;
+}
+
 .home-card {
-    grid-column: span 3;
+    grid-column: span 6;
 }
 
 .community-card .card-art,
@@ -448,9 +453,13 @@ a {
     }
 
     .feature-card,
-    .community-card,
-    .home-card {
+    .community-card {
         grid-column: span 1;
+    }
+
+    /* จอเล็กมี 2 คอลัมน์ การ์ดใบที่ 7 (หน้าหลัก) เลยให้กว้างเต็มแถว */
+    .home-card {
+        grid-column: span 2;
     }
 
     .card-art {
