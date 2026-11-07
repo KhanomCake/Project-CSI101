@@ -31,7 +31,7 @@ MENU_ITEMS.forEach(function (item) {
 const nav = document.createElement("nav");
 nav.className = "mamha-nav";
 nav.innerHTML =
-    '<a href="../home/home.html" class="mamha-nav-logo">MaMha</a>' +
+    '<a href="../menu/menu.html" class="mamha-nav-logo">MaMha</a>' +
     '<div class="mamha-nav-links">' + linksHTML + "</div>" +
     '<a href="../index.html" class="mamha-nav-logout">ออกจากระบบ</a>';
 
