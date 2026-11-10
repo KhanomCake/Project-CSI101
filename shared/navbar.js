@@ -4,6 +4,7 @@
 const MENU_ITEMS = [
     // { folder: "home",      file: "home.html",           label: "หน้าแรก" },
     { folder: "menu",      file: "menu.html",           label: "สารบัญ" },
+    // { folder: "about",     file:"about.html",           label: "เกี่ยวกับ" },
     { folder: "breeds",    file: "DogBreedsIndex.html", label: "สายพันธุ์สุนัข" },
     // { folder: "search",    file: "Dogsearch.html",      label: "ค้นหาสุนัข" },
     { folder: "match",     file: "recommend-dog.html",  label: "Dog Match" },
