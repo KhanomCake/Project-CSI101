@@ -10,10 +10,14 @@ body.mamha-themed {
     font-family: "Kanit", sans-serif;
 }
 
-/* ===== 2. แถบหัวเรื่อง (แบบเดียวกับหน้าสารบัญ) ===== */
+/* ===== 2. แถบหัวเรื่อง =====
+   ค่าทุกอย่างก๊อปมาจาก .hero ในหน้าสารบัญ (menu/saraban.css) เพื่อให้ทุกหน้าสูงและหน้าตาเท่ากันเป๊ะ */
 .mamha-banner {
-    background: linear-gradient(120deg, #eaf6ff 0%, #d9edff 100%);
-    border-bottom: 1px solid #d9eaf9;
+    /* ใช้รูปพื้นหลังลายเท้าหมาเดียวกับหน้าสารบัญ (path นับจากไฟล์ CSS นี้ซึ่งอยู่ในโฟลเดอร์ shared) */
+    background-color: #eaf6ff;
+    background-image: url("../menu/img/background.jpg");
+    background-position: center;
+    background-size: cover;
     overflow: hidden;
 }
 
@@ -21,10 +25,8 @@ body.mamha-themed {
     position: relative;
     display: flex;
     align-items: center;
-    max-width: 1100px;
-    min-height: 150px;
-    margin: 0 auto;
-    padding: 22px 24px;
+    min-height: 195px;                                   /* สูงเท่าหน้าสารบัญ */
+    padding: 25px max(7.3%, calc((100% - 1120px) / 2));  /* ระยะซ้ายขวาเท่าหน้าสารบัญ */
     box-sizing: border-box;
     text-align: left;
 }
@@ -32,24 +34,27 @@ body.mamha-themed {
 .mamha-banner-copy {
     position: relative;
     z-index: 1;
-    max-width: 65%;
+    width: 62%;
+    padding-bottom: 2px;
 }
 
 .mamha-banner-eyebrow {
-    display: inline-block;
-    margin: 0 0 8px;
-    padding: 3px 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0 0 7px;
+    padding: 4px 10px;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(213, 235, 255, 0.8);
     color: #388de5;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
 }
 
 .mamha-banner-title {
-    margin: 0 0 6px;
+    margin: 0 0 9px;
     color: #153d66;
-    font-size: clamp(24px, 3.2vw, 32px);
+    font-size: clamp(22px, 3.2vw, 29px);
     font-weight: 700;
     line-height: 1.3;
 }
@@ -59,26 +64,51 @@ body.mamha-themed {
 }
 
 .mamha-banner-desc {
-    margin: 0;
+    margin: 1px 0;
     color: #55789a;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 1.65;
 }
 
-.mamha-banner-dog {
+/* โลโก้ MaMha ด้านขวา (ขนาดและตำแหน่งเท่ากับ .hero-logo ในหน้าสารบัญ)
+   รูปโลโก้เป็นแนวนอน มีพื้นที่ว่างซ้ายขวา จึงใช้กล่องสี่เหลี่ยมจัตุรัส + object-fit: cover ตัดให้เหลือตรงกลาง */
+.mamha-banner-logo {
     position: absolute;
-    right: 24px;
-    bottom: -10px;
-    height: 150px;
-    mix-blend-mode: multiply;
+    top: 50%;
+    right: 10%;
+    width: 190px;
+    height: 190px;
+    transform: translateY(-50%);   /* จัดให้อยู่กลางแนวตั้ง */
+    object-fit: cover;
+    clip-path: circle(37.5%);      /* ตัดเหลือแค่วงกลมของโลโก้ ไม่เอาพื้นสีครีมรอบนอก */
 }
 
+/* จอเล็ก (มือถือ): ค่าเดียวกับหน้าสารบัญ */
 @media (max-width: 700px) {
-    .mamha-banner-copy {
-        max-width: 100%;
+    .mamha-banner-inner {
+        min-height: 205px;
+        padding: 22px 22px;
     }
 
-    .mamha-banner-dog {
-        display: none;
+    .mamha-banner-copy {
+        width: 70%;
+    }
+
+    .mamha-banner-logo {
+        right: 12px;
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 440px) {
+    .mamha-banner-title {
+        font-size: 20px;
+    }
+
+    .mamha-banner-desc {
+        max-width: 270px;
+        font-size: 11px;
     }
 }
 

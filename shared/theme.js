@@ -31,7 +31,7 @@ if (banner) {
                 '<div class="mamha-banner-title">' + banner.title + "<span>" + banner.highlight + "</span></div>" +
                 '<p class="mamha-banner-desc">' + banner.desc + "</p>" +
             "</div>" +
-            '<img class="mamha-banner-dog" src="../menu/img/mama.png" alt="">' +
+            '<img class="mamha-banner-logo" src="../shared/img/mamha-logo.webp" alt="โลโก้ MaMha">' +
         "</div>";
 
     // วางต่อจาก navbar (navbar อยู่บนสุดของ body แล้ว)
