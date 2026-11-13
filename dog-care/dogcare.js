@@ -1,72 +1,363 @@
-// js สำหรับ ฟังค์ชั่นให้เว็บไซด์เลื่อนตอนเรากดเลือกเสร็จ
-const readButtons = document.querySelectorAll(".read-guide-btn");
-// เก็บปุ่ม HTML ทุกปุ่มที่มี class ชื่อ read-guide-btn
-// เพื่อให้ JavaScript สามารถเข้าถึงปุ่มทุกปุ่ม และสั่งให้แต่ละปุ่มทำงานเมื่อผู้ใช้คลิกได้
-
-const detailPanels = document.querySelectorAll(".detail-panel");
-// เพื่อให้ JavaScript สามารถเลือกซ่อนหรือแสดงกล่องรายละเอียดแต่ละกล่องได้ 
-// เช่น เมื่อคลิกอ่านเรื่องสุขภาพ ก็แสดงเฉพาะรายละเอียดสุขภาพ
+/* =========================================
+   DOGCARE GUIDE SYSTEM
+   6 Guides + YouTube / Image Media
+========================================= */
 
 
+/* -----------------------------------------
+   1. ตั้งค่าสื่อของแต่ละหัวข้อ
+----------------------------------------- */
 
-const guideDetails = document.getElementById("guideDetails");
-// เก็บ HTML Element ที่มี id="guideDetails" เพียง Element เดียว
-// เพื่อให้ JavaScript เข้าถึงส่วนรายละเอียดหลักของหน้าเว็บได้ เช่น สั่งให้หน้าเว็บเลื่อนลงมายังส่วนรายละเอียดเมื่อผู้ใช้กดปุ่มอ่านเพิ่มเติม
+const guideMedia = {
 
-readButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-        const targetPanel = document.getElementById(button.dataset.target);
-        // เอาค่าเป้าหมายที่กำหนดไว้ในปุ่ม ไปค้นหากล่องรายละเอียดที่มี ID ตรงกัน แล้วเก็บกล่องนั้นไว้ใน targetPanel"
-        // dataset ใช้เข้าถึงข้อมูลที่กำหนดไว้ใน HTML ด้วย Attribute ที่ขึ้นต้นด้วย data-
-
-        if (!targetPanel) return;
-        // ถ้าค้นหากล่องไม่เจอ ก็หยุดทำงานทันที เพื่อป้องกัน Error จากการพยายามใช้งาน Element ที่ไม่มีอยู่จริง
+    "nutrition-details": {
+        title: "วิธีเลือกอาหารและโภชนาการ",
+        description: "เรียนรู้วิธีเลือกอาหารและปริมาณที่เหมาะสมกับน้องหมา",
+        youtubeUrl: "https://www.youtube.com/embed/VO8G7SlD8SI?si=IwQSTunpqu4kiJcP"
+    },
 
 
-        // แสดงกล่องที่เลือกและซ่อนกล่องอื่น
-        detailPanels.forEach(function (panel) {
-            panel.hidden = panel !== targetPanel;
+    "healthcare-details": {
+        title: "การดูแลสุขภาพและการแพทย์",
+        description: "เรียนรู้การดูแลสุขภาพและการป้องกันโรค",
+        youtubeUrl: "",
+
+        image: "./Joyful Vet Caring for Happy Retriever.png"
+    },
+
+    "training-details": {
+        title: "การฝึกวินัยและการเข้าสังคม",
+        description: "เรียนรู้วิธีฝึกคำสั่งพื้นฐานและพฤติกรรมที่ดี",
+        youtubeUrl: "https://www.youtube.com/embed/BziB_fQQC8U?si=qH6M2O2pU1pIyCSN",
+
+        image: "./Gemini_Generated_Image_164gxh164gxh164g(1).jpg"
+    },
+
+    "exercise-details": {
+        title: "การออกกำลังกายและกิจกรรม",
+        description: "ตัวอย่างกิจกรรมเพื่อสุขภาพกายและสุขภาพจิต",
+        youtubeUrl: "https://www.youtube.com/embed/I7jx40xdOXc?si=dGA7hdVHGb7eS-wB",
+
+        image: "./Gemini_Generated_Image_164gxh164gxh164g(1).jpg"
+    },
+
+    "grooming-details": {
+    title: "การดูแลความสะอาดและกรูมมิ่ง",
+    description: "เรียนรู้การดูแลความสะอาดและขนของน้องหมา",
+
+    videos: [
+        {
+            title: "วิธีอาบน้ำสุนัขอย่างถูกวิธี",
+            description: "เรียนรู้วิธีอาบน้ำและทำความสะอาดน้องหมา",
+            youtubeUrl: "https://www.youtube.com/embed/Z61hqrswdDQ?si=Gl_sEULd9QUIyiC5"
+        },
+        {
+            title: "วิธีอาบน้ำหมาใหญ่",
+            description: "เรียนรู้วิธีการอาบน้ำและทำความสะอาดหมาใหญ่",
+            youtubeUrl: "https://www.youtube.com/embed/E0ro3Izwbvg?si=cLLHnNH8ubw90EoA"
+        }
+    ],
+
+    image: "./Gemini_Generated_Image_164gxh164gxh164g(1).jpg"
+},
+    "safety-details": {
+        title: "สภาพแวดล้อมและความปลอดภัย",
+        description: "วิธีจัดพื้นที่ให้ปลอดภัยสำหรับสุนัข",
+        youtubeUrl: "",
+
+        image: "./ความสุขอบอุ่นกับน้องโกลเด้น.png"
+    }
+
+};
+
+
+/* -----------------------------------------
+   2. แปลง YouTube URL เป็น Embed URL
+----------------------------------------- */
+
+function getYoutubeEmbedUrl(url) {
+
+    if (!url) return null;
+
+    try {
+
+        const parsedUrl = new URL(url);
+
+        let videoId = "";
+
+        if (parsedUrl.hostname === "youtu.be") {
+
+            videoId = parsedUrl.pathname.slice(1);
+
+        } else if (
+            parsedUrl.hostname.includes("youtube.com")
+        ) {
+
+            if (parsedUrl.pathname === "/watch") {
+
+                videoId = parsedUrl.searchParams.get("v");
+
+            } else if (
+                parsedUrl.pathname.startsWith("/embed/")
+            ) {
+
+                videoId = parsedUrl.pathname.split("/")[2];
+
+            } else if (
+                parsedUrl.pathname.startsWith("/shorts/")
+            ) {
+
+                videoId = parsedUrl.pathname.split("/")[2];
+
+            }
+
+        }
+
+        if (!videoId || !/^[a-zA-Z0-9_-]{11}$/.test(videoId)) {
+            return null;
+        }
+
+        return `https://www.youtube-nocookie.com/embed/${videoId}`;
+
+    } catch (error) {
+
+        console.error("Invalid YouTube URL:", error);
+
+        return null;
+
+    }
+
+}
+
+
+/* -----------------------------------------
+   3. สร้างพื้นที่ Video / Image
+----------------------------------------- */
+
+
+function createGuideMedia(panel) {
+
+    const media = guideMedia[panel.id];
+
+    if (!media) return;
+
+    if (panel.querySelector(".detail-layout")) return;
+
+    const layout = document.createElement("div");
+    layout.className = "detail-layout";
+
+    // ฝั่งข้อความซ้าย
+    const content = document.createElement("div");
+    content.className = "detail-content";
+
+    while (panel.firstChild) {
+        content.appendChild(panel.firstChild);
+    }
+
+    // ฝั่งสื่อขวา
+    const mediaBox = document.createElement("aside");
+    mediaBox.className = "detail-media";
+
+    // =================================
+    // กรณีมีวิดีโอ 2 ช่อง
+    // =================================
+
+    if (media.videos && media.videos.length > 0) {
+
+        mediaBox.classList.add("multi-video");
+
+        const videoGrid = document.createElement("div");
+        videoGrid.className = "detail-video-grid";
+
+        media.videos.forEach((item, index) => {
+
+            const embedUrl = getYoutubeEmbedUrl(item.youtubeUrl);
+
+            const card = document.createElement("div");
+            card.className = "detail-video-card";
+
+            if (embedUrl) {
+
+                const iframe = document.createElement("iframe");
+
+                iframe.src = embedUrl;
+                iframe.title = item.title;
+                iframe.loading = "lazy";
+
+                iframe.allow =
+                    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+
+                iframe.allowFullscreen = true;
+
+                card.appendChild(iframe);
+
+            } else {
+
+                const fallback = document.createElement("div");
+                fallback.className = "video-fallback";
+                fallback.textContent = "ยังไม่มีวิดีโอสำหรับหัวข้อนี้";
+
+                card.appendChild(fallback);
+            }
+
+            const caption = document.createElement("div");
+            caption.className = "media-caption";
+
+            const label = document.createElement("span");
+            label.className = "media-label";
+            label.textContent = `▶ VIDEO ${index + 1}`;
+
+            const heading = document.createElement("h4");
+            heading.textContent = item.title;
+
+            const description = document.createElement("p");
+            description.textContent = item.description;
+
+            caption.append(label, heading, description);
+
+            card.appendChild(caption);
+
+            videoGrid.appendChild(card);
+
         });
-        // ดังนั้นโค้ดนี้ทำให้แสดงเฉพาะกล่องที่ผู้ใช้เลือก
+
+        mediaBox.appendChild(videoGrid);
+
+    }
+
+    // =================================
+    // กรณีมีวิดีโอเดียวหรือรูปภาพ
+    // =================================
+
+    else {
+
+        const embedUrl = getYoutubeEmbedUrl(media.youtubeUrl);
+
+        if (embedUrl) {
+
+            const iframe = document.createElement("iframe");
+
+            iframe.src = embedUrl;
+            iframe.title = media.title;
+            iframe.loading = "lazy";
+
+            iframe.allow =
+                "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+
+            iframe.allowFullscreen = true;
+
+            mediaBox.appendChild(iframe);
+
+        } else {
+
+            mediaBox.classList.add("image-mode");
+
+            const img = document.createElement("img");
+
+            img.src = media.image;
+            img.alt = media.title;
+            img.loading = "lazy";
+
+            mediaBox.appendChild(img);
+
+        }
+
+        const caption = document.createElement("div");
+        caption.className = "media-caption";
+
+        const label = document.createElement("span");
+        label.className = "media-label";
+
+        label.textContent = embedUrl
+            ? "▶ VIDEO GUIDE"
+            : "✦ IMAGE GUIDE";
+
+        const heading = document.createElement("h4");
+        heading.textContent = media.title;
+
+        const description = document.createElement("p");
+        description.textContent = media.description;
+
+        caption.append(label, heading, description);
+
+        mediaBox.appendChild(caption);
+    }
+
+    layout.append(content, mediaBox);
+
+    panel.appendChild(layout);
+}
 
 
-        // 2. เปลี่ยนสถานะการ์ดที่ถูกเลือก
-        readButtons.forEach(function (item) {
-            item.closest(".guide-card").classList.toggle(
-                "selected",
-                item === button
-            );
-            // closest() ใช้ค้นหา Element แม่ที่ใกล้ที่สุด ซึ่งตรงกับ Selector ที่กำหนด
-            // จะได้กล่อง div ที่ครอบปุ่มนั้นอยู่
-            // ถ้า item === button เป็น true → เพิ่ม class selected
-            // ถ้าเป็น false → ลบ class selected
-            // ทำให้การ์ดที่ถูกคลิกมีสถานะ selected ส่วนการ์ดอื่นไม่มีสถานะนี้
+
+/* -----------------------------------------
+   4. เริ่มต้นระบบเมื่อเปิดเว็บไซต์
+----------------------------------------- */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const guideButtons = document.querySelectorAll(
+        ".read-guide-btn"
+    );
+
+    const detailPanels = document.querySelectorAll(
+        ".detail-panel"
+    );
+
+    const guideDetails = document.getElementById(
+        "guideDetails"
+    );
 
 
-            item.setAttribute(
-                "aria-expanded",
-                String(item === button)
-            );
-            // ส่วนนี้เป็นการกำหนด Attribute ให้ปุ่ม 
-            // เพื่อบอกสถานะการขยายหรือเปิดเนื้อหาของปุ่มแก่เทคโนโลยีช่วยเหลือ 
-            // เช่น Screen Reader
-            // setAttribute() = กำหนด Attribute
-            // "aria-expanded" = ชื่อ Attribute
-            // item === button = ตรวจสอบว่าปุ่มนี้เป็นปุ่มที่ถูกคลิกหรือไม่
-            // String() = แปลงค่าจาก Boolean เป็น String
-            // สิ่งสำคัญคือ aria-expanded ไม่ได้ทำให้กล่องรายละเอียดแสดงหรือซ่อนด้วยตัวเอง
-            // หน้าที่หลักคือช่วยให้เทคโนโลยีช่วยเหลือ เช่น Screen Reader เข้าใจสถานะของปุ่มได้
-            // ส่วนการแสดงและซ่อนกล่องรายละเอียดจริง ๆ เป็นหน้าที่ของโค้ดนี้:
-        });
+    // สร้าง Media ให้ครบทั้ง 6 หัวข้อ
+    detailPanels.forEach(panel => {
 
-        // 3. เลื่อนลงมาที่ส่วนรายละเอียด หลังจากแสดงเนื้อหาแล้ว
-        requestAnimationFrame(function () {
-            guideDetails.scrollIntoView({
-                behavior: window.matchMedia(
-                    "(prefers-reduced-motion: reduce)"
-                ).matches ? "auto" : "smooth",
-                block: "start"
-            });
-        });
+        createGuideMedia(panel);
+
     });
+
+
+    /* -------------------------------------
+       5. ระบบกดเลือกหัวข้อ
+    ------------------------------------- */
+
+    guideButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const targetId = button.dataset.target;
+
+            const selectedPanel = document.getElementById(
+                targetId
+            );
+
+            if (!selectedPanel) return;
+
+
+            // ซ่อนรายละเอียดหัวข้ออื่นทั้งหมด
+            detailPanels.forEach(panel => {
+
+                panel.hidden = true;
+
+            });
+
+
+            // แสดงเฉพาะหัวข้อที่เลือก
+            selectedPanel.hidden = false;
+
+
+            // เลื่อนลงมาที่รายละเอียด
+            if (guideDetails) {
+
+                guideDetails.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+
+        });
+
+    });
+
 });

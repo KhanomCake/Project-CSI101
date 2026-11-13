@@ -1,603 +1,1448 @@
 /* ===== Global ===== */
 
 :root {
+
     --background: #f8fcff;
+
     --white: #ffffff;
+
     --green: #1f6fc4;
+
     --text: #163e68;
+
     --gray: #59799b;
+
     --border: #d9eaf9;
+
 }
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
 
 html {
+
     scroll-behavior: smooth;
+
     scroll-padding-top: 90px;
+
 }
 
 body {
+
     font-family: "Kanit", sans-serif;
+
     background: var(--background);
+
     color: var(--text);
+
     line-height: 1.7;
+
 }
 
 a {
+
     color: inherit;
+
     text-decoration: none;
+
 }
 
 button {
-    font: inherit;
-    cursor: pointer;
-}
 
+    font: inherit;
+
+    cursor: pointer;
+
+}
 
 /* ===== Navbar ===== */
 
 .navbar {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     gap: 20px;
+
     padding: 16px 7%;
+
     background: var(--white);
+
     border-bottom: 1px solid var(--border);
+
     position: sticky;
+
     top: 0;
+
     z-index: 100;
+
 }
 
 .logo {
+
     display: flex;
+
     align-items: center;
+
     gap: 8px;
+
     color: var(--green);
+
     font-size: 21px;
+
     font-weight: 700;
+
 }
 
 .logo-paw {
+
     font-size: 23px;
+
 }
 
 .navbar nav {
+
     display: flex;
+
     gap: 28px;
+
 }
 
 .navbar nav a {
+
     color: var(--gray);
+
     font-size: 14px;
+
 }
 
 .navbar nav a:hover,
+
 .navbar nav a[aria-current="page"] {
+
     color: var(--green);
+
 }
 
 .nav-cta {
-    background: var(--green);
-    color: var(--white);
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-size: 13px;
-}
 
+    background: var(--green);
+
+    color: var(--white);
+
+    padding: 8px 16px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+}
 
 /* ===== Page Introduction ===== */
 
 .page-intro {
+
     max-width: 800px;
+
     margin: auto;
+
     padding: 80px 20px 70px;
+
     text-align: center;
+
 }
 
 .section-kicker {
+
     display: inline-block;
+
     color: var(--gray);
+
     font-size: 11px;
+
     font-weight: 700;
+
     letter-spacing: 1.5px;
+
     margin-bottom: 12px;
+
 }
 
 .page-intro h1 {
+
     color: var(--green);
+
     font-size: clamp(30px, 4vw, 46px);
+
     line-height: 1.5;
+
     margin-bottom: 18px;
+
 }
 
 .page-intro h1 span {
+
     color: #777d78;
+
 }
 
 .page-intro p {
-    max-width: 600px;
-    margin: auto;
-    color: var(--gray);
-    font-size: 14px;
-}
 
+    max-width: 600px;
+
+    margin: auto;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+}
 
 /* ===== Guide Section ===== */
 
 .guide-section,
+
 .details-section {
+
     width: 86%;
+
     max-width: 1100px;
+
     margin: auto;
+
 }
 
 .guide-section {
+
     padding-bottom: 80px;
+
 }
 
 .section-heading {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: end;
+
     gap: 20px;
+
     margin-bottom: 25px;
+
 }
 
 .section-heading h2,
+
 .details-intro h2 {
+
     color: var(--green);
+
     font-size: 28px;
+
 }
 
 .section-heading>p {
-    color: var(--gray);
-    font-size: 13px;
-    text-align: right;
-}
 
+    color: var(--gray);
+
+    font-size: 13px;
+
+    text-align: right;
+
+}
 
 /* ===== Guide Cards ===== */
 
 .guide-grid {
+
     display: grid;
+
     grid-template-columns: repeat(3, minmax(0, 1fr));
+
     gap: 20px;
+
 }
 
 .guide-card {
+
     display: flex;
+
     flex-direction: column;
+
     align-items: flex-start;
+
     padding: 24px;
+
     background: var(--white);
+
     border: 1px solid var(--border);
+
     border-radius: 10px;
+
     transition: transform 0.2s, box-shadow 0.2s;
+
 }
 
 .guide-card:hover {
+
     transform: translateY(-3px);
+
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+
 }
 
 .card-topline {
+
     width: 100%;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     margin-bottom: 20px;
+
 }
 
 .card-icon {
+
     width: 46px;
+
     height: 46px;
+
     display: grid;
+
     place-items: center;
+
     background: #f1f2ef;
+
     border-radius: 9px;
+
     font-size: 23px;
+
 }
 
 .card-number {
+
     color: #a0a49f;
+
     font-size: 13px;
+
 }
 
 .card-label {
+
     color: var(--gray);
+
     font-size: 10px;
+
     font-weight: 700;
+
     letter-spacing: 1px;
+
     margin-bottom: 7px;
+
 }
 
 .guide-card h3 {
+
     color: var(--green);
+
     font-size: 18px;
+
     line-height: 1.6;
+
     margin-bottom: 10px;
+
 }
 
 .guide-card>p {
+
     color: var(--gray);
+
     font-size: 13px;
+
     margin-bottom: 15px;
+
 }
 
 .topic-preview {
+
     list-style: none;
+
     margin-bottom: 22px;
+
 }
 
 .topic-preview li {
+
     font-size: 12px;
+
     color: #555c56;
+
     margin-bottom: 5px;
+
 }
 
 .topic-preview li::before {
+
     content: "•";
+
     color: var(--gray);
+
     margin-right: 9px;
+
 }
 
 .read-guide-btn {
+
     width: 100%;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     margin-top: auto;
+
     padding: 11px 13px;
+
     background: #f1f3f0;
+
     color: var(--green);
+
     border: 1px solid transparent;
+
     border-radius: 6px;
+
     font-size: 13px;
+
     transition: background 0.2s;
+
 }
 
 .read-guide-btn:hover {
-    background: #e6e9e5;
-}
 
+    background: #e6e9e5;
+
+}
 
 /* ===== Details Section ===== */
 
 .details-section {
+
     padding: 55px 0 80px;
+
     border-top: 1px solid var(--border);
+
 }
 
 .details-intro {
+
     margin-bottom: 25px;
+
 }
 
 .details-intro h2 {
+
     margin-bottom: 6px;
+
 }
 
 .details-intro p {
+
     color: var(--gray);
+
     font-size: 14px;
+
 }
 
 .detail-placeholder {
+
     min-height: 200px;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 12px;
+
     padding: 30px;
+
     text-align: center;
+
     background: var(--white);
+
     border: 1px dashed #d5d9d4;
+
     border-radius: 10px;
+
     color: var(--gray);
+
     font-size: 14px;
+
 }
 
 .placeholder-icon {
-    font-size: 32px;
-}
 
+    font-size: 32px;
+
+}
 
 /* ===== Detail Content ===== */
 
 .detail-panel {
+
     padding: 30px;
+
     background: var(--white);
+
     border: 1px solid var(--border);
+
     border-radius: 10px;
+
 }
 
 .detail-title {
+
     display: flex;
+
     align-items: center;
+
     gap: 15px;
+
     padding-bottom: 22px;
+
     margin-bottom: 5px;
+
     border-bottom: 1px solid var(--border);
+
 }
 
 .detail-icon {
+
     width: 52px;
+
     height: 52px;
+
     flex-shrink: 0;
+
     display: grid;
+
     place-items: center;
+
     background: #f1f2ef;
+
     border-radius: 9px;
+
     font-size: 25px;
+
 }
 
 .detail-title .section-kicker {
+
     margin-bottom: 3px;
+
 }
 
 .detail-title h3 {
+
     color: var(--green);
+
     font-size: 22px;
+
     line-height: 1.5;
+
 }
 
 .detail-topic {
+
     padding: 22px 0;
+
     border-bottom: 1px solid var(--border);
+
 }
 
 .detail-topic h4 {
+
     color: var(--green);
+
     font-size: 16px;
+
     margin-bottom: 9px;
+
 }
 
 .detail-topic h4 span {
+
     color: #929892;
+
     margin-right: 8px;
+
     font-size: 13px;
+
 }
 
 .detail-topic p {
+
     color: #626862;
+
     font-size: 14px;
+
     line-height: 1.9;
+
 }
 
 .guide-disclaimer {
-    margin-top: 22px;
-    padding: 14px 16px;
-    background: #f5f6f3;
-    border-left: 3px solid #aab4aa;
-    color: var(--gray);
-    font-size: 12px;
-    line-height: 1.8;
-}
 
+    margin-top: 22px;
+
+    padding: 14px 16px;
+
+    background: #f5f6f3;
+
+    border-left: 3px solid #aab4aa;
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
 
 /* ===== Footer ===== */
 
 .footer {
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     gap: 8px;
+
     padding: 35px 20px;
+
     background: var(--white);
+
     border-top: 1px solid var(--border);
+
     text-align: center;
+
 }
 
 .footer-logo {
+
     font-size: 20px;
+
 }
 
 .footer p,
-.footer>span {
-    color: var(--gray);
-    font-size: 12px;
-}
 
+.footer>span {
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+}
 
 /* ===== Responsive ===== */
 
 @media (max-width: 900px) {
+
     .guide-grid {
+
         grid-template-columns: repeat(2, minmax(0, 1fr));
+
     }
 
     .guide-section,
+
     .details-section {
+
         width: 90%;
+
     }
+
 }
 
 @media (max-width: 600px) {
+
     .navbar {
+
         padding: 14px 5%;
+
         gap: 10px;
+
     }
 
     .logo {
+
         font-size: 18px;
+
     }
 
     .navbar nav {
+
         gap: 12px;
+
     }
 
     .navbar nav a {
+
         font-size: 12px;
+
     }
 
     .nav-cta {
+
         padding: 7px 10px;
+
         font-size: 11px;
+
     }
 
     .page-intro {
+
         padding: 55px 20px;
+
     }
 
     .page-intro p {
+
         font-size: 13px;
+
     }
 
     .guide-grid {
+
         grid-template-columns: 1fr;
+
         gap: 15px;
+
     }
 
     .section-heading {
+
         align-items: start;
+
     }
 
     .section-heading h2,
+
     .details-intro h2 {
+
         font-size: 24px;
+
     }
 
     .section-heading>p {
+
         font-size: 11px;
+
     }
 
     .guide-card {
+
         padding: 21px;
+
     }
 
     .detail-panel {
+
         padding: 20px;
+
     }
 
     .detail-title h3 {
+
         font-size: 18px;
+
     }
 
     .detail-topic p {
+
         font-size: 13px;
+
     }
+
 }
+
 /* ให้ช่องกรอกและปุ่มใช้ฟอนต์เดียวกับหน้า (ปกติเบราว์เซอร์จะไม่ส่งต่อฟอนต์ให้) */
-button, input, select, textarea {
+
+button,
+input,
+select,
+textarea {
+
     font-family: inherit;
+
 }
 
 /* =========================================
-   สไตล์สำหรับ Hero Section (Intro) แบบใหม่
+
+   สไตล์สำหรับ Hero Section (Intro) แบบใหม่
+
 ========================================= */
 
-.page-intro {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
-    padding: 4rem 5%;
-    
-    /* สร้างสีพื้นหลังโทนฟ้า-ครีมพาสเทล พร้อมรัศมีขอบโค้ง */
-    background: linear-gradient(135deg, #e0f2fe 0%, #fef3c7 100%);
-    /* หากมีไฟล์รูปลายรอยเท้า สามารถใส่ทับได้โดยลบคอมเมนต์ด้านล่าง */
-    /* background-image: url('ที่อยู่ไฟล์ลายรอยเท้า.png'), linear-gradient(135deg, #e0f2fe 0%, #fef3c7 100%); */
-    
-    border-radius: 24px;
-    margin: 2rem auto 4rem auto;
-    max-width: 1200px;
-    box-sizing: border-box;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
 
 .intro-content {
+
     flex: 1;
-    text-align: left; /* จัดตัวหนังสือชิดซ้าย */
+
+    text-align: left;
+    /* จัดตัวหนังสือชิดซ้าย */
+
     max-width: 600px;
+
 }
 
 .intro-content .section-kicker {
+
     color: #0284c7;
+
     font-weight: 600;
+
     letter-spacing: 1px;
+
     display: block;
+
     margin-bottom: 0.5rem;
+
 }
 
 .intro-content h1 {
+
     font-size: 3.5rem;
+
     line-height: 1.2;
+
     color: #0f172a;
+
     margin: 0 0 1.5rem 0;
+
 }
 
 .intro-content h1 span {
+
     color: #1e3a8a;
+
     font-size: 2.5rem;
+
 }
 
 .intro-content p {
+
     font-size: 1.1rem;
+
     color: #475569;
+
     line-height: 1.6;
+
     margin-bottom: 2rem;
+
 }
 
 /* ปุ่มเลือกคู่มือในหน้า Intro */
+
 .btn-primary {
+
     display: inline-flex;
+
     align-items: center;
+
     gap: 8px;
+
     background-color: #4399f5;
+
     color: white;
+
     padding: 12px 28px;
+
     border-radius: 30px;
+
     text-decoration: none;
+
     font-weight: 600;
+
     transition: background-color 0.3s, transform 0.2s;
+
 }
 
 .btn-primary:hover {
+
     background-color: #2b7cd3;
+
     transform: translateY(-2px);
+
 }
 
-.intro-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+
+
+/* ปรับแต่งสำหรับหน้าจอมือถือ (แท็บเล็ตและสมาร์ทโฟน) */
+
+@media (max-width: 768px) {
+
+    .page-intro {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 2.5rem 1.5rem;
+
+    }
+
+    .intro-content {
+
+        text-align: center;
+        /* บนมือถือปรับให้อยู่ตรงกลางเพื่อให้สวยงาม */
+
+    }
+
+    .intro-content h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+    .intro-content h1 span {
+
+        font-size: 1.8rem;
+
+    }
+
+    .intro-image {
+
+        justify-content: center;
+
+        margin-top: 1rem;
+
+    }
+
 }
 
-.intro-image img {
+
+/* =========================================
+   DOGCARE - FULL SCREEN DETAIL PAGE
+   TEXT LEFT / VIDEO RIGHT
+========================================= */
+
+/* ป้องกันปัญหาคำนวณขนาด */
+* {
+    box-sizing: border-box;
+}
+
+/* =========================================
+   1. DETAIL SECTION
+========================================= */
+
+.details-section {
+    width: 100%;
     max-width: 100%;
+    scroll-margin-top: 75px;
+}
+
+.detail-panel {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* ซ่อนหัวข้อที่ยังไม่ได้เลือก */
+.detail-panel[hidden] {
+    display: none !important;
+}
+
+/* =========================================
+   2. MAIN TWO COLUMN LAYOUT
+========================================= */
+
+.detail-layout {
+    display: grid;
+
+    /* ข้อความ 40% / วิดีโอ 60% */
+    grid-template-columns:
+        minmax(0, 0.8fr)
+        minmax(0, 1.2fr);
+
+    gap: clamp(20px, 3vw, 40px);
+
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+    padding: clamp(16px, 2vw, 30px);
+
+    align-items: center;
+}
+
+/* =========================================
+   3. LEFT SIDE - DETAIL CONTENT
+========================================= */
+
+.detail-content {
+    width: 100%;
+    min-width: 0;
+}
+
+/* หัวข้อหลัก */
+.detail-content .detail-title {
+    font-size: clamp(23px, 2.2vw, 36px);
+
+    line-height: 1.35;
+
+    margin-top: 0;
+    margin-bottom: 18px;
+
+    color: #163e68;
+}
+
+/* หัวข้อย่อย */
+.detail-content h4 {
+    font-size: clamp(15px, 1.2vw, 18px);
+
+    line-height: 1.5;
+
+    margin-top: 14px;
+    margin-bottom: 7px;
+
+    color: #163e68;
+}
+
+/* เนื้อหารายละเอียด */
+.detail-content p {
+    font-size: clamp(13px, 1vw, 15px);
+
+    line-height: 1.75;
+
+    margin-bottom: 12px;
+
+    color: #59799b;
+}
+
+/* รายการ */
+.detail-content ul,
+.detail-content ol {
+    padding-left: 22px;
+    margin-bottom: 14px;
+}
+
+.detail-content li {
+    font-size: clamp(13px, 1vw, 15px);
+
+    line-height: 1.7;
+
+    margin-bottom: 5px;
+
+    color: #59799b;
+}
+
+/* =========================================
+   4. RIGHT SIDE - VIDEO / IMAGE
+========================================= */
+
+.detail-media {
+    position: sticky;
+    top: 100px;
+
+    width: 100%;
+    min-width: 0;
+
+    align-self: start;
+
+    border-radius: 22px;
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 1px solid #d9eaf9;
+
+    box-shadow: 0 15px 40px rgba(30, 80, 130, 0.10);
+}
+
+/* YouTube Video */
+.detail-media iframe {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+    border: none;
+}
+
+/* รูปภาพกรณีไม่มีวิดีโอ */
+.detail-media img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
     object-fit: cover;
 }
 
-/* ปรับแต่งสำหรับหน้าจอมือถือ (แท็บเล็ตและสมาร์ทโฟน) */
-@media (max-width: 768px) {
-    .page-intro {
-        flex-direction: column;
-        text-align: center;
-        padding: 2.5rem 1.5rem;
-    }
-    
-    .intro-content {
-        text-align: center; /* บนมือถือปรับให้อยู่ตรงกลางเพื่อให้สวยงาม */
-    }
-    
-    .intro-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .intro-content h1 span {
-        font-size: 1.8rem;
-    }
-    
-    .intro-image {
+/* =========================================
+   5. MEDIA CAPTION
+========================================= */
+
+.media-caption {
+    width: 100%;
+
+    padding: 16px 20px;
+
+    background: #ffffff;
+}
+
+/* ป้าย VIDEO GUIDE / IMAGE GUIDE */
+.media-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 12px;
+
+    margin-bottom: 9px;
+
+    border-radius: 30px;
+
+    background: #eaf4ff;
+
+    color: #2879c9;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+/* ชื่อวิดีโอ */
+.media-caption h4 {
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    color: #163e68;
+
+    margin: 0 0 5px;
+}
+
+/* คำอธิบายวิดีโอ */
+.media-caption p {
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #59799b;
+
+    margin: 0;
+}
+
+/* =========================================
+   6. DESKTOP - FULL SCREEN
+========================================= */
+
+@media (min-width: 1000px) {
+
+    .detail-panel:not([hidden]) {
+        min-height: calc(100vh - 130px);
+
+        display: flex;
+
+        align-items: center;
         justify-content: center;
-        margin-top: 1rem;
+    }
+
+    .detail-layout {
+        width: 100%;
+    }
+
+    .detail-media {
+        align-self: center;
+    }
+
+}
+
+/* =========================================
+   7. TABLET
+========================================= */
+
+@media (min-width: 601px) and (max-width: 999px) {
+
+    .detail-layout {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 22px;
+    }
+
+    .detail-content {
+        max-height: none;
+    }
+
+    .detail-media {
+        position: static;
+
+        width: 100%;
+    }
+
+}
+
+/* =========================================
+   8. MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .detail-panel:not([hidden]) {
+        min-height: auto;
+    }
+
+    .detail-layout {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding: 14px;
+    }
+
+    .detail-content {
+        max-height: none;
+    }
+
+    .detail-content .detail-title {
+        font-size: 24px;
+    }
+
+    .detail-content p,
+    .detail-content li {
+        font-size: 14px;
+    }
+
+    .detail-media {
+        position: static;
+
+        border-radius: 16px;
+    }
+
+    .media-caption {
+        padding: 14px;
+    }
+
+}
+
+
+/* =========================================
+   DETAIL SECTION HEADER
+   จัดหัวข้อให้อยู่ซ้ายและพอดีหน้าจอ
+========================================= */
+
+.details-section {
+    width: 100%;
+    max-width: 1450px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: clamp(16px, 3vw, 30px);
+    padding-right: clamp(16px, 3vw, 30px);
+
+    box-sizing: border-box;
+
+    text-align: left;
+}
+
+/* หัวข้อ YOUR SELECTED GUIDE */
+.details-section > .section-label {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* หัวข้อ รายละเอียดคู่มือ */
+.details-section > h2 {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* ข้อความอธิบาย */
+.details-section > p {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+}
+
+/* ป้องกัน Layout รายละเอียดล้นจอ */
+.detail-panel,
+.detail-layout {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* มือถือ */
+@media (max-width: 600px) {
+    .details-section {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }
+
+/* PAGE INTRO - SIMPLE TEXT */
+
+.page-intro {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 35px auto 50px;
+    padding: 20px 24px;
+
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.intro-content {
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+}
+
+
+
+/* =========================================
+   FULL WIDTH HERO SECTION
+========================================= */
+
+
+
+
+
+
+.page-intro {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+    padding: 55px 5%;
+
+    /* ฟ้าอ่อนไล่ไปเหลืองครีม */
+    background:
+        linear-gradient(
+            110deg,
+            rgba(225, 242, 252, 0.94) 0%,
+            rgba(234, 242, 235, 0.90) 50%,
+            rgba(252, 243, 202, 0.88) 100%
+        ),
+        url("./img/your-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+
+
+
+/* Container จัดเนื้อหาภายใน */
+.intro-inner {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 400px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+/* ข้อความฝั่งซ้าย */
+.intro-content {
+    width: 100%;
+    text-align: left;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.intro-content h1 {
+    font-size: clamp(30px, 3vw, 44px);
+    line-height: 1.4;
+    color: #163e68;
+}
+
+.intro-content h1 span {
+    display: block;
+    color: #2879c9;
+}
+
+.intro-content p {
+    line-height: 1.9;
+    color: #59799b;
+    margin: 20px 0;
+}
+
+/* รูปฝั่งขวา */
+.intro-image {
+    width: 100%;
+}
+
+.intro-image img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* มือถือ */
+@media (max-width: 768px) {
+
+    .page-intro {
+        padding: 35px 20px;
+    }
+
+    .intro-inner {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .intro-image img {
+        height: 240px;
+    }
+
+}
+
