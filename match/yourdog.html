@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คู่มือเลี้ยงน้องหมาที่คุณเลือก</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="yourdog.css">
+</head>
+<body>
+
+    <main class="container">
+        
+        
+        <div class="back-nav">
+            <a href="maindog.html" class="back-btn">← ย้อนกลับหน้าหลัก</a>
+        </div>
+
+        <section class="search-section">
+            <h2>คุณมีสายพันธุ์น้องหมาในใจหรือยัง?</h2>
+            <p class="subtitle">พิมพ์ชื่อสายพันธุ์ภาษาไทยหรืออังกฤษ เพื่อดูข้อมูลการดูแล โรคประจำพันธุ์ </p>
+            
+            <div class="search-box-wrapper">
+                <form id="searchForm" class="search-form" autocomplete="off">
+                    <input 
+                        type="text" 
+                        id="breedInput" 
+                        placeholder="เช่น โกลเด้น, ชิวาวา, คอร์กี้, ไซบีเรียน, บีเกิ้ล..." 
+                        required
+                    >
+                    <button type="submit" id="searchBtn">ค้นหาข้อมูล</button>
+                </form>
+                
+                <ul id="autocompleteList" class="autocomplete-list hidden"></ul>
+            </div>
+        </section>
+
+        
+        <div id="notFoundAlert" class="alert-box hidden">
+            <h3>🐶 ยังไม่มีข้อมูลสายพันธุ์ "<span id="searchedTerm"></span>" ในฐานข้อมูลหลัก</h3>
+        </div>
+
+        
+        <section id="resultSection" class="result-section hidden">
+            <div class="card main-info-card">
+                
+                <div class="breed-image-wrapper">
+                    <img id="breedImage" src="" alt="รูปภาพสุนัข" loading="lazy">
+                </div>
+
+                <div class="card-header">
+                    <div>
+                        <span id="breedCategory" class="badge-category">สายพันธุ์ขนาดกลาง</span>
+                        <h2 id="breedNameTh">ชื่อสายพันธุ์ภาษาไทย</h2>
+                        <p id="breedNameEn" class="en-name">English Breed Name</p>
+                    </div>
+                </div>
+
+                
+                <div class="suitability-badges" id="suitabilityBadges"></div>
+
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">⚖️ น้ำหนักเฉลี่ย</span>
+                        <strong id="breedWeight">-</strong>
+                    </div>
+
+                    <div class="stat-item">
+                        <span class="stat-label">⏳ อายุขัยเฉลี่ย</span>
+                        <strong id="breedLifespan">-</strong>
+                    </div>
+                </div>
+               
+            </div>
+
+            
+            <div class="details-grid">
+                <div class="card">
+                    <h3>💛 นิสัยและพฤติกรรม</h3>
+                    <p id="breedTemperament" class="detail-text"></p>
+                    
+                    <h3 class="mt-20">✂️ การดูแลขนและความสะอาด</h3>
+                    <p id="breedGrooming" class="detail-text"></p>
+                </div>
+
+                <div class="card">
+                    <h3>🏥 โรคประจำพันธุ์และข้อควรระวัง</h3>
+                    <ul id="breedHealth" class="styled-list warning-list"></ul>
+
+                    <h3 class="mt-20">🎒 เช็กลิสต์ของใช้ที่ต้องเตรียม</h3>
+                    <ul id="breedChecklist" class="styled-list check-list"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="yourdog.js"></script>
+</body>
+</html>
