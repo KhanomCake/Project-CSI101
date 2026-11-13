@@ -486,3 +486,118 @@ button {
 button, input, select, textarea {
     font-family: inherit;
 }
+
+/* =========================================
+   สไตล์สำหรับ Hero Section (Intro) แบบใหม่
+========================================= */
+
+.page-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 4rem 5%;
+    
+    /* สร้างสีพื้นหลังโทนฟ้า-ครีมพาสเทล พร้อมรัศมีขอบโค้ง */
+    background: linear-gradient(135deg, #e0f2fe 0%, #fef3c7 100%);
+    /* หากมีไฟล์รูปลายรอยเท้า สามารถใส่ทับได้โดยลบคอมเมนต์ด้านล่าง */
+    /* background-image: url('ที่อยู่ไฟล์ลายรอยเท้า.png'), linear-gradient(135deg, #e0f2fe 0%, #fef3c7 100%); */
+    
+    border-radius: 24px;
+    margin: 2rem auto 4rem auto;
+    max-width: 1200px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.intro-content {
+    flex: 1;
+    text-align: left; /* จัดตัวหนังสือชิดซ้าย */
+    max-width: 600px;
+}
+
+.intro-content .section-kicker {
+    color: #0284c7;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.intro-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: #0f172a;
+    margin: 0 0 1.5rem 0;
+}
+
+.intro-content h1 span {
+    color: #1e3a8a;
+    font-size: 2.5rem;
+}
+
+.intro-content p {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* ปุ่มเลือกคู่มือในหน้า Intro */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #4399f5;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #2b7cd3;
+    transform: translateY(-2px);
+}
+
+.intro-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* ปรับแต่งสำหรับหน้าจอมือถือ (แท็บเล็ตและสมาร์ทโฟน) */
+@media (max-width: 768px) {
+    .page-intro {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .intro-content {
+        text-align: center; /* บนมือถือปรับให้อยู่ตรงกลางเพื่อให้สวยงาม */
+    }
+    
+    .intro-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .intro-content h1 span {
+        font-size: 1.8rem;
+    }
+    
+    .intro-image {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
