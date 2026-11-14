@@ -1,0 +1,902 @@
+[
+  {
+    "id": "pomeranian",
+    "name_th": "ปอมเมอเรเนียน",
+    "name_en": "Pomeranian",
+    "price": 1,
+    "size": 1,
+    "temperament": 1,
+    "image": "https://du2j4cfd2qo0k.cloudfront.net/e8c823be_5652_4863_af17_53ee587e9861_5d55470c13.png"
+  },
+  {
+    "id": "chihuahua",
+    "name_th": "ชิวาวา",
+    "name_en": "Chihuahua",
+    "price": 1,
+    "size": 1,
+    "temperament": 4,
+    "image": "https://img.thaicdn.net/u/2018/Jarosphan/Pet/Dog/47798/03.jpg"
+  },
+  {
+    "id": "shih-tzu",
+    "name_th": "ชิสุ",
+    "name_en": "Shih Tzu",
+    "price": 1, 
+    "size": 1,
+    "temperament": 1,
+    "image": "https://cdn.ennxo.com/uploads/products/640/cb64e497fe9441599f9b7185b92f4e27.jpg"
+  },
+  {
+    "id": "poodle-toy-miniature",
+    "name_th": "พุดเดิ้ล (ทอย/มินิเจอร์)",
+    "name_en": "Poodle (Toy / Miniature)",
+    "price": 3,
+    "size": 1,
+    "temperament": 1,
+    "image": "https://cdn.ennxo.com/uploads/products/640/2cf383a4ab454f2eae8e6393937e2169.jpg"
+  },
+  {
+    "id": "pug",
+    "name_th": "ปัก",
+    "name_en": "Pug",
+    "price": 3,
+    "size": 1,
+    "temperament": 1,
+    "image": "https://png.pngtree.com/png-clipart/20240312/original/pngtree-pug-dog-breed-png-image_14569258.png"
+  },
+  {
+    "id": "yorkshire-terrier",
+    "name_th": "ยอร์คเชียร์ เทอร์เรีย",
+    "name_en": "Yorkshire Terrier",
+    "price": 3,
+    "size": 1,
+    "temperament": 1,
+    "image": "https://108dog.com/market/board/thumbnail/94e3aef7-959a-4e74-b003-910fa9dc14dc.jpg"
+  },
+  {
+    "id": "maltese",
+    "name_th": "มอลทีส",
+    "name_en": "Maltese",
+    "price": 3,
+    "size": 1,
+    "temperament": 1,
+    "image": "https://cdn.ennxo.com/uploads/products/640/50ef9f0f86264e5dbc7dfb2a4a245ac6.jpg"
+  },
+  {
+    "id": "papillon",
+    "name_th": "ปาปิยอง",
+    "name_en": "Papillon",
+    "price": 3,
+    "size": 1,
+    "temperament": 2,
+    "image": "https://cdn.ennxo.com/uploads/products/640/3dbae8197c694c078b606b0f25093014.jpg"
+  },
+  {
+    "id": "bichon-frise",
+    "name_th": "บิชอง ฟรีเซ",
+    "name_en": "Bichon Frise",
+    "price": 3,
+    "size": 1,
+    "temperament": 2,
+    "image": "https://glurgang.com/wp-content/uploads/2023/07/Characteristics-and-Behavior-of-Bichon-Frize.jpg"
+  },
+  {
+    "id": "alaskan-klee-kai",
+    "name_th": "อะแลสกัน คลีไค",
+    "name_en": "Alaskan Klee Kai",
+    "price": 5,
+    "size": 1,
+    "temperament": 3,
+    "image": "https://t3.ftcdn.net/jpg/02/54/90/14/360_F_254901497_qTycTxP7sTja57BYPYmTeonuWW1cbEoI.jpg"
+  },
+  {
+    "id": "russian-toy",
+    "name_th": "รัสเซียน ทอย",
+    "name_en": "Russian Toy",
+    "price": 5,
+    "size": 1,
+    "temperament": 1,
+    "image": "https://img.magnific.com/premium-photo/russian-toy-terrier-thoroughbred-dog_564276-10043.jpg"
+  },
+  {
+    "id": "japanese-chin",
+    "name_th": "แจแปนนีส ชิน",
+    "name_en": "Japanese Chin",
+    "price": 5,
+    "size": 1,
+    "temperament": 5,
+    "image": "https://image.dogilike.com/shareimg/contentimg/2013/prig/Breed/japanesechinf1.jpg"
+  },
+  {
+    "id": "japanese-terrier",
+    "name_th": "แจแปนนีส เทอร์เรีย",
+    "name_en": "Japanese Terrier",
+    "price": 7,
+    "size": 1,
+    "temperament": 3,
+    "image": "https://static.wixstatic.com/media/c6a3da_306b4c045fe4453fb022fc43d4cae855~mv2.png/v1/fill/w_1110,h_1110,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/c6a3da_306b4c045fe4453fb022fc43d4cae855~mv2.png"
+  },
+  {
+    "id": "italian-greyhound",
+    "name_th": "อิตาเลียน เกรย์ฮาวด์",
+    "name_en": "Italian Greyhound",
+    "price": 5,
+    "size": 1,
+    "temperament": 5,
+    "image": "https://image.dogilike.com/shareimg/contentimg/2013/prig/Breed/Piccolo%20Levriero%20Italiano%20ITALIAN%20GREYHOUND3.jpg"
+  },
+  {
+    "id": "affenpinscher",
+    "name_th": "อัฟเฟนพินเชอร์",
+    "name_en": "Affenpinscher",
+    "price": 5,
+    "size": 1,
+    "temperament": 6,
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0LUWwWY56BhDQR1lZIneHHYYb1n72wLbDkkNb6Gr2TzGoRzjvfloSyg4d9FGvphoRPzMzmhlj57SMOzOF04pDvtHkPBAJ35VA79QJlyFv_b4xeRDtnhoZbwV-lLmU66WEDNbrPEEQdVY/w1200-h630-p-k-no-nu/Affenpinscher.jpg"
+  },
+  {
+    "id": "brussels-griffon",
+    "name_th": "บรัสเซลส์ กริฟฟอน",
+    "name_en": "Brussels Griffon",
+    "price": 5,
+    "size": 1,
+    "temperament": 1,
+    "image": "https://pettocute.com/storage/2022/07/dog-g7dddc07b0_640.webp"
+  },
+  {
+    "id": "scottish-terrier",
+    "name_th": "สก็อตติช เทอร์เรีย",
+    "name_en": "Scottish Terrier",
+    "price": 5,
+    "size": 1,
+    "temperament": 6,
+    "image": "https://www.bloggang.com/data/4/49days/picture/1325710796.jpg"
+  },
+  {
+    "id": "boston-terrier",
+    "name_th": "บอสตัน เทอร์เรีย",
+    "name_en": "Boston Terrier",
+    "price": 5,
+    "size": 1,
+    "temperament": 1,
+    "image": "https://image.dogilike.com/shareimg/contentimg/2013/prig/Breed/Boston_Terrier_Eden_Forever.JPG"
+  },
+  {
+    "id": "cavalier-king-charles-spaniel",
+    "name_th": "คาวาเลียร์ คิง ชาร์ลส์ สแปเนียล",
+    "name_en": "Cavalier King Charles Spaniel",
+    "price": 5,
+    "size": 1,
+    "temperament": 1,
+    "image": "https://www.decadeslife.com/wp-content/uploads/2022/11/Cavalier-King-Charles-Spaniel-Dog.webp"
+  },
+  {
+    "id": "jack-russell-terrier",
+    "name_th": "แจ็ค รัสเซลล์ เทอร์เรีย",
+    "name_en": "Jack Russell Terrier",
+    "price": 3,
+    "size": 1,
+    "temperament": 3,
+    "image": "https://png.pngtree.com/thumb_back/fw800/background/20230523/pngtree-jack-russell-terrier-pictures-and-video-wallpapers-image_2687004.jpg"
+  },
+  {
+    "id": "shiba-inu",
+    "name_th": "ชิบะ อินุ",
+    "name_en": "Shiba Inu",
+    "price": 5,
+    "size": 1,
+    "temperament": 6,
+    "image": "https://cdn.ennxo.com/uploads/products/640/bf52cdfd8c11443893d2aa89c13c3568.jpg"
+  },
+  {
+    "id": "japanese-spitz",
+    "name_th": "แจแปนนิส สปิตซ์",
+    "name_en": "Japanese Spitz",
+    "price": 3,
+    "size": 1,
+    "temperament": 1,
+    "image": "https://cdn.ennxo.com/uploads/products/640/6e3bff99a7374952abea0b5cd3e9a7ad.jpg"
+  },
+  {
+    "id": "pekingese",
+    "name_th": "ปักกิ่ง",
+    "name_en": "Pekingese",
+    "price": 1,
+    "size": 1,
+    "temperament": 5,
+    "image": "https://neo-corporate.com/wp-content/uploads/2026/01/pekingese-dog.jpg"
+  },
+  {
+    "id": "miniature-schnauzer",
+    "name_th": "มินิเจอร์ ชเนาเซอร์",
+    "name_en": "Miniature Schnauzer",
+    "price": 3,
+    "size": 1,
+    "temperament": 1,
+    "image": "https://pettocute.com/storage/2022/06/sebastian-coman-travel-nufybs_HQKc-unsplash-e1655980027241.webp"
+  },
+  {
+    "id": "miniature-pinscher",
+    "name_th": "มินิเจอร์ พินเชอร์ (มินิพิน)",
+    "name_en": "Miniature Pinscher",
+    "price": 1,
+    "size": 1,
+    "temperament": 3,
+    "image": "https://mypets.decorexpro.com/wp-content/uploads/2017/08/mini-pincher-e1503389186491.jpg"
+  },
+  {
+    "id": "west-highland-white-terrier",
+    "name_th": "เวสต์ ไฮแลนด์ ไวท์ เทอร์เรีย (เวสตี)",
+    "name_en": "West Highland White Terrier",
+    "price": 5,
+    "size": 1,
+    "temperament": 4,
+    "image": "https://www.bloggang.com/data/v/vinitsiri/picture/1281961380.jpg"
+  },
+  {
+    "id": "dachshund",
+    "name_th": "ดัชชุน (แด็กซันด์)",
+    "name_en": "Dachshund",
+    "price": 3,
+    "size": 1,
+    "temperament": 6,
+    "image": "https://cdn.ennxo.com/uploads/products/480/5ad44872e5054b318092cacc9789fdc6.jpg"
+  },
+  {
+    "id": "shetland-sheepdog",
+    "name_th": "เชตแลนด์ ชีพด็อก (เชลตี้)",
+    "name_en": "Shetland Sheepdog",
+    "price": 5,
+    "size": 1,
+    "temperament": 2,
+    "image": "https://image.dogilike.com/shareimg/contentimg/2013/prig/Breed/billy-the-shetland-sheepdog_33884_2009-09-05_w450.jpg"
+  },
+  {
+    "id": "lhasa-apso",
+    "name_th": "ลาซา แอปโซ",
+    "name_en": "Lhasa Apso",
+    "price": 3,
+    "size": 1,
+    "temperament": 6,
+    "image": "https://img.kapook.com/image/_81177202.jpg"
+  },
+  {
+    "id": "parson-russell-terrier",
+    "name_th": "พาร์สัน รัสเซลล์ เทอร์เรีย",
+    "name_en": "Parson Russell Terrier",
+    "price": 5,
+    "size": 1,
+    "temperament": 3,
+    "image": "https://pic.marketdogs.com/images/2019/02/02/dog-3684791_640.jpg"
+  },
+  {
+    "id": "american-eskimo-dog",
+    "name_th": "อเมริกัน เอสกิโม ด็อก (เอสกี)",
+    "name_en": "American Eskimo Dog",
+    "price": 5,
+    "size": 1,
+    "temperament": 3,
+    "image": "https://image.dogilike.com/shareimg/contentimg/2020/aomsin_/Ranking/7-24/shutterstock_1078824218-1024x683.jpg"
+  },
+  {
+    "id": "beagle",
+    "name_th": "บีเกิล",
+    "name_en": "Beagle",
+    "price": 3,
+    "size": 3,
+    "temperament": 3,
+    "image": "https://cdn.pixabay.com/photo/2020/07/11/03/41/beagle-5392662_1280.jpg"
+  },
+  {
+    "id": "french-bulldog",
+    "name_th": "เฟรนช์ บูลด็อก",
+    "name_en": "French Bulldog",
+    "price": 5,
+    "size": 3,
+    "temperament": 1,
+    "image": "https://cdn.ennxo.com/uploads/products/640/d6295aeda3f641cabdccd4af0c56aaee.jpg"
+  },
+  {
+    "id": "thai-bangkaew",
+    "name_th": "ไทยบางแก้ว",
+    "name_en": "Thai Bangkaew",
+    "price": 1,
+    "size": 3,
+    "temperament": 4,
+    "image": "https://img.kapook.com/u/2019/Jarosphan/Pet/Dog/154/010.jpg"
+  },
+  {
+    "id": "thai-ridgeback",
+    "name_th": "ไทยหลังอาน",
+    "name_en": "Thai Ridgeback",
+    "price": 3,
+    "size": 3,
+    "temperament": 4,
+    "image": "https://www.lib.ru.ac.th/journal2/wp-content/uploads/2013/11/thai-ridgeback-dog-%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%9B%E0%B8%B2%E0%B8%A27.jpg"
+  },
+  {
+    "id": "thai-mongrel",
+    "name_th": "หมาไทยพันธุ์ทาง (สุนัขพื้นบ้านไทย)",
+    "name_en": "Thai Mongrel",
+    "price": 1,
+    "size": 3,
+    "temperament": 4,
+    "image": "https://previews.123rf.com/images/aspartame/aspartame1609/aspartame160900009/65646680-thai-mixed-breed-dog-on-cement-floor.jpg"
+  },
+  {
+    "id": "basenji",
+    "name_th": "บาเซนจิ",
+    "name_en": "Basenji",
+    "price": 5,
+    "size": 3,
+    "temperament": 6,
+    "image": "https://image.dogilike.com/shareimg/contentimg/2013/meaw/Breeds/Basenji/2.jpg"
+  },
+  {
+    "id": "australian-cattle-dog",
+    "name_th": "ออสเตรเลียน แคตเทิล ด็อก",
+    "name_en": "Australian Cattle Dog",
+    "price": 5,
+    "size": 3,
+    "temperament": 3,
+    "image": "https://pettocute.com/storage/2022/07/courtney-wentz-UERY_7oYW6w-unsplash-_1__1.webp"
+  },
+  {
+    "id": "australian-kelpie",
+    "name_th": "ออสเตรเลียน เคลพี",
+    "name_en": "Australian Kelpie",
+    "price": 5,
+    "size": 3,
+    "temperament": 3,
+    "image": "https://t3.ftcdn.net/jpg/02/23/50/64/360_F_223506474_zJ7xH7UpS3TdT5SGHShCb7Uwc3PCwUil.jpg"
+  },
+  {
+    "id": "siberian-husky",
+    "name_th": "ไซบีเรียน ฮัสกี้",
+    "name_en": "Siberian Husky",
+    "price": 3,
+    "size": 3,
+    "temperament": 6,
+    "image": "https://img.freepik.com/fotos-premium/cao-husky-siberiano-deitado-na-grama-da-floresta-em-tamanho-real-descansando-o-retrato-do-cao-husky-com-olhos-castanhos-azuis_77829-8467.jpg"
+  },
+  {
+    "id": "samoyed",
+    "name_th": "ซามอยด์",
+    "name_en": "Samoyed",
+    "price": 5,
+    "size": 3,
+    "temperament": 6,
+    "image": "https://lppuppy.com/wp-content/uploads/2026/03/4.jpg"
+  },
+  {
+    "id": "bulldog",
+    "name_th": "บูลด็อก (บริติช บูลด็อก)",
+    "name_en": "Bulldog (British Bulldog)",
+    "price": 5,
+    "size": 3,
+    "temperament": 5,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Whitebulldog.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original"
+  },
+  {
+    "id": "american-bully",
+    "name_th": "อเมริกัน บูลลี",
+    "name_en": "American Bully",
+    "price": 5,
+    "size": 3,
+    "temperament": 1,
+    "image": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/UUZTTZEVSYHLIIIOBYOFYVBBTQ.jpg&w=1200"
+  },
+  {
+    "id": "american-pit-bull-terrier",
+    "name_th": "อเมริกัน พิทบูล เทอร์เรีย",
+    "name_en": "American Pit Bull Terrier",
+    "price": 3,
+    "size": 3,
+    "temperament": 3,
+    "image": "https://t1.blockdit.com/photos/2022/02/6218adb0bb91ae116a568cfb_800x0xcover_00CLelBI.jpg"
+  },
+  {
+    "id": "border-collie",
+    "name_th": "บอร์เดอร์ คอลลี",
+    "name_en": "Border Collie",
+    "price": 3,
+    "size": 3,
+    "temperament": 2,
+    "image": "https://cdn.pixabay.com/photo/2017/04/09/20/57/dog-2216866_1280.jpg"
+  },
+  {
+    "id": "australian-shepherd",
+    "name_th": "ออสเตรเลียน เชพเพิร์ด",
+    "name_en": "Australian Shepherd",
+    "price": 5,
+    "size": 3,
+    "temperament": 2,
+    "image": "https://www.thaipedigree.com/static/articles/e1b8285253b6a2f233bafdac9958485280ab0d98f80d99a15b3ffed69dd3be59.jpeg"
+  },
+  {
+    "id": "kerry-blue-terrier",
+    "name_th": "เคอร์รี บลู เทอร์เรีย",
+    "name_en": "Kerry Blue Terrier",
+    "price": 7,
+    "size": 3,
+    "temperament": 3,
+    "image": "https://www.akc.org/wp-content/uploads/2017/11/Kerry-Blue-Terrier-standing-stacked-outdoors.jpg"
+  },
+  {
+    "id": "pembroke-welsh-corgi",
+    "name_th": "เวลช์ คอร์กี เพมโบรก",
+    "name_en": "Pembroke Welsh Corgi",
+    "price": 5,
+    "size": 3,
+    "temperament": 6,
+    "image": "https://cdn.pixabay.com/photo/2022/11/13/09/07/pembroke-welsh-corgi-7588703_640.jpg"
+  },
+  {
+    "id": "cardigan-welsh-corgi",
+    "name_th": "เวลช์ คอร์กี คาร์ดิแกน",
+    "name_en": "Cardigan Welsh Corgi",
+    "price": 5,
+    "size": 3,
+    "temperament": 6,
+    "image": "https://img.thaicdn.net/image/pet/Cardigan_Welsh_Corgi_400.jpg"
+  },
+  {
+    "id": "airedale-terrier",
+    "name_th": "แอร์เดล เทอร์เรีย",
+    "name_en": "Airedale Terrier",
+    "price": 5,
+    "size": 3,
+    "temperament": 6,
+    "image": "https://vetkardiyoloji.com/wp-content/uploads/2023/06/Airedale-terrier-charles14m-1536x1290.jpg"
+  },
+  {
+    "id": "shikoku",
+    "name_th": "ชิโกกุ",
+    "name_en": "Shikoku",
+    "price": 7,
+    "size": 3,
+    "temperament": 4,
+    "image": "https://i.pinimg.com/736x/7a/b9/65/7ab965a74b7c16317bd9d68a1b342ad0.jpg"
+  },
+  {
+    "id": "kai-ken",
+    "name_th": "ไค เคน",
+    "name_en": "Kai Ken",
+    "price": 7,
+    "size": 3,
+    "temperament": 4,
+    "image": "https://image.dogilike.com/shareimg/contentimg/2020/meaw/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9D%E0%B8%B6%E0%B8%81/EP8%2018062020/Kai%20Ken.jpg"
+  },
+  {
+    "id": "belgian-shepherd",
+    "name_th": "เบลเจียน เชพเพิร์ด (เทอร์วูเรน / โกรเนนดาล)",
+    "name_en": "Belgian Shepherd",
+    "price": 7,
+    "size": 3,
+    "temperament": 4,
+    "image": "https://png.pngtree.com/png-clipart/20231218/original/pngtree-belgian-shepherd-tervuren-puppy-dog-photo-png-image_13869296.png"
+  },
+  {
+    "id": "vizsla",
+    "name_th": "วิซสลา",
+    "name_en": "Vizsla",
+    "price": 5,
+    "size": 3,
+    "temperament": 3,
+    "image": "https://www.shutterstock.com/image-photo/vizsla-puppy-on-green-grass-260nw-2549554669.jpg"
+  },
+  {
+    "id": "beagle-harrier",
+    "name_th": "บีเกิล-แฮร์ริเออร์",
+    "name_en": "Beagle-Harrier",
+    "price": 7,
+    "size": 3,
+    "temperament": 3,
+    "image": "https://s3.animalia.bio/pets/animals/photos/full/1x1/nhI3eJAQFQL9RW7g1PEg4MzmCVZBu4L2ZHS8Mk0k.webp?id=c1f4e0589b8745441039f7d1a0c0e6cd"
+  },
+  {
+    "id": "keeshond",
+    "name_th": "คีสออนด์",
+    "name_en": "Keeshond",
+    "price": 5,
+    "size": 3,
+    "temperament": 1,
+    "image": "https://image.dogilike.com/shareimg/contentimg/2013/prig/Breed/Keeshond_Majic_standing_cropped.jpg"
+  },
+  {
+    "id": "portuguese-water-dog",
+    "name_th": "โปรตุกีส วอเตอร์ ด็อก",
+    "name_en": "Portuguese Water Dog",
+    "price": 7,
+    "size": 3,
+    "temperament": 3,
+    "image": "https://image.dogilike.com/shareimg/contentimg/nuna/jat_vg.jpg"
+  },
+  {
+    "id": "puli",
+    "name_th": "พูลี",
+    "name_en": "Puli",
+    "price": 7,
+    "size": 3,
+    "temperament": 6,
+    "image": "https://image.dogilike.com/shareimg/contentimg/nut_2/Lifestyle/Puli/3colorsPuli.jpg"
+  },
+  {
+    "id": "cocker-spaniel",
+    "name_th": "ค็อกเกอร์ สแปเนียล",
+    "name_en": "Cocker Spaniel",
+    "price": 3,
+    "size": 3,
+    "temperament": 1,
+    "image": "https://media.istockphoto.com/id/1696964551/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%84%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C.jpg?s=612x612&w=0&k=20&c=ysHdAgWAf_iGABC-1BaCLuWBoA7X91er12fE1lkAbnQ="
+  },
+  {
+    "id": "saluki",
+    "name_th": "ซาลูกิ",
+    "name_en": "Saluki",
+    "price": 7,
+    "size": 3,
+    "temperament": 5,
+    "image": "https://mypets.decorexpro.com/wp-content/uploads/2017/05/Saluki10.jpg"
+  },
+  {
+    "id": "american-cocker-spaniel",
+    "name_th": "อเมริกัน ค็อกเกอร์ สแปเนียล",
+    "name_en": "American Cocker Spaniel",
+    "price": 3,
+    "size": 3,
+    "temperament": 1,
+    "image": "https://www.postposmo.com/wp-content/uploads/2020/07/cocker-spaniel4.jpg"
+  },
+  {
+    "id": "shar-pei",
+    "name_th": "ชาร์เปย",
+    "name_en": "Shar Pei",
+    "price": 3,
+    "size": 3,
+    "temperament": 6,
+    "image": "https://png.pngtree.com/png-vector/20230907/ourmid/pngtree-looking-sharpei-pup-puppy-studio-png-image_9213014.png"
+  },
+  {
+    "id": "belgian-malinois",
+    "name_th": "เบลเจียน มาลินอยส์",
+    "name_en": "Belgian Malinois",
+    "price": 5,
+    "size": 3,
+    "temperament": 2,
+    "image": "https://cdn.ennxo.com/uploads/products/640/f88fe678e3d641c38e9ec9b90e688306.jpg"
+  },
+  {
+    "id": "basset-hound",
+    "name_th": "บาสเซ็ต ฮาวด์",
+    "name_en": "Basset Hound",
+    "price": 5,
+    "size": 3,
+    "temperament": 5,
+    "image": "https://cdn.ennxo.com/uploads/products/640/464112a3455e43748a21f3cce35919c0.jpg"
+  },
+  {
+    "id": "american-staffordshire-terrier",
+    "name_th": "อเมริกัน สแตฟฟอร์ดเชียร์ เทอร์เรีย (แอมสตาฟ)",
+    "name_en": "American Staffordshire Terrier",
+    "price": 3,
+    "size": 3,
+    "temperament": 4,
+    "image": "https://cdn.ennxo.com/uploads/products/640/4b9348d16cfc4b63be3a9dde2371b528.jpg"
+  },
+  {
+    "id": "whippet",
+    "name_th": "วิปเพ็ท",
+    "name_en": "Whippet",
+    "price": 5,
+    "size": 3,
+    "temperament": 5,
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgipvN4r_L8hBeRIjhXfhyWG2zkYAhBm-WZ-qR8WY1GlGMoW6J0XhuI1ky_OGGp1O8CptgVEKeg9crj72IpCQls7QuN_m5_Lh1TyTPW45c-9ZosgsxxhAVH7TE5IFs_O5H81c_Iq_bEkq_A/s1600/whippet_coleman.jpg"
+  },
+  {
+    "id": "golden-retriever",
+    "name_th": "โกลเด้น รีทรีฟเวอร์",
+    "name_en": "Golden Retriever",
+    "price": 3,
+    "size": 5,
+    "temperament": 1,
+    "image": "https://glurgang.com/wp-content/uploads/2023/06/Golden-Retriever-Physical-Characteristics.jpg"
+  },
+  {
+    "id": "tibetan-mastiff",
+    "name_th": "ทิเบตัน มาสทิฟฟ์",
+    "name_en": "Tibetan Mastiff",
+    "price": 7,
+    "size": 5,
+    "temperament": 4,
+    "image": "https://t4.ftcdn.net/jpg/18/43/34/51/360_F_1843345168_LKa8SuqKpOUCo1gYoLeCNXJ4NsgcuKS9.jpg"
+  },
+  {
+    "id": "newfoundland",
+    "name_th": "นิวฟันด์แลนด์",
+    "name_en": "Newfoundland",
+    "price": 7,
+    "size": 5,
+    "temperament": 5,
+    "image": "https://glurgang.com/wp-content/uploads/2023/05/Newfoundland-large-breed-dogs.jpg"
+  },
+  {
+    "id": "bernese-mountain-dog",
+    "name_th": "เบอร์นีส เมาน์เทน ด็อก",
+    "name_en": "Bernese Mountain Dog",
+    "price": 7,
+    "size": 5,
+    "temperament": 5,
+    "image": "https://www.bloggang.com/data/4/49days/picture/1321602483.jpg"
+  },
+  {
+    "id": "great-pyrenees",
+    "name_th": "เกรท ไพรีนิส",
+    "name_en": "Great Pyrenees",
+    "price": 5,
+    "size": 5,
+    "temperament": 4,
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmL9oN6jNsfqzBK3ORzLCbN7Zond2LiMzjcK8oLLWz7aUf7V9l9ZVr1MiUgpkItTcSTbHavbWMwT9g8dSOPJjxx3FYm3O_Wg-7DnxBo7bpnUsBoCERUfztyFNBNQbKsTtOBqS_1se0Jw-e/s1600/%25E0%25B9%2580%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B8%2597+%25E0%25B9%2584%25E0%25B8%259E%25E0%25B8%25A3%25E0%25B8%25B5%25E0%25B8%2599%25E0%25B8%25B5%25E0%25B8%25AA.jpg"
+  },
+  {
+    "id": "english-mastiff",
+    "name_th": "มาสทิฟฟ์",
+    "name_en": "English Mastiff",
+    "price": 7,
+    "size": 5,
+    "temperament": 4,
+    "image": "https://chocomoji.com/dogs/breeds/mastiff/images/dog-ceo-3.webp"
+  },
+  {
+    "id": "neapolitan-mastiff",
+    "name_th": "นีโอโปลิแทน มาสทิฟฟ์",
+    "name_en": "Neapolitan Mastiff",
+    "price": 7,
+    "size": 5,
+    "temperament": 4,
+    "image": "https://www.postposmo.com/wp-content/uploads/2020/06/mastin-napolitano-12.jpg"
+  },
+  {
+    "id": "boxer",
+    "name_th": "บ็อกเซอร์",
+    "name_en": "Boxer",
+    "price": 5,
+    "size": 5,
+    "temperament": 3,
+    "image": "https://image.dogilike.com/shareimg/contentimg/2013/meaw/Breeds/Boxer/1.jpg"
+  },
+  {
+    "id": "dogo-argentino",
+    "name_th": "โดโก อาร์เจนติโน",
+    "name_en": "Dogo Argentino",
+    "price": 5,
+    "size": 5,
+    "temperament": 3,
+    "image": "https://cdn.ennxo.com/uploads/products/640/9bc6e4bbb6524adb842c63e743f60849.jpg"
+  },
+  {
+    "id": "kangal-shepherd-dog",
+    "name_th": "คันกัล",
+    "name_en": "Kangal Shepherd Dog",
+    "price": 7,
+    "size": 5,
+    "temperament": 4,
+    "image": "https://animalmarket.ma/wp-content/uploads/2025/07/Copie-de-Sans-titre-1070x510.jpg"
+  },
+  {
+    "id": "anatolian-shepherd-dog",
+    "name_th": "อนาโตเลียน เชพเพิร์ด ด็อก",
+    "name_en": "Anatolian Shepherd Dog",
+    "price": 7,
+    "size": 5,
+    "temperament": 4,
+    "image": "https://st3.depositphotos.com/8776626/35076/i/450/depositphotos_350767812-stock-photo-anatolian-shepherd-dog-coban-kopegi.jpg"
+  },
+  {
+    "id": "alaskan-malamute",
+    "name_th": "อลาสกัน มาลามิวท์",
+    "name_en": "Alaskan Malamute",
+    "price": 5,
+    "size": 5,
+    "temperament": 6,
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbLm1mXL_Nh8WKZKsuHovR7tiyOpwJBGNzb5aQqXf4ymnpA6Qz_GQ8h-x-jKVoOz0DjuDjCNlhlBg0KkCPO3S99OZQmtpWdPHW9942tN-f7n0kxyJk-1HrLQqixdjDJBiCGXMbjPNw84bU/s1600/06.jpg"
+  },
+  {
+    "id": "chow-chow",
+    "name_th": "เชาเชา",
+    "name_en": "Chow Chow",
+    "price": 5,
+    "size": 5,
+    "temperament": 6,
+    "image": "https://cdn.pixabay.com/photo/2022/04/13/15/01/chow-chow-7130446_1280.jpg"
+  },
+  {
+    "id": "german-shepherd",
+    "name_th": "เยอรมัน เชพเพิร์ด (อัลเซเซียน)",
+    "name_en": "German Shepherd",
+    "price": 3,
+    "size": 5,
+    "temperament": 2,
+    "image": "https://i.pinimg.com/736x/a4/3f/a6/a43fa62293a6cb326a7eee1f99031948.jpg"
+  },
+  {
+    "id": "labrador-retriever",
+    "name_th": "ลาบราดอร์ รีทรีฟเวอร์",
+    "name_en": "Labrador Retriever",
+    "price": 3,
+    "size": 5,
+    "temperament": 1,
+    "image": "https://images.pexels.com/photos/28725007/pexels-photo-28725007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    "id": "bull-terrier",
+    "name_th": "บูล เทอร์เรีย",
+    "name_en": "Bull Terrier",
+    "price": 5,
+    "size": 5,
+    "temperament": 3,
+    "image": "https://static.wixstatic.com/media/10e7d0_c21594a873494d888be2cbb9560d14e9~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/10e7d0_c21594a873494d888be2cbb9560d14e9~mv2.png"
+  },
+  {
+    "id": "rhodesian-ridgeback",
+    "name_th": "โรดีเซียน ริดจ์แบ็ก",
+    "name_en": "Rhodesian Ridgeback",
+    "price": 5,
+    "size": 5,
+    "temperament": 4,
+    "image": "https://media.istockphoto.com/id/1437763593/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B9%82%E0%B8%A3%E0%B8%94%E0%B8%B5%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B8%A3%E0%B8%B4%E0%B8%94%E0%B8%88%E0%B9%8C%E0%B9%81%E0%B8%9A%E0%B9%87%E0%B8%84-%E0%B9%80%E0%B8%AD%E0%B8%B2%E0%B8%97%E0%B9%8C%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C.jpg?s=612x612&w=0&k=20&c=48iaphS-zx_waidzGnelApqcevKMz9VuPwoZwLPsMVI="
+  },
+  {
+    "id": "rottweiler",
+    "name_th": "ร็อตไวเลอร์",
+    "name_en": "Rottweiler",
+    "price": 3,
+    "size": 5,
+    "temperament": 4,
+    "image": "https://image.dogilike.com/shareimg/contentimg/2013/prig/Breed/rottweiler_2.jpg"
+  },
+  {
+    "id": "doberman-pinscher",
+    "name_th": "โดเบอร์แมน พินเชอร์",
+    "name_en": "Doberman Pinscher",
+    "price": 5,
+    "size": 5,
+    "temperament": 2,
+    "image": "https://media.istockphoto.com/id/1449439279/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B9%82%E0%B8%94%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%A1%E0%B8%99-%E0%B8%9E%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%8A%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0-%E0%B8%95%E0%B8%B8%E0%B9%8A%E0%B8%81%E0%B8%95%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%A7%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%A1%E0%B8%99%E0%B8%AD%E0%B8%81%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%AD%E0%B8%B2%E0%B8%97%E0%B8%B4%E0%B8%95%E0%B8%A2%E0%B9%8C%E0%B8%95%E0%B8%81-%E0%B8%AB%E0%B8%B9%E0%B8%9E%E0%B8%B7%E0%B8%8A%E0%B8%82%E0%B8%99%E0%B8%B2.jpg?s=612x612&w=0&k=20&c=ncFmJujEUi8ffHbzL-30kGkb65G-RdJQFonn--zCYe8="
+  },
+  {
+    "id": "great-dane",
+    "name_th": "เกรท เดน",
+    "name_en": "Great Dane",
+    "price": 5,
+    "size": 5,
+    "temperament": 5,
+    "image": "https://www.dogthailand.net/data/attachment/forum/202506/24/012804u6l77e16lrg66mnl.jpg"
+  },
+  {
+    "id": "saint-bernard",
+    "name_th": "เซนต์เบอร์นาร์ด",
+    "name_en": "Saint Bernard",
+    "price": 5,
+    "size": 5,
+    "temperament": 5,
+    "image": "https://image.peco-japan.com/optimized_images/281707.jpg"
+  },
+  {
+    "id": "bullmastiff",
+    "name_th": "บูลมาสทิฟฟ์",
+    "name_en": "Bullmastiff",
+    "price": 5,
+    "size": 5,
+    "temperament": 4,
+    "image": "https://cdn.mos.cms.futurecdn.net/N9ahixNY9AB37CvRdzb2ZK.jpg"
+  },
+  {
+    "id": "old-english-sheepdog",
+    "name_th": "โอลด์ อิงลิช ชีพด็อก",
+    "name_en": "Old English Sheepdog",
+    "price": 7,
+    "size": 5,
+    "temperament": 1,
+    "image": "https://image.dogilike.com/shareimg/contentimg/2013/prig/Breed/dims_vetstreet_com(1).jpg"
+  },
+  {
+    "id": "collie",
+    "name_th": "คอลลี่",
+    "name_en": "Collie (Rough/Smooth)",
+    "price": 5,
+    "size": 5,
+    "temperament": 1,
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgheNsMSj2QAotfgIZjsalD9X50-QHOiHUU1DGPc8-3laOxU6HOJ1RDAm41LwsJoct8YWoppFVZ7zA2egAl7r06xRw1j1JOX0V9cZpmooOg8u9z1gvMwwVxIAufDXgaPgTfHzVIyAx_J8k/s1600/Collie.jpg"
+  },
+  {
+    "id": "bloodhound",
+    "name_th": "บลัดฮาวด์",
+    "name_en": "Bloodhound",
+    "price": 7,
+    "size": 5,
+    "temperament": 5,
+    "image": "https://image.dogilike.com/shareimg/contentimg/2013/pungpond/6-9/BH81.jpg"
+  },
+  {
+    "id": "greyhound",
+    "name_th": "เกรย์ฮาวด์",
+    "name_en": "Greyhound",
+    "price": 5,
+    "size": 5,
+    "temperament": 5,
+    "image": "https://www.purina.co.th/sites/default/files/2025-07/BREED%2520Hero_0062_greyhound.jpg"
+  },
+  {
+    "id": "weimaraner",
+    "name_th": "ไวมาราเนอร์",
+    "name_en": "Weimaraner",
+    "price": 5,
+    "size": 5,
+    "temperament": 2,
+    "image": "https://media.istockphoto.com/id/487576070/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%AA%E0%B8%B8%E0%B8%99%E0%B8%B1%E0%B8%82%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B9%8C%E0%B9%81%E0%B8%97%E0%B9%89-weimaraner-%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B9%83%E0%B8%99%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4.jpg?s=612x612&w=0&k=20&c=nv5M64mhWURIQa7KbjECUIU1w41lw00epXxqopKKv88="
+  },
+  {
+    "id": "irish-wolfhound",
+    "name_th": "ไอริช วูล์ฟฮาวด์",
+    "name_en": "Irish Wolfhound",
+    "price": 7,
+    "size": 5,
+    "temperament": 5,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/%282%29_Irish_Wolfhound_4.jpg?utm_source=th.wikipedia.org&utm_campaign=index&utm_content=original"
+  },
+  {
+    "id": "black-russian-terrier",
+    "name_th": "แบล็ก รัสเซียน เทอร์เรีย",
+    "name_en": "Black Russian Terrier",
+    "price": 7,
+    "size": 5,
+    "temperament": 4,
+    "image": "https://media.istockphoto.com/id/1049396800/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%AA%E0%B8%B8%E0%B8%99%E0%B8%B1%E0%B8%82%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B9%8C%E0%B8%A3%E0%B8%B1%E0%B8%AA%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B9%81%E0%B8%9A%E0%B8%A5%E0%B9%87%E0%B8%84%E0%B9%80%E0%B8%97%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2.jpg?s=612x612&w=0&k=20&c=5-0R-ZkIuD0s0zdQ2_rt2ftYwhLoTzkn0gwjUYW4GAw="
+  },
+  {
+    "id": "bouvier-des-flandres",
+    "name_th": "บูวีเย เดส์ ฟลานเดรส์",
+    "name_en": "Bouvier des Flandres",
+    "price": 7,
+    "size": 5,
+    "temperament": 2,
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Ygor_Raiza.jpg/500px-Ygor_Raiza.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+  },
+  {
+    "id": "komondor",
+    "name_th": "โคมอนดอร์",
+    "name_en": "Komondor",
+    "price": 7,
+    "size": 5,
+    "temperament": 4,
+    "image": "https://image.dogilike.com/shareimg/contentimg/nuna/komondor_1.jpg"
+  },
+  {
+    "id": "beauceron",
+    "name_th": "โบเซรอน",
+    "name_en": "Beauceron",
+    "price": 7,
+    "size": 5,
+    "temperament": 4,
+    "image": "https://www.dailypaws.com/thmb/pGvE7m6X9g3DZADGcGZnlGERHx4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Beauceron-sitting-fence-573817693-2000-a99e22919fc042d88b96e991dd3c4e7b.jpg"
+  },
+  {
+    "id": "dalmatian",
+    "name_th": "ดัลเมเชียน",
+    "name_en": "Dalmatian",
+    "price": 5,
+    "size": 5,
+    "temperament": 3,
+    "image": "https://i.pinimg.com/originals/b2/f0/56/b2f0563078e2f5a360e3d85fa1c2623f.jpg"
+  },
+  {
+    "id": "akita-inu",
+    "name_th": "อาคิตะ อินุ",
+    "name_en": "Akita Inu",
+    "price": 5,
+    "size": 5,
+    "temperament": 4,
+    "image": "https://media.komchadluek.net/media/img/size1/2015/10/09/dd7bbk7b9ifejd8dbea65.jpg"
+  }
+]
