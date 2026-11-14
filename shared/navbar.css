@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap');
 
+/* แก้ navbar ขยับ (1): จองที่ของแถบเลื่อน (scrollbar) ไว้ทุกหน้า
+   หน้าที่ยาวจะมีแถบเลื่อน หน้าที่สั้นไม่มี ทำให้ความกว้างจอไม่เท่ากัน เมนูที่จัดกลางเลยขยับ */
+html {
+    scrollbar-gutter: stable;
+    background: #f6faff;       /* แก้จอขาวแวบ (1): สีพื้นตอนหน้ากำลังโหลด เป็นฟ้าอ่อนแทนสีขาว */
+}
+
+/* แก้จอขาวแวบ (2): ให้เบราว์เซอร์ค้างหน้าเก่าไว้จนหน้าใหม่พร้อม แล้วค่อยๆ เปลี่ยนแบบนุ่มๆ
+   (ใช้ได้กับ Chrome / Edge และต้องเปิดผ่าน Live Server ไม่ใช่ดับเบิลคลิกไฟล์) */
+@view-transition {
+    navigation: auto;
+}
+
 .mamha-nav {
     display: flex;
     flex-wrap: wrap;
@@ -14,6 +27,7 @@
     color: #163e68;
     font-family: 'Prompt', sans-serif;
     font-size: 14px;
+    line-height: 1.5;          /* แก้ navbar ขยับ (2): กำหนดความสูงบรรทัดเอง ไม่ให้ CSS ของแต่ละหน้ามาเปลี่ยน */
 }
 
 .mamha-nav a {
@@ -33,8 +47,10 @@
     gap: 4px 14px;
 }
 
+/* แก้ navbar ขยับ (3): ไม่ใช้ตัวหนากับเมนูที่เลือกอยู่
+   เพราะตัวหนากว้างกว่าตัวปกติ เปลี่ยนหน้าแล้วคำอื่นๆ เลยถูกดันไปนิดหนึ่ง ใช้สี + ขีดเส้นใต้แทน */
 .mamha-nav-links a.active {
-    font-weight: bold;
     text-decoration: underline;
+    text-underline-offset: 4px;
     color: #4399f5;
 }

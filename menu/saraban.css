@@ -204,6 +204,19 @@ a {
     mix-blend-mode: multiply;
 }
 
+/* โลโก้ MaMha ด้านขวา (แทนรูปหมา .hero-dog เดิม)
+   object-fit: cover ตัดพื้นที่ว่างซ้ายขวาของรูป ให้เหลือแค่วงกลมตรงกลาง */
+.hero-logo {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 190px;
+    height: 190px;
+    transform: translateY(-50%);
+    object-fit: cover;
+    clip-path: circle(37.5%);   /* ตัดเหลือแค่วงกลมของโลโก้ ไม่เอาพื้นสีครีมรอบนอก */
+}
+
 .features {
     width: min(100% - 70px, 1050px);
     margin: 25px auto 0;
@@ -436,6 +449,12 @@ a {
         right: -3%;
         width: 40%;
         height: 160px;
+    }
+
+    .hero-logo {
+        right: 12px;
+        width: 130px;
+        height: 130px;
     }
 
     .features {

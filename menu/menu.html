@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <!-- เมนูด้านบนมาจาก ../shared/navbar.js (ใช้ร่วมกันทุกหน้า) -->
+    <!-- เมนู navbar: เรียกไว้บนสุดของ body ให้เมนูขึ้นก่อนเนื้อหา หน้าจะได้ไม่กระพริบ -->
+    <script src="../shared/navbar.js"></script>
 
     <main>
         <section class="hero" aria-labelledby="hero-title">
@@ -20,7 +21,8 @@
                 <p>เรารวมทุกฟีเจอร์ที่คุณและน้องหมาต้องการไว้ในที่เดียว</p>
                 <p>เลือกดูฟีเจอร์ที่สนใจ แล้วเริ่มต้นการเดินทางไปด้วยกันได้เลย!</p>
             </div>
-            <img class="hero-dog" src="img/mama.png" alt="ลูกสุนัขโกลเด้นรีทรีฟเวอร์">
+            <!-- <img class="hero-dog" src="img/mama.png" alt="ลูกสุนัขโกลเด้นรีทรีฟเวอร์"> -->   <!-- รูปหมาเดิม เปลี่ยนเป็นโลโก้แทน -->
+            <img class="hero-logo" src="../shared/img/mamha-logo.webp" alt="โลโก้ MaMha">
         </section>
 
         <section class="features" aria-labelledby="features-title">
@@ -99,6 +101,5 @@
         </section>
     </main>
 
-    <script src="../shared/navbar.js"></script>
 </body>
 </html>
