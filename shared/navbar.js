@@ -7,7 +7,7 @@ const MENU_ITEMS = [
     // { folder: "about",     file:"about.html",           label: "เกี่ยวกับ" },
     { folder: "breeds",    file: "DogBreedsIndex.html", label: "สายพันธุ์สุนัข" },
     // { folder: "search",    file: "Dogsearch.html",      label: "ค้นหาสุนัข" },
-    { folder: "match",     file: "maindog.html",  label: "Dog Match" },
+    { folder: "match",     file: "maindog.html",  label: "จับคู่หาน้องหมา" },
     { folder: "dog-care",  file: "dogcare.html",        label: "คู่มือการเลี้ยง" },
     { folder: "Calculate", file: "calculate.html",      label: "คำนวณค่าใช้จ่าย" },
     // { folder: "vaccine",   file: "vaccines.html",       label: "วัคซีน" },
