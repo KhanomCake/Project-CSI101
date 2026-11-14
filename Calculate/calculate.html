@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MaMha | DoggyBudget</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="calculatestyle.css" />
+  </head>
+  <body>
+    <!-- เมนูหลัก -->
+    <!-- <header class="site-header">
+        <div class="nav-container">
+          <a href="#home" class="brand">🐶 MaMha</a>
+
+          <nav class="main-nav">
+            <a href="#home">คำนวณค่าใช้จ่าย</a>
+            <a href="#food">อาหารสุนัข</a>
+            <a href="#accessories">อุปกรณ์สุนัข</a>
+          </nav>
+        </div>
+      </header> -->
+
+    <main>
+      <!-- ส่วนที่ 1: คำนวณค่าใช้จ่าย -->
+      <section id="home" class="budget-section">
+        <div class="container">
+          <header class="budget-header">
+            <div class="logo-area">
+              <div class="logo-icon">🐶</div>
+              <div>
+                <h1 class="logo-title">DoggyBudget</h1>
+                <p class="logo-subtitle">
+                  คำนวณค่าใช้จ่ายสำหรับเลี้ยงน้องหมาได้อย่างมั่นใจ
+                </p>
+              </div>
+            </div>
+
+            <div class="currency-badge">คำนวณเป็นสกุลเงินบาท (THB)</div>
+          </header>
+
+          <div class="main-grid">
+            <!-- ช่องกรอกค่าใช้จ่าย -->
+            <div class="inputs-col">
+              <!-- ค่าใช้จ่ายแรกเริ่ม -->
+              <section class="card">
+                <div class="card-header-row">
+                  <h2 class="card-title">
+                    <span class="badge-num">1</span>
+                    ค่าใช้จ่ายแรกเริ่ม (จ่ายครั้งเดียว)
+                  </h2>
+                  <span class="unit-text">บาท (THB)</span>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="cost-adoption"
+                      >ค่าตัว / ค่ารับเลี้ยงน้องหมา</label
+                    >
+                    <input type="number" id="cost-adoption" value="0" min="0" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cost-vaccine">วัคซีนแรกเกิด & ตรวจสุขภาพ</label>
+                    <input
+                      type="number"
+                      id="cost-vaccine"
+                      value="2500"
+                      min="0"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cost-neutering">ทำหมัน / ไมโครชิป</label>
+                    <input
+                      type="number"
+                      id="cost-neutering"
+                      value="3600"
+                      min="0"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cost-bed">เบาะนอน, กรง, คอก</label>
+                    <input type="number" id="cost-bed" value="1500" min="0" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cost-leash">สายจูง, ปลอกคอ, ชามอาหาร</label>
+                    <input type="number" id="cost-leash" value="800" min="0" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cost-toys">ของเล่น & ของใช้เริ่มต้น</label>
+                    <input type="number" id="cost-toys" value="600" min="0" />
+                  </div>
+                </div>
+              </section>
+
+              <!-- ค่าใช้จ่ายรายเดือน -->
+              <section class="card">
+                <div class="card-header-row">
+                  <h2 class="card-title">
+                    <span class="badge-num">2</span>
+                    ค่าใช้จ่ายประจำ (ต่อเดือน)
+                  </h2>
+                  <span class="unit-text">บาท / เดือน</span>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="cost-food">อาหารหลัก & ขนมประจำวัน</label>
+                    <input type="number" id="cost-food" value="1500" min="0" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cost-pads">แผ่นรองซับ / ทราย / ถุงเก็บอึ</label>
+                    <input type="number" id="cost-pads" value="300" min="0" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cost-grooming">อาบน้ำ / ตัดขน</label>
+                    <input
+                      type="number"
+                      id="cost-grooming"
+                      value="600"
+                      min="0"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cost-meds">ยากันเห็บ / พยาธิ</label>
+                    <input type="number" id="cost-meds" value="350" min="0" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cost-insurance">ประกันสุขภาพสัตว์เลี้ยง</label>
+                    <input
+                      type="number"
+                      id="cost-insurance"
+                      value="300"
+                      min="0"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cost-checkup"
+                      >ค่ารักษา / ตรวจสุขภาพประจำเดือน</label
+                    >
+                    <input
+                      type="number"
+                      id="cost-checkup"
+                      value="500"
+                      min="0"
+                    />
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <!-- สรุปค่าใช้จ่าย -->
+            <aside class="summary-col">
+              <div class="summary-card">
+                <h2 class="summary-title">📋 สรุปภาพรวมค่าใช้จ่ายน้องหมา</h2>
+
+                <div class="res-box res-box-primary">
+                  <div class="res-label">ค่าใช้จ่ายประมาณการต่อเดือน</div>
+                  <div class="res-value-wrap">
+                    <span class="res-value" id="out-monthly">3,550</span>
+                    <span class="res-unit">บาท / เดือน</span>
+                  </div>
+                </div>
+
+                <div class="res-box">
+                  <div class="res-label">รวมปีแรก (รวมค่าใช้จ่ายแรกเริ่ม)</div>
+                  <div class="res-value-wrap">
+                    <span class="res-value" id="out-first-year">51,600</span>
+                    <span class="res-unit">บาท</span>
+                  </div>
+                </div>
+
+                <div class="res-box">
+                  <div class="res-label">ค่าใช้จ่ายเฉลี่ยปีต่อ ๆ ไป</div>
+                  <div class="res-value-wrap">
+                    <span class="res-value" id="out-next-years">42,600</span>
+                    <span class="res-unit">บาท / ปี</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tip-card">
+                <h3 class="tip-title">💡 ข้อแนะนำสำหรับการวางแผน</h3>
+                <p class="tip-text">
+                  ควรเตรียมเงินสำรองฉุกเฉินสำหรับค่ารักษาพยาบาลยามเจ็บป่วยกะทันหันอย่างน้อย
+                  10,000 - 20,000 บาท เสมอ
+                  เพราะค่ารักษาพยาบาลสัตว์เลี้ยงอาจสูงกว่าที่คาดคิด
+                </p>
+                <p class="tip-text">
+                  คำนวณค่าใช้จ่ายปีแรกจะรวมทั้งอุปกรณ์แรกเริ่มและค่าใช้จ่ายรายเดือน
+                  12 เดือน
+                  ส่วนปีถัดไปจะเหลือเพียงค่าใช้จ่ายรายเดือนสะสมทั้งปีครับ
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ส่วนที่ 2: อาหารสุนัข -->
+      <section id="food" class="product-section">
+        <div class="section-container">
+          <div class="section-heading">
+            <span class="section-label">DOG FOOD</span>
+            <h2>อาหารสุนัขคุณภาพ</h2>
+            <p>เลือกสิ่งที่ดีให้เพื่อนสี่ขาของคุณ</p>
+          </div>
+
+          <div class="food-grid">
+            <article class="food-card">
+              <img
+                src="https://images.openai.com/static-rsc-4/guk1fkjvxqqeiD0SLVjJMLXxEViijSF1tf7qDlx_PRPkAYK4eBJPhkUb7U1pRwFoq7LFg0hDiPC8CR04Gcj_hpA9kUYzZij37d4bpl2snVWmqkkfdGhTvPEgdZmlRTrHPJmRf_n-4oGY1jqhWTfmOqhrQwvEa2kjojB2S9q6olTo310pr466s365G8A3CX9h?purpose=fullsize"
+                alt="Royal Canin - Maxi Adult" 
+              />
+              <div class="food-info">
+                <span class="food-level">Super Premium</span>
+                <ul>
+                  <li>สูตรสำหรับสุนัขพันธุ์ใหญ่</li>
+                  <li>ดูแลระบบย่อยอาหาร</li>
+                  <li>มีสารอาหารช่วยดูแลกระดูกและข้อต่อ</li>
+                  <li>เหมาะกับสุนัขโตอายุประมาณ 15 เดือน-5 ปี</li>
+                </ul>
+                <h3>Royal Canin - Maxi Adult</h3>
+                <button class="shopee-btn" data-brand="Royal Canin - Maxi Adult">
+                  ซื้อสินค้าบน Shopee
+                </button>
+              </div>
+            </article>
+
+            <article class="food-card">
+              <img
+                src="https://images.openai.com/static-rsc-4/N4-6WYRidzJ19yIo1blLJMExLR19A_BjcqmF8hZUl08kQA_rpuxyPKdN0V9DHwh3dM8-YpBrozQUSiCfvN1oAMx9tE5wkJNsyazehjRTqWBN20k6n0Hcycrp_3LVwoRPBoRG42F8qrV8r4EO2EIm6-CxGJYEzUP6eHUqLXRrxQM?purpose=inline"
+                alt="Hill's Science Diet - Adult Large Breed"
+              />
+              <div class="food-info">
+                <span class="food-level">Premium / Science-based Nutrition</span>
+                <ul>
+                  <li>เน้นโภชนาการที่สมดุล</li>
+                  <li>มีสารอาหารช่วยดูแลข้อต่อ</li>
+                  <li>มีโปรตีนช่วยรักษากล้ามเนื้อ</li>
+                  <li>เหมาะกับสุนัขโตพันธุ์ใหญ่</li>
+                </ul>
+                <h3>Hill's Science Diet - Adult Large Breed</h3>
+                <button class="shopee-btn" data-brand="Hill's Science Diet - Adult Large Breed">
+                  ซื้อสินค้าบน Shopee
+                </button>
+              </div>
+            </article>
+
+            <article class="food-card">
+              <img
+                src="https://images.openai.com/static-rsc-4/v6GIVLI5ksOshYWTNPkOeHHlrLTH5fnHh6tyfxFusQ18945FsebYw3Qm_J370j4ast6g1em8nC4L3ss64pYQnuNcpd3X26HDOzo37BjJJ2mrMLy_0BFPQuRXgW_KxXjHkaHn0kJov_lxAbL3sFeR2gh2xfo_mrnbQEblU9vLbSf8-AkiodQSyRsjitm2mPaV?purpose=fullsize"
+                alt="Purina Pro Plan - Large Breed Adult"
+              />
+              <div class="food-info">
+                <span class="food-level">Super Premium</span>
+                <ul>
+                  <li>เน้นโปรตีนเพื่อรักษากล้ามเนื้อ</li>
+                  <li>มีสารอาหารช่วยดูแลข้อต่อ</li>
+                  <li>มีกรดไขมันโอเมก้า</li>
+                </ul>
+                <h3>Purina Pro Plan - Large Breed Adult</h3>
+                <button class="shopee-btn" data-brand="Purina Pro Plan - Large Breed Adult">
+                  ซื้อสินค้าบน Shopee
+                </button>
+              </div>
+            </article>
+
+            <article class="food-card">
+              <img
+                src="https://images.openai.com/static-rsc-4/wuudF_Mz3Amyls8ejYPEASR_-bOhRbHyLAlqu12l0-0nJ-bSzBz1nbSNB150AsAHvAu-Y5vgPrX_Ip0vc69R2UjYaAj5w1nHliZ4U9T9n-FedRFWb08-6Nu0_YRqSa9p4rpa2IZXfM52OMRdcG9pRKR4XS1iseMy7ZhlZkna9rE?purpose=inline"
+                alt="Orijen - Original"
+              />
+              <div class="food-info">
+                <span class="food-level">Ultra Premium</span>
+                <ul>
+                  <li>เน้นวัตถุดิบจากสัตว์</li>
+                  <li>มีโปรตีนค่อนข้างสูง</li>
+                  <li>มีส่วนผสมจากเนื้อสัตว์และปลา</li>
+                </ul>
+                <h3>Orijen - Original</h3>
+                <button class="shopee-btn" data-brand="Orijen - Original">
+                  ซื้อสินค้าบน Shopee
+                </button>
+              </div>
+            </article>
+
+            <article class="food-card">
+              <img
+                src="https://images.openai.com/static-rsc-4/p44SVnoxydOTquq2L-2I_OwtuqX2abSqn_ejwNB115dfQVJOFtfL4eR3g73gAd3yZk-Oy6CySWk6lgEQ2jtdvQxOGXWMEsT8O_M6epDmTtvfPb9fTYH4sJSc2C8eRQoUljEjyyUmwQKnTE1yOOLE93p5OEC_8kGBQIH4b-MAfOtZfnyanowF-eMsnXtoQGWD?purpose=fullsize"
+                alt="Acana - Adult Large Breed"
+              />
+              <div class="food-info">
+                <span class="food-level">Premium / Holistic</span>
+                <ul>
+                 <li>เน้นวัตถุดิบจากสัตว์</li>
+                 <li>มีโปรตีนช่วยดูแลกล้ามเนื้อ</li>
+                 <li>มีสารอาหารจากปลาและแหล่งไขมัน</li>
+                </ul>
+                <h3>Acana - Adult Large Breed</h3>
+                <button class="shopee-btn" data-brand="Acana - Adult Large Breed">
+                  ซื้อสินค้าบน Shopee
+                </button>
+              </div>
+            </article>
+
+            <article class="food-card">
+              <img
+                src="https://images.openai.com/static-rsc-4/28vtr8fikSJx7W1K9K8lxiKNKJxAGudX1xwU8YM9djw3MXt2WetkWa9icAYHHXwKlm6FXPQ0EVC5pXMQS59RMAvV267_BHp5EUA824egeogtVVdCxD4DEtF48bhT6e7q1OrkiW81qlVPlNyApLRDV1DcGkKIXI_GhqAydKCDj2hsspsKMSbFWgJrjKb4YEw6?purpose=fullsize"
+                alt="Royal Canin Chihuahua Adult"
+              />
+              <div class="food-info">
+                <span class="food-level">Premium</span>
+                <ul>
+                  <li>ออกแบบสูตรเฉพาะสำหรับสุนัขพันธุ์ชิวาวาโต</li>
+                  <li>มีโปรตีนที่ย่อยและดูดซึมได้ดี</li>
+                  <li>เม็ดอาหารขนาดเล็ก เหมาะกับขากรรไกรของชิวาวา</li>
+                </ul>
+                <h3>Royal Canin Chihuahua Adult</h3>
+                <button class="shopee-btn" data-brand="Royal Canin Chihuahua Adult">
+                  ซื้อสินค้าบน Shopee
+                </button>
+              </div>
+            </article>
+
+            <article class="food-card">
+              <img
+                src="https://images.openai.com/static-rsc-4/3czTv7x_KEM5Z0eLFoHlJ8YIStTbJTa6vgih3yCqSQQCU-hk3gMeKoUdBVhhuWW3cCz5OwP-p2-2XKL0eynpsYTTiN1lb_70hWjwlpzuz631KoSjy1aXuoNlnyhtSeiJQaO_okl3XUaVmWN5uwOkHy17lRpk8CNSTXQrg8HTkdUwMI72Z3s33SMKmaIBMj-0?purpose=fullsize"
+                alt="Buzz Beyond - Gluten Free Adult"
+              />
+              <div class="food-info">
+                <span class="food-level">Premium</span>
+                <ul>
+                  <li>เน้นโภชนาการแบบองค์รวม</li>
+                  <li>มีสูตรจากปลาและเนื้อสัตว์</li>
+                  <li>มีตัวเลือกสูตร Grain-free</li>
+                </ul>
+                <h3>Buzz Beyond - Gluten Free Adult</h3>
+                <button class="shopee-btn" data-brand="Buzz Beyond - Gluten Free Adult">
+                  ซื้อสินค้าบน Shopee
+                </button>
+              </div>
+            </article>
+
+            <article class="food-card">
+              <img
+                src="https://images.openai.com/static-rsc-4/1X6TZ2FmFTf9mAcfh7tYLSp1CD2YnB-_Fh4UwfqFQ_gGB-Jh6Ax2BikblKccUMoSp2_zlHUSJjw9FljNdnuI44U2Cj8IovNkhp7h5xOh2tlps0NYsONZqMiuIcgJkWOL-QpU0qxtIDsgoMIUNvPpDLspq30qOb3XUkvfrjVWTHdiQ66jf12o17C2EBEEOPru?purpose=fullsize"
+                alt="Purina Pro Plan - Small & Mini Adult"
+              />
+              <div class="food-info">
+                <span class="food-level">Super Premium</span>
+                <ul>
+                  <li>สูตรสำหรับสุนัขโตพันธุ์เล็ก</li>
+                  <li>ใช้เนื้อไก่เป็นแหล่งโปรตีน</li>
+                  <li>มีโปรตีนช่วยรักษามวลกล้ามเนื้อ</li>
+                </ul>
+                <h3>Purina Pro Plan - Small & Mini Adult</h3>
+                <button class="shopee-btn" data-brand="Purina Pro Plan - Small & Mini Adult">
+                  ซื้อสินค้าบน Shopee
+                </button>
+              </div>
+            </article>
+
+            <article class="food-card">
+              <img
+                src="https://images.openai.com/static-rsc-4/ud7fmqCtNdL979630UQb2f33-VvnLS5n-6xY_vJHjEgZ_w23InNtcOBRpWmPRcAFUGMdo5pse19JmvZLDsMWVnYAXModeqM6k6JGYHKwlmRaIzcIPi8NC1dEadX9WvPdHQ7tItNTOAnv_L6ZRODspGo7OEWcSlior26yIBnaaYw?purpose=inline"
+                alt="SmartHeart - Gold Holistic Small Breeds"
+              />
+              <div class="food-info">
+                <span class="food-level">Premium</span>
+                <ul>
+                  <li>มีสูตรสำหรับลูกสุนัขและสุนัขโต</li>
+                  <li>มีสารอาหารและวิตามินเสริม</li>
+                  <li>มีตัวเลือกตามขนาดสายพันธุ์</li>
+                </ul>
+                <h3>martHeart - Gold Holistic Small Breeds</h3>
+                <button class="shopee-btn" data-brand="martHeart - Gold Holistic Small Breeds">
+                  ซื้อสินค้าบน Shopee
+                </button>
+              </div>
+            </article>
+
+            <article class="food-card">
+              <img
+                src="https://images.openai.com/static-rsc-4/wMKulVTJiC3w2rFogsfMCs9JpGG7d7AGrFMHNFZXim_0JaPV8lzjai9ZMK37tyLJuuZembSKqIJw0DDtr8Xyhvxt1seL7kiIYFD3jEN9ky24zQUYBoNh_PfNy3Oz7GAI5-sr4muFYnVt7avwpvoTwvmuUUFotB9cFyuaAfemxeE?purpose=inline"
+                alt="Monster Lab - Tiny Guard Grain Free"
+              />
+              <div class="food-info">
+                <span class="food-level">Premium</span>
+                <ul>
+                  <li>สูตร Grain Free สำหรับสุนัขโตพันธุ์เล็ก</li>
+                  <li>ใช้โปรตีนจากเนื้อแกะ</li>
+                  <li>มี Mixed Berry และขมิ้น ซึ่งเป็นแหล่งสารต้านอนุมูลอิสระ</li>
+                </ul>
+                <h3>Monster Lab - Tiny Guard Grain Free</h3>
+                <button class="shopee-btn" data-brand="Monster Lab - Tiny Guard Grain Free">
+                  ซื้อสินค้าบน Shopee
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ส่วนที่ 3: อุปกรณ์สุนัข -->
+      <section id="accessories" class="product-section accessories-section">
+        <div class="section-container">
+          <div class="section-heading">
+            <span class="section-label">DOG ACCESSORIES</span>
+            <h2>อุปกรณ์สำหรับน้องหมา</h2>
+            <p>รวมของใช้และของเล่นที่ช่วยให้ชีวิตน้องหมาสะดวกสบาย</p>
+          </div>
+
+          <div class="accessory-grid">
+            <article class="accessory-card">
+              <img
+                src="https://down-th.img.susercontent.com/file/th-11134207-7rasj-mawgqsd9w12s46@resize_w450_nl.webp"
+                alt=""
+              />
+              <h3>ห่วงยางกัด MOMOVIDA</h3>
+              <p>ของเล่นสำหรับกัด วัสดุ EVA</p>
+              <a
+                class="shopee-btn"
+                href="https://shopee.co.th/MOMOVIDA-%E0%B8%AB%E0%B9%88%E0%B8%A7%E0%B8%87%E0%B8%A2%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B8%E0%B8%99%E0%B8%B1%E0%B8%82-%E0%B9%81%E0%B8%82%E0%B9%87%E0%B8%87%E0%B9%81%E0%B8%A3%E0%B8%87-%E0%B8%97%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%99-%E0%B8%A7%E0%B8%B1%E0%B8%AA%E0%B8%94%E0%B8%B8-EVA-%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%94%E0%B8%A0%E0%B8%B1%E0%B8%A2-%E0%B8%A1%E0%B8%B5%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A2%E0%B8%B7%E0%B8%94%E0%B8%AB%E0%B8%A2%E0%B8%B8%E0%B9%88%E0%B8%99-%E0%B8%AB%E0%B9%88%E0%B8%A7%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%B2-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99-DT-21-i.1032923055.42003326098"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ซื้อสินค้าบน Shopee</a
+              >
+            </article>
+
+            <article class="accessory-card">
+              <img
+                src="https://down-th.img.susercontent.com/file/sg-11134201-8259h-mt0nhnrirpjd53@resize_w450_nl.webp"
+                alt=""
+              />
+              <h3>ที่นอนสัตว์เลี้ยง</h3>
+              <p>เบาะนอนนุ่ม มีหลายขนาด</p>
+              <a
+                class="shopee-btn"
+                href="https://shopee.co.th/%F0%9F%90%BE%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%AA%E0%B9%88%E0%B8%87%F0%9F%90%BE%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B8%AD%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87-%E0%B9%80%E0%B8%9A%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88-%E0%B8%99%E0%B8%B8%E0%B9%88%E0%B8%A1-%E0%B8%AA%E0%B8%9A%E0%B8%B2%E0%B8%A2-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B8%AD%E0%B8%99%E0%B9%81%E0%B8%A1%E0%B8%Aว-4-%E0%B8%82%E0%B8%99%E0%B8%B2%E0%B8%94-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B8%AD%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%ต%E0%B8%A7%E0%B9%8C%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2-S-M-L-XL-i.238389288.27401895862"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ซื้อสินค้าบน Shopee</a
+              >
+            </article>
+
+            <article class="accessory-card">
+              <img
+                src="https://down-th.img.susercontent.com/file/th-11134207-81zti-mig5vlnnoykn82.webp"
+                alt=""
+              />
+              <h3>Arm & Hammer Barkies</h3>
+              <p>ของเล่นขัดฟันสำหรับสุนัข</p>
+              <a
+                class="shopee-btn"
+                href="https://shopee.co.th/-%E0%B9%81%E0%B8%9A%E0%B8%A3%E0%B8%99%E0%B8%94%E0%B9%8C%E0%B9%81%E0%B8%97%E0%B9%89-USA%F0%9F%87%BA%F0%9F%87%B8-Arm-and-Hammer-Barkies-%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B8%82%E0%B8%B1%E0%B8%94%E0%B8%9F%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B8%E0%B8%99%E0%B8%B1%E0%B8%82-%E0%B8%81%E0%B8%A5%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B9%84%E0%B8%81%E0%B9%88-%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%84%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%A7%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87-%E0%B8%82%E0%B8%99%E0%B8%B2%E0%B8%94-17%E0%B8%8B%E0%B8%A1.-i.1008494946.52653341672"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ซื้อสินค้าบน Shopee</a
+              >
+            </article>
+
+            <article class="accessory-card">
+              <img
+                src="https://down-th.img.susercontent.com/file/37e56a64349f23a0cdf3ed3d180aa412.webp"
+                alt=""
+              />
+              <h3>เชือกกัด Happy PETs</h3>
+              <p>ของเล่นเชือกสำหรับน้องหมา</p>
+              <a
+                class="shopee-btn"
+                href="https://shopee.co.th/Happy-PETs-%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B8%AA%E0%B8%B8%E0%B8%99%E0%B8%B1%E0%B8%82-%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B8%81%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88-%E0%B8%A1%E0%B8%B5%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%88%E0%B8%B1%E0%B8%9A-%E0%B9%84%E0%B8%A7%E0%B9%89%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%B2-%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B8%AB%E0%B8%A1%E0%B8%B2-i.149868349.7772894503"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ซื้อสินค้าบน Shopee</a
+              >
+            </article>
+
+            <article class="accessory-card">
+              <img
+                src="https://down-th.img.susercontent.com/file/sg-11134201-8258j-msv9ipqs9ddud7.webp"
+                alt=""
+              />
+              <h3>แผ่นรองฉี่ PETWELL</h3>
+              <p>แผ่นรองซับสำหรับสัตว์เลี้ยง</p>
+              <a
+                class="shopee-btn"
+                href="https://shopee.co.th/PETWELL-%E0%B9%81%E0%B8%9C%E0%B9%88%E0%B8%99%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%89%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%97%E0%B8%B4%E0%B9%89%E0%B8%87-6%E0%B8%8A%E0%B8%B1%E0%B9%89%E0%B8%99-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%81%E0%B8%A5%E0%B8%B4%E0%B9%88%E0%B8%99-%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B8%8B%E0%B8%B1%E0%B8%9A%E0%B9%84%E0%B8%A7-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%A3%E0%B8%B1%E0%B9%88%E0%B8%A7-%E0%B9%80%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%B0%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%81%E0%B8%A1%E0%B8%A7-i.1898914692.54817574660"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ซื้อสินค้าบน Shopee</a
+              >
+            </article>
+
+            <article class="accessory-card">
+              <img
+                src="https://down-th.img.susercontent.com/file/th-11134207-7rash-m30p6zk5k6mr60.webp"
+                alt=""
+              />
+              <h3>บันไดสัตว์เลี้ยง</h3>
+              <p>ช่วยให้น้องหมาขึ้นลงเตียงได้สะดวก</p>
+              <a
+                class="shopee-btn"
+                href="https://shopee.co.th/%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%94%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%A7%E0%B9%8C%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87-%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%94%E0%B9%82%E0%B8%8B%E0%B8%9F%E0%B8%B2%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B8%A2%E0%B8%87-%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%99%E0%B8%B8%E0%B9%88%E0%B8%A1-%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%94%E0%B8%AA%E0%B8%B8%E0%B8%99%E0%B8%B1%E0%B8%82-%E0%B8%AB%E0%B8%A1%E0%B8%B2-%E0%B9%81%E0%B8%A1%E0%B8%A7-%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%82%E0%B8%B6%E0%B9%89%E0%B8%99%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2-%E0%B8%96%E0%B8%AD%E0%B8%94%E0%B8%8B%E0%B8%B1%E0%B8%81%E0%B9%84%E0%B8%94%E0%B9%89-i.1160092760.26068865711"
+                target="_blank"
+                rel="noopener noreferrer"
+                >ซื้อสินค้าบน Shopee</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- <footer class="site-footer">
+      <p>© 2026 MaMha | โลกของน้องหมา เริ่มต้นที่นี่ 🐶</p>
+    </footer> -->
+
+    <script src="calculate.js"></script>
+  </body>
+</html>

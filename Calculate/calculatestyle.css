@@ -1,0 +1,663 @@
+/* =================================
+   1. ตั้งค่าพื้นฐาน
+================================= */
+
+:root {
+  --navy-blue: #163e68;
+  --blue-light: #4399f5;
+  --blue-soft: #eaf4ff;
+  --blue-hover: #307fd4;
+  --cream: #f5f8fc;
+  --white: #ffffff;
+  --text: #334238;
+  --muted: #718074;
+  --border: #e5edf5;
+  --shadow: 0 8px 28px rgba(22, 62, 104, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* =================================
+   2. ส่วนคำนวณค่าใช้จ่าย
+================================= */
+
+.budget-section {
+  padding: 60px 20px 75px;
+  background: linear-gradient(180deg, #f0f6ff, #f8faff);
+}
+
+.container {
+  max-width: 1150px;
+  width: 100%;
+  margin: auto;
+}
+
+/* Header */
+
+.budget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-icon {
+  width: 62px;
+  height: 62px;
+  background: var(--navy-blue);
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  box-shadow: 0 6px 15px rgba(22, 62, 104, 0.15);
+}
+
+.logo-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--navy-blue);
+  line-height: 1.3;
+}
+
+.logo-subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+.currency-badge {
+  background: var(--white);
+  border: 1px solid #dce9f8;
+  color: var(--navy-blue);
+  padding: 9px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =================================
+   3. Layout เครื่องคำนวณ
+================================= */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 25px;
+  align-items: start;
+}
+
+.inputs-col,
+.summary-col {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* =================================
+   4. กล่องกรอกค่าใช้จ่าย
+================================= */
+
+.card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 32px rgba(22, 62, 104, 0.09);
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid var(--border);
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navy-blue);
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.badge-num {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--blue-soft);
+  color: var(--blue-light);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.unit-text {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Form */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #53677b;
+  font-weight: 400;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  background: #f8faff;
+  border: 1px solid #e1eaf4;
+  border-radius: 11px;
+  font-size: 15px;
+  color: var(--navy-blue);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-group input:hover {
+  border-color: #b9d6f5;
+}
+
+.form-group input:focus {
+  border-color: var(--blue-light);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(67, 153, 245, 0.12);
+}
+
+/* =================================
+   5. กล่องสรุปค่าใช้จ่าย
+================================= */
+
+.summary-card {
+  background: linear-gradient(145deg, #163e68, #2766a5);
+  border-radius: 22px;
+  padding: 28px;
+  color: var(--white);
+  box-shadow: 0 12px 28px rgba(22, 62, 104, 0.15);
+}
+
+.summary-title {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Result Box */
+
+.res-box {
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 15px;
+  padding: 19px;
+  margin-bottom: 15px;
+  transition: background 0.2s ease;
+}
+
+.res-box:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.res-box:last-child {
+  margin-bottom: 0;
+}
+
+.res-box-primary {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.res-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 7px;
+}
+
+.res-value-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.res-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.res-unit {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+}
+
+/* =================================
+   6. กล่องคำแนะนำ
+================================= */
+
+.tip-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue-light);
+  border-radius: 17px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.tip-title {
+  color: var(--navy-blue);
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 13px;
+}
+
+.tip-text {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 12px;
+}
+
+.tip-text:last-child {
+  margin-bottom: 0;
+}
+
+/* =================================
+   7. ส่วนอาหารและอุปกรณ์
+================================= */
+
+.product-section {
+  padding: 85px 20px;
+  background: var(--white);
+}
+
+.section-container {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-label {
+  display: inline-block;
+  color: var(--blue-light);
+  background: var(--blue-soft);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--navy-blue);
+  margin: 13px 0 7px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/* =================================
+   8. การ์ดอาหารสุนัข
+================================= */
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.food-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(22, 62, 104, 0.05);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(22, 62, 104, 0.1);
+}
+
+.food-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  background: #f8faff;
+  padding: 18px;
+}
+
+.food-info {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.food-level {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--blue-soft);
+  color: var(--navy-blue);
+  padding: 6px 13px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* รายละเอียดอาหาร */
+
+.food-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 17px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.food-info li {
+  position: relative;
+  padding-left: 23px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.food-info li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--blue-light);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.food-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navy-blue);
+  margin: 0 0 18px;
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+}
+
+/* =================================
+   9. การ์ดอุปกรณ์สุนัข
+================================= */
+
+.accessory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.accessory-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  box-shadow: 0 5px 20px rgba(22, 62, 104, 0.05);
+}
+
+.accessory-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(22, 62, 104, 0.1);
+}
+
+.accessory-card img {
+  width: 100%;
+  height: 185px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.accessory-card h3 {
+  color: var(--navy-blue);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.accessory-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+/* =================================
+   10. ปุ่ม Shopee
+================================= */
+
+.shopee-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  background: var(--blue-light);
+  color: var(--white);
+  border: none;
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+  margin-top: auto;
+}
+
+.shopee-btn:hover {
+  background: var(--blue-hover);
+  transform: translateY(-2px);
+}
+
+.shopee-btn:active {
+  transform: translateY(0);
+}
+
+.shopee-btn:focus-visible {
+  outline: 3px solid rgba(67, 153, 245, 0.3);
+  outline-offset: 3px;
+}
+
+/* =================================
+   11. Footer
+================================= */
+
+.site-footer {
+  background: var(--navy-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 14px;
+}
+
+/* =================================
+   12. รองรับแท็บเล็ต
+================================= */
+
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-grid,
+  .accessory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .summary-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+}
+
+/* =================================
+   13. รองรับโทรศัพท์
+================================= */
+
+@media (max-width: 600px) {
+  .budget-section {
+    padding: 35px 15px 50px;
+  }
+
+  .budget-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .logo-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 25px;
+  }
+
+  .logo-title {
+    font-size: 25px;
+  }
+
+  .logo-subtitle {
+    font-size: 12px;
+  }
+
+  .main-grid {
+    gap: 18px;
+  }
+
+  .form-grid,
+  .food-grid,
+  .accessory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-col {
+    display: flex;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card-header-row {
+    align-items: flex-start;
+  }
+
+  .card-title {
+    font-size: 15px;
+  }
+
+  .unit-text {
+    font-size: 11px;
+  }
+
+  .summary-card {
+    padding: 22px;
+  }
+
+  .summary-title {
+    font-size: 17px;
+  }
+
+  .res-value {
+    font-size: 27px;
+  }
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+
+  .product-section {
+    padding: 55px 15px;
+  }
+
+  .food-card img {
+    height: 220px;
+  }
+
+  .food-info h3 {
+    min-height: auto;
+  }
+
+  .accessory-card {
+    padding: 20px;
+  }
+}
