@@ -35,6 +35,7 @@ function submitQuiz() {
     const userEnergy = parseInt(document.getElementById('energy').value);
     const userGrooming = parseInt(document.getElementById('grooming').value);
     const userExperience = parseInt(document.getElementById('experience').value);
+    const userFamily = parseInt(document.getElementById('family').value);   // (เพิ่ม) ข้อ 8
 
     const scoredBreeds = dogBreeds.map(dog => {
         const priceDiff = Math.abs(dog.price - userPrice);
@@ -46,9 +47,13 @@ function submitQuiz() {
         const energyDiff = Math.abs(dog.energy - userEnergy);
         const groomingDiff = Math.abs(dog.grooming - userGrooming);
         const experienceDiff = Math.abs(dog.experience - userExperience);
+        // (เพิ่ม) ข้อ 8: หักเฉพาะตอนที่สายพันธุ์ "เข้ากับเด็ก/สัตว์อื่นได้น้อยกว่า" ที่บ้านต้องการ
+        // ถ้าบ้านไม่มีเด็กหรือสัตว์อื่น (1) ทุกสายพันธุ์ได้ 0 ไม่โดนหัก
+        const familyDiff = Math.max(0, userFamily - dog.familyFriendly);
 
         const totalDifference = (priceDiff * 1.0) + (sizeDiff * 2.0) + (tempDiff * 2.5)
-            + (spaceDiff * 1.0) + (energyDiff * 1.0) + (groomingDiff * 1.0) + (experienceDiff * 1.0);   // (เพิ่ม) ข้อ 4-7 น้ำหนัก 1.0 เท่ากับเรื่องงบ
+            + (spaceDiff * 1.0) + (energyDiff * 1.0) + (groomingDiff * 1.0) + (experienceDiff * 1.0)   // (เพิ่ม) ข้อ 4-7 น้ำหนัก 1.0 เท่ากับเรื่องงบ
+            + (familyDiff * 1.0);   // (เพิ่ม) ข้อ 8
 
         return {
             ...dog,

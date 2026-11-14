@@ -10,6 +10,7 @@
     "energy": 1,
     "grooming": 3,
     "experience": 3,
+    "familyFriendly": 3,
     "image": "https://du2j4cfd2qo0k.cloudfront.net/e8c823be_5652_4863_af17_53ee587e9861_5d55470c13.png"
   },
   {
@@ -23,6 +24,7 @@
     "energy": 1,
     "grooming": 1,
     "experience": 1,
+    "familyFriendly": 1,
     "image": "https://img.thaicdn.net/u/2018/Jarosphan/Pet/Dog/47798/03.jpg"
   },
   {
@@ -36,6 +38,7 @@
     "energy": 1,
     "grooming": 5,
     "experience": 1,
+    "familyFriendly": 5,
     "image": "https://cdn.ennxo.com/uploads/products/640/cb64e497fe9441599f9b7185b92f4e27.jpg"
   },
   {
@@ -49,6 +52,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 1,
+    "familyFriendly": 5,
     "image": "https://cdn.ennxo.com/uploads/products/640/2cf383a4ab454f2eae8e6393937e2169.jpg"
   },
   {
@@ -62,6 +66,7 @@
     "energy": 1,
     "grooming": 1,
     "experience": 1,
+    "familyFriendly": 5,
     "image": "https://png.pngtree.com/png-clipart/20240312/original/pngtree-pug-dog-breed-png-image_14569258.png"
   },
   {
@@ -75,6 +80,7 @@
     "energy": 1,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 3,
     "image": "https://108dog.com/market/board/thumbnail/94e3aef7-959a-4e74-b003-910fa9dc14dc.jpg"
   },
   {
@@ -88,6 +94,7 @@
     "energy": 1,
     "grooming": 5,
     "experience": 1,
+    "familyFriendly": 3,
     "image": "https://cdn.ennxo.com/uploads/products/640/50ef9f0f86264e5dbc7dfb2a4a245ac6.jpg"
   },
   {
@@ -101,6 +108,7 @@
     "energy": 3,
     "grooming": 3,
     "experience": 1,
+    "familyFriendly": 3,
     "image": "https://cdn.ennxo.com/uploads/products/640/3dbae8197c694c078b606b0f25093014.jpg"
   },
   {
@@ -114,6 +122,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://glurgang.com/wp-content/uploads/2023/07/Characteristics-and-Behavior-of-Bichon-Frize.jpg"
   },
   {
@@ -127,6 +136,7 @@
     "energy": 5,
     "grooming": 3,
     "experience": 3,
+    "familyFriendly": 1,
     "image": "https://t3.ftcdn.net/jpg/02/54/90/14/360_F_254901497_qTycTxP7sTja57BYPYmTeonuWW1cbEoI.jpg"
   },
   {
@@ -140,6 +150,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 1,
+    "familyFriendly": 1,
     "image": "https://img.magnific.com/premium-photo/russian-toy-terrier-thoroughbred-dog_564276-10043.jpg"
   },
   {
@@ -153,6 +164,7 @@
     "energy": 1,
     "grooming": 3,
     "experience": 1,
+    "familyFriendly": 3,
     "image": "https://image.dogilike.com/shareimg/contentimg/2013/prig/Breed/japanesechinf1.jpg"
   },
   {
@@ -166,6 +178,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 1,
+    "familyFriendly": 3,
     "image": "https://static.wixstatic.com/media/c6a3da_306b4c045fe4453fb022fc43d4cae855~mv2.png/v1/fill/w_1110,h_1110,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/c6a3da_306b4c045fe4453fb022fc43d4cae855~mv2.png"
   },
   {
@@ -179,6 +192,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 3,
     "image": "https://image.dogilike.com/shareimg/contentimg/2013/prig/Breed/Piccolo%20Levriero%20Italiano%20ITALIAN%20GREYHOUND3.jpg"
   },
   {
@@ -192,6 +206,7 @@
     "energy": 3,
     "grooming": 3,
     "experience": 3,
+    "familyFriendly": 1,
     "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0LUWwWY56BhDQR1lZIneHHYYb1n72wLbDkkNb6Gr2TzGoRzjvfloSyg4d9FGvphoRPzMzmhlj57SMOzOF04pDvtHkPBAJ35VA79QJlyFv_b4xeRDtnhoZbwV-lLmU66WEDNbrPEEQdVY/w1200-h630-p-k-no-nu/Affenpinscher.jpg"
   },
   {
@@ -205,6 +220,7 @@
     "energy": 1,
     "grooming": 3,
     "experience": 3,
+    "familyFriendly": 1,
     "image": "https://pettocute.com/storage/2022/07/dog-g7dddc07b0_640.webp"
   },
   {
@@ -218,6 +234,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 5,
+    "familyFriendly": 1,
     "image": "https://www.bloggang.com/data/4/49days/picture/1325710796.jpg"
   },
   {
@@ -231,6 +248,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 1,
+    "familyFriendly": 5,
     "image": "https://image.dogilike.com/shareimg/contentimg/2013/prig/Breed/Boston_Terrier_Eden_Forever.JPG"
   },
   {
@@ -244,6 +262,7 @@
     "energy": 3,
     "grooming": 3,
     "experience": 1,
+    "familyFriendly": 5,
     "image": "https://www.decadeslife.com/wp-content/uploads/2022/11/Cavalier-King-Charles-Spaniel-Dog.webp"
   },
   {
@@ -257,6 +276,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://png.pngtree.com/thumb_back/fw800/background/20230523/pngtree-jack-russell-terrier-pictures-and-video-wallpapers-image_2687004.jpg"
   },
   {
@@ -270,6 +290,7 @@
     "energy": 3,
     "grooming": 3,
     "experience": 5,
+    "familyFriendly": 1,
     "image": "https://cdn.ennxo.com/uploads/products/640/bf52cdfd8c11443893d2aa89c13c3568.jpg"
   },
   {
@@ -283,6 +304,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://cdn.ennxo.com/uploads/products/640/6e3bff99a7374952abea0b5cd3e9a7ad.jpg"
   },
   {
@@ -296,6 +318,7 @@
     "energy": 1,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 1,
     "image": "https://neo-corporate.com/wp-content/uploads/2026/01/pekingese-dog.jpg"
   },
   {
@@ -309,6 +332,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 3,
     "image": "https://pettocute.com/storage/2022/06/sebastian-coman-travel-nufybs_HQKc-unsplash-e1655980027241.webp"
   },
   {
@@ -322,6 +346,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 1,
     "image": "https://mypets.decorexpro.com/wp-content/uploads/2017/08/mini-pincher-e1503389186491.jpg"
   },
   {
@@ -335,6 +360,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 3,
     "image": "https://www.bloggang.com/data/v/vinitsiri/picture/1281961380.jpg"
   },
   {
@@ -348,6 +374,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 3,
     "image": "https://cdn.ennxo.com/uploads/products/480/5ad44872e5054b318092cacc9789fdc6.jpg"
   },
   {
@@ -361,6 +388,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://image.dogilike.com/shareimg/contentimg/2013/prig/Breed/billy-the-shetland-sheepdog_33884_2009-09-05_w450.jpg"
   },
   {
@@ -374,6 +402,7 @@
     "energy": 1,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 1,
     "image": "https://img.kapook.com/image/_81177202.jpg"
   },
   {
@@ -387,6 +416,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://pic.marketdogs.com/images/2019/02/02/dog-3684791_640.jpg"
   },
   {
@@ -400,6 +430,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 1,
+    "familyFriendly": 3,
     "image": "https://image.dogilike.com/shareimg/contentimg/2020/aomsin_/Ranking/7-24/shutterstock_1078824218-1024x683.jpg"
   },
   {
@@ -413,6 +444,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 5,
     "image": "https://cdn.pixabay.com/photo/2020/07/11/03/41/beagle-5392662_1280.jpg"
   },
   {
@@ -426,6 +458,7 @@
     "energy": 1,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://cdn.ennxo.com/uploads/products/640/d6295aeda3f641cabdccd4af0c56aaee.jpg"
   },
   {
@@ -439,6 +472,7 @@
     "energy": 5,
     "grooming": 3,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://img.kapook.com/u/2019/Jarosphan/Pet/Dog/154/010.jpg"
   },
   {
@@ -452,6 +486,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 1,
     "image": "https://www.lib.ru.ac.th/journal2/wp-content/uploads/2013/11/thai-ridgeback-dog-%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%9B%E0%B8%B2%E0%B8%A27.jpg"
   },
   {
@@ -465,6 +500,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 1,
+    "familyFriendly": 3,
     "image": "https://previews.123rf.com/images/aspartame/aspartame1609/aspartame160900009/65646680-thai-mixed-breed-dog-on-cement-floor.jpg"
   },
   {
@@ -478,6 +514,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 3,
     "image": "https://image.dogilike.com/shareimg/contentimg/2013/meaw/Breeds/Basenji/2.jpg"
   },
   {
@@ -491,6 +528,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://pettocute.com/storage/2022/07/courtney-wentz-UERY_7oYW6w-unsplash-_1__1.webp"
   },
   {
@@ -504,6 +542,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://t3.ftcdn.net/jpg/02/23/50/64/360_F_223506474_zJ7xH7UpS3TdT5SGHShCb7Uwc3PCwUil.jpg"
   },
   {
@@ -517,6 +556,7 @@
     "energy": 5,
     "grooming": 5,
     "experience": 5,
+    "familyFriendly": 5,
     "image": "https://img.freepik.com/fotos-premium/cao-husky-siberiano-deitado-na-grama-da-floresta-em-tamanho-real-descansando-o-retrato-do-cao-husky-com-olhos-castanhos-azuis_77829-8467.jpg"
   },
   {
@@ -530,6 +570,7 @@
     "energy": 5,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://lppuppy.com/wp-content/uploads/2026/03/4.jpg"
   },
   {
@@ -543,6 +584,7 @@
     "energy": 1,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Whitebulldog.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
@@ -556,6 +598,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/UUZTTZEVSYHLIIIOBYOFYVBBTQ.jpg&w=1200"
   },
   {
@@ -569,6 +612,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://t1.blockdit.com/photos/2022/02/6218adb0bb91ae116a568cfb_800x0xcover_00CLelBI.jpg"
   },
   {
@@ -582,6 +626,7 @@
     "energy": 5,
     "grooming": 3,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://cdn.pixabay.com/photo/2017/04/09/20/57/dog-2216866_1280.jpg"
   },
   {
@@ -595,6 +640,7 @@
     "energy": 5,
     "grooming": 5,
     "experience": 5,
+    "familyFriendly": 5,
     "image": "https://www.thaipedigree.com/static/articles/e1b8285253b6a2f233bafdac9958485280ab0d98f80d99a15b3ffed69dd3be59.jpeg"
   },
   {
@@ -608,6 +654,7 @@
     "energy": 5,
     "grooming": 5,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://www.akc.org/wp-content/uploads/2017/11/Kerry-Blue-Terrier-standing-stacked-outdoors.jpg"
   },
   {
@@ -621,6 +668,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://cdn.pixabay.com/photo/2022/11/13/09/07/pembroke-welsh-corgi-7588703_640.jpg"
   },
   {
@@ -634,6 +682,7 @@
     "energy": 3,
     "grooming": 3,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://img.thaicdn.net/image/pet/Cardigan_Welsh_Corgi_400.jpg"
   },
   {
@@ -647,6 +696,7 @@
     "energy": 5,
     "grooming": 3,
     "experience": 3,
+    "familyFriendly": 3,
     "image": "https://vetkardiyoloji.com/wp-content/uploads/2023/06/Airedale-terrier-charles14m-1536x1290.jpg"
   },
   {
@@ -660,6 +710,7 @@
     "energy": 5,
     "grooming": 3,
     "experience": 5,
+    "familyFriendly": 1,
     "image": "https://i.pinimg.com/736x/7a/b9/65/7ab965a74b7c16317bd9d68a1b342ad0.jpg"
   },
   {
@@ -673,6 +724,7 @@
     "energy": 5,
     "grooming": 3,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://image.dogilike.com/shareimg/contentimg/2020/meaw/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9D%E0%B8%B6%E0%B8%81/EP8%2018062020/Kai%20Ken.jpg"
   },
   {
@@ -686,6 +738,7 @@
     "energy": 5,
     "grooming": 3,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://png.pngtree.com/png-clipart/20231218/original/pngtree-belgian-shepherd-tervuren-puppy-dog-photo-png-image_13869296.png"
   },
   {
@@ -699,6 +752,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://www.shutterstock.com/image-photo/vizsla-puppy-on-green-grass-260nw-2549554669.jpg"
   },
   {
@@ -712,6 +766,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://s3.animalia.bio/pets/animals/photos/full/1x1/nhI3eJAQFQL9RW7g1PEg4MzmCVZBu4L2ZHS8Mk0k.webp?id=c1f4e0589b8745441039f7d1a0c0e6cd"
   },
   {
@@ -725,6 +780,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 1,
+    "familyFriendly": 5,
     "image": "https://image.dogilike.com/shareimg/contentimg/2013/prig/Breed/Keeshond_Majic_standing_cropped.jpg"
   },
   {
@@ -738,6 +794,7 @@
     "energy": 5,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://image.dogilike.com/shareimg/contentimg/nuna/jat_vg.jpg"
   },
   {
@@ -751,6 +808,7 @@
     "energy": 5,
     "grooming": 5,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://image.dogilike.com/shareimg/contentimg/nut_2/Lifestyle/Puli/3colorsPuli.jpg"
   },
   {
@@ -764,6 +822,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://media.istockphoto.com/id/1696964551/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%84%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C.jpg?s=612x612&w=0&k=20&c=ysHdAgWAf_iGABC-1BaCLuWBoA7X91er12fE1lkAbnQ="
   },
   {
@@ -777,6 +836,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 1,
     "image": "https://mypets.decorexpro.com/wp-content/uploads/2017/05/Saluki10.jpg"
   },
   {
@@ -790,6 +850,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://www.postposmo.com/wp-content/uploads/2020/07/cocker-spaniel4.jpg"
   },
   {
@@ -803,6 +864,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 1,
     "image": "https://png.pngtree.com/png-vector/20230907/ourmid/pngtree-looking-sharpei-pup-puppy-studio-png-image_9213014.png"
   },
   {
@@ -816,6 +878,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://cdn.ennxo.com/uploads/products/640/f88fe678e3d641c38e9ec9b90e688306.jpg"
   },
   {
@@ -829,6 +892,7 @@
     "energy": 1,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 5,
     "image": "https://cdn.ennxo.com/uploads/products/640/464112a3455e43748a21f3cce35919c0.jpg"
   },
   {
@@ -842,6 +906,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://cdn.ennxo.com/uploads/products/640/4b9348d16cfc4b63be3a9dde2371b528.jpg"
   },
   {
@@ -855,6 +920,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 1,
+    "familyFriendly": 5,
     "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgipvN4r_L8hBeRIjhXfhyWG2zkYAhBm-WZ-qR8WY1GlGMoW6J0XhuI1ky_OGGp1O8CptgVEKeg9crj72IpCQls7QuN_m5_Lh1TyTPW45c-9ZosgsxxhAVH7TE5IFs_O5H81c_Iq_bEkq_A/s1600/whippet_coleman.jpg"
   },
   {
@@ -868,6 +934,7 @@
     "energy": 5,
     "grooming": 5,
     "experience": 1,
+    "familyFriendly": 5,
     "image": "https://glurgang.com/wp-content/uploads/2023/06/Golden-Retriever-Physical-Characteristics.jpg"
   },
   {
@@ -881,6 +948,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 5,
+    "familyFriendly": 1,
     "image": "https://t4.ftcdn.net/jpg/18/43/34/51/360_F_1843345168_LKa8SuqKpOUCo1gYoLeCNXJ4NsgcuKS9.jpg"
   },
   {
@@ -894,6 +962,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://glurgang.com/wp-content/uploads/2023/05/Newfoundland-large-breed-dogs.jpg"
   },
   {
@@ -907,6 +976,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://www.bloggang.com/data/4/49days/picture/1321602483.jpg"
   },
   {
@@ -920,6 +990,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmL9oN6jNsfqzBK3ORzLCbN7Zond2LiMzjcK8oLLWz7aUf7V9l9ZVr1MiUgpkItTcSTbHavbWMwT9g8dSOPJjxx3FYm3O_Wg-7DnxBo7bpnUsBoCERUfztyFNBNQbKsTtOBqS_1se0Jw-e/s1600/%25E0%25B9%2580%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B8%2597+%25E0%25B9%2584%25E0%25B8%259E%25E0%25B8%25A3%25E0%25B8%25B5%25E0%25B8%2599%25E0%25B8%25B5%25E0%25B8%25AA.jpg"
   },
   {
@@ -933,6 +1004,7 @@
     "energy": 1,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 5,
     "image": "https://chocomoji.com/dogs/breeds/mastiff/images/dog-ceo-3.webp"
   },
   {
@@ -946,6 +1018,7 @@
     "energy": 1,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 1,
     "image": "https://www.postposmo.com/wp-content/uploads/2020/06/mastin-napolitano-12.jpg"
   },
   {
@@ -959,6 +1032,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://image.dogilike.com/shareimg/contentimg/2013/meaw/Breeds/Boxer/1.jpg"
   },
   {
@@ -972,6 +1046,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 1,
     "image": "https://cdn.ennxo.com/uploads/products/640/9bc6e4bbb6524adb842c63e743f60849.jpg"
   },
   {
@@ -985,6 +1060,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://animalmarket.ma/wp-content/uploads/2025/07/Copie-de-Sans-titre-1070x510.jpg"
   },
   {
@@ -998,6 +1074,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 1,
     "image": "https://st3.depositphotos.com/8776626/35076/i/450/depositphotos_350767812-stock-photo-anatolian-shepherd-dog-coban-kopegi.jpg"
   },
   {
@@ -1011,6 +1088,7 @@
     "energy": 5,
     "grooming": 5,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbLm1mXL_Nh8WKZKsuHovR7tiyOpwJBGNzb5aQqXf4ymnpA6Qz_GQ8h-x-jKVoOz0DjuDjCNlhlBg0KkCPO3S99OZQmtpWdPHW9942tN-f7n0kxyJk-1HrLQqixdjDJBiCGXMbjPNw84bU/s1600/06.jpg"
   },
   {
@@ -1024,6 +1102,7 @@
     "energy": 1,
     "grooming": 5,
     "experience": 5,
+    "familyFriendly": 1,
     "image": "https://cdn.pixabay.com/photo/2022/04/13/15/01/chow-chow-7130446_1280.jpg"
   },
   {
@@ -1037,6 +1116,7 @@
     "energy": 5,
     "grooming": 3,
     "experience": 3,
+    "familyFriendly": 3,
     "image": "https://i.pinimg.com/736x/a4/3f/a6/a43fa62293a6cb326a7eee1f99031948.jpg"
   },
   {
@@ -1050,6 +1130,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 1,
+    "familyFriendly": 5,
     "image": "https://images.pexels.com/photos/28725007/pexels-photo-28725007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
@@ -1063,6 +1144,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://static.wixstatic.com/media/10e7d0_c21594a873494d888be2cbb9560d14e9~mv2.png/v1/fill/w_980,h_980,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/10e7d0_c21594a873494d888be2cbb9560d14e9~mv2.png"
   },
   {
@@ -1076,6 +1158,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://media.istockphoto.com/id/1437763593/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B9%82%E0%B8%A3%E0%B8%94%E0%B8%B5%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B8%A3%E0%B8%B4%E0%B8%94%E0%B8%88%E0%B9%8C%E0%B9%81%E0%B8%9A%E0%B9%87%E0%B8%84-%E0%B9%80%E0%B8%AD%E0%B8%B2%E0%B8%97%E0%B9%8C%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C.jpg?s=612x612&w=0&k=20&c=48iaphS-zx_waidzGnelApqcevKMz9VuPwoZwLPsMVI="
   },
   {
@@ -1089,6 +1172,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://image.dogilike.com/shareimg/contentimg/2013/prig/Breed/rottweiler_2.jpg"
   },
   {
@@ -1102,6 +1186,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://media.istockphoto.com/id/1449439279/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B9%82%E0%B8%94%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%A1%E0%B8%99-%E0%B8%9E%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%8A%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0-%E0%B8%95%E0%B8%B8%E0%B9%8A%E0%B8%81%E0%B8%95%E0%B8%B2%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%A7%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%A1%E0%B8%99%E0%B8%AD%E0%B8%81%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%AD%E0%B8%B2%E0%B8%97%E0%B8%B4%E0%B8%95%E0%B8%A2%E0%B9%8C%E0%B8%95%E0%B8%81-%E0%B8%AB%E0%B8%B9%E0%B8%9E%E0%B8%B7%E0%B8%8A%E0%B8%82%E0%B8%99%E0%B8%B2.jpg?s=612x612&w=0&k=20&c=ncFmJujEUi8ffHbzL-30kGkb65G-RdJQFonn--zCYe8="
   },
   {
@@ -1115,6 +1200,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://www.dogthailand.net/data/attachment/forum/202506/24/012804u6l77e16lrg66mnl.jpg"
   },
   {
@@ -1128,6 +1214,7 @@
     "energy": 1,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://image.peco-japan.com/optimized_images/281707.jpg"
   },
   {
@@ -1141,6 +1228,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://cdn.mos.cms.futurecdn.net/N9ahixNY9AB37CvRdzb2ZK.jpg"
   },
   {
@@ -1154,6 +1242,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://image.dogilike.com/shareimg/contentimg/2013/prig/Breed/dims_vetstreet_com(1).jpg"
   },
   {
@@ -1167,6 +1256,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgheNsMSj2QAotfgIZjsalD9X50-QHOiHUU1DGPc8-3laOxU6HOJ1RDAm41LwsJoct8YWoppFVZ7zA2egAl7r06xRw1j1JOX0V9cZpmooOg8u9z1gvMwwVxIAufDXgaPgTfHzVIyAx_J8k/s1600/Collie.jpg"
   },
   {
@@ -1180,6 +1270,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://image.dogilike.com/shareimg/contentimg/2013/pungpond/6-9/BH81.jpg"
   },
   {
@@ -1193,6 +1284,7 @@
     "energy": 3,
     "grooming": 1,
     "experience": 1,
+    "familyFriendly": 3,
     "image": "https://www.purina.co.th/sites/default/files/2025-07/BREED%2520Hero_0062_greyhound.jpg"
   },
   {
@@ -1206,6 +1298,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 3,
     "image": "https://media.istockphoto.com/id/487576070/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%AA%E0%B8%B8%E0%B8%99%E0%B8%B1%E0%B8%82%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B9%8C%E0%B9%81%E0%B8%97%E0%B9%89-weimaraner-%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B9%83%E0%B8%99%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4.jpg?s=612x612&w=0&k=20&c=nv5M64mhWURIQa7KbjECUIU1w41lw00epXxqopKKv88="
   },
   {
@@ -1219,6 +1312,7 @@
     "energy": 3,
     "grooming": 3,
     "experience": 3,
+    "familyFriendly": 5,
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/%282%29_Irish_Wolfhound_4.jpg?utm_source=th.wikipedia.org&utm_campaign=index&utm_content=original"
   },
   {
@@ -1232,6 +1326,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://media.istockphoto.com/id/1049396800/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%AA%E0%B8%B8%E0%B8%99%E0%B8%B1%E0%B8%82%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B9%8C%E0%B8%A3%E0%B8%B1%E0%B8%AA%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B9%81%E0%B8%9A%E0%B8%A5%E0%B9%87%E0%B8%84%E0%B9%80%E0%B8%97%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2.jpg?s=612x612&w=0&k=20&c=5-0R-ZkIuD0s0zdQ2_rt2ftYwhLoTzkn0gwjUYW4GAw="
   },
   {
@@ -1245,6 +1340,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Ygor_Raiza.jpg/500px-Ygor_Raiza.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
   },
   {
@@ -1258,6 +1354,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 5,
+    "familyFriendly": 1,
     "image": "https://image.dogilike.com/shareimg/contentimg/nuna/komondor_1.jpg"
   },
   {
@@ -1271,6 +1368,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 5,
+    "familyFriendly": 3,
     "image": "https://www.dailypaws.com/thmb/pGvE7m6X9g3DZADGcGZnlGERHx4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Beauceron-sitting-fence-573817693-2000-a99e22919fc042d88b96e991dd3c4e7b.jpg"
   },
   {
@@ -1284,6 +1382,7 @@
     "energy": 5,
     "grooming": 1,
     "experience": 3,
+    "familyFriendly": 3,
     "image": "https://i.pinimg.com/originals/b2/f0/56/b2f0563078e2f5a360e3d85fa1c2623f.jpg"
   },
   {
@@ -1297,6 +1396,7 @@
     "energy": 3,
     "grooming": 5,
     "experience": 5,
+    "familyFriendly": 1,
     "image": "https://media.komchadluek.net/media/img/size1/2015/10/09/dd7bbk7b9ifejd8dbea65.jpg"
   }
 ]
