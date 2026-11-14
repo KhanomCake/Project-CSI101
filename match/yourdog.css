@@ -315,7 +315,8 @@ body {
 /* Stats Grid */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);   /* (แก้) เดิม 3 คอลัมน์ แต่มีข้อมูลแค่ 2 อัน (น้ำหนัก, อายุขัย) ช่องที่ 3 เลยว่าง */
+    text-align: center;                      /* (เพิ่ม) จัดตัวหนังสือให้อยู่กลางแต่ละช่อง */
     gap: 16px;
     background-color: var(--bg-cream);
     padding: 18px;
