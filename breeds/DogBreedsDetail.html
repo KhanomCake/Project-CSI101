@@ -17,22 +17,93 @@
   <a href="DogBreedsIndex.html" class="back-btn">← กลับไปหน้าสายพันธุ์</a>
 
   <div class="DogBreeds">
-    <h1 id="name"></h1>
-    <p id="en"></p>
 
-    <h2>ข้อมูลสายพันธุ์</h2>
-    <p id="info"></p>
+    <!-- ส่วนหัว: ชื่อ + คำอธิบายสั้น + ข้อมูลทั่วไปแบบกล่องเล็ก ๆ ให้กวาดตาดูได้เร็ว -->
+    <header class="breed-head">
+      <h1 id="name"></h1>
+      <p id="en"></p>
+      <p id="info"></p>
+      <div id="facts" class="facts"></div>
+    </header>
 
-    <h2>จุดเด่นและนิสัย</h2>
-    <ul id="traits"></ul>
+    <!-- สารบัญในหน้า: JS จะสร้างปุ่มให้ตามหัวข้อที่มีข้อมูลจริง -->
+    <nav id="toc" class="toc" aria-label="หัวข้อในหน้านี้" hidden></nav>
 
-    <div class="lifespan-box">
-      <h2>อายุขัย</h2>
-      <p id="lifespan"></p>
+    <div class="breed-body">
+
+      <!-- ทุกหัวข้อใช้โครงเดียวกัน: ไอคอน + ชื่อหัวข้อ (สารบัญดึงข้อความจาก .sec-title)
+           หัวข้อที่มี hidden จะถูกเปิดโดย JS เมื่อสายพันธุ์นั้นมีข้อมูล -->
+      <section id="sec-history" hidden>
+        <h2><span class="sec-title">ประวัติความเป็นมา</span></h2>
+        <p id="history" class="long-text"></p>
+      </section>
+
+      <section id="sec-traits">
+        <h2><span class="sec-title">จุดเด่นและนิสัย</span></h2>
+        <ul id="traits" class="trait-grid"></ul>
+      </section>
+
+      <section id="sec-proscons" hidden>
+        <h2><span class="sec-title">ข้อดี – ข้อเสีย</span></h2>
+        <div class="two-col">
+          <div class="box box-good">
+            <h3>ข้อดี <span id="pros-count" class="count"></span></h3>
+            <ul id="pros" class="point-list"></ul>
+          </div>
+          <div class="box box-bad">
+            <h3>ข้อเสีย <span id="cons-count" class="count"></span></h3>
+            <ul id="cons" class="point-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="sec-care" hidden>
+        <h2><span class="sec-title">การดูแล</span></h2>
+        <ul id="care" class="row-table"></ul>
+      </section>
+
+      <section id="sec-health" hidden>
+        <h2><span class="sec-title">ปัญหาสุขภาพที่พบบ่อย</span></h2>
+        <ol id="health" class="row-table numbered"></ol>
+        <p class="note">ข้อมูลนี้เป็นความรู้ทั่วไป หากสุนัขมีอาการผิดปกติควรพาไปพบสัตวแพทย์</p>
+      </section>
+
+      <section id="sec-suitable" hidden>
+        <h2><span class="sec-title">เหมาะกับใคร</span></h2>
+        <div class="two-col">
+          <div class="box box-good">
+            <h3>เหมาะกับ</h3>
+            <ul id="suit-good" class="point-list"></ul>
+          </div>
+          <div class="box box-warn">
+            <h3>อาจไม่เหมาะกับ</h3>
+            <ul id="suit-caution" class="point-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- แหล่งอ้างอิง: ตัวเล็ก สีจาง อยู่ท้ายการ์ด ไม่แย่งความสนใจจากเนื้อหา -->
+      <footer id="sources" class="sources" hidden>
+        <p class="sources-title">แหล่งอ้างอิง</p>
+        <ol id="source-list"></ol>
+        <p id="sources-note" class="sources-note"></p>
+      </footer>
+
     </div>
   </div>
   </div>
   <script src="DogBreedData.js"></script>
+  <!-- ข้อมูลละเอียดของแต่ละสายพันธุ์ แยกเป็นชุดละ 10 สายพันธุ์ตามลำดับใน DogBreedData.js -->
+  <script src="details/details-01.js"></script>
+  <script src="details/details-02.js"></script>
+  <script src="details/details-03.js"></script>
+  <script src="details/details-04.js"></script>
+  <script src="details/details-05.js"></script>
+  <script src="details/details-06.js"></script>
+  <script src="details/details-07.js"></script>
+  <script src="details/details-08.js"></script>
+  <script src="details/details-09.js"></script>
+  <script src="details/details-10.js"></script>
   <script src="DogBreedsDetail.js"></script>
 </body>
 </html>
