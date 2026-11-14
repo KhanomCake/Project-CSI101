@@ -463,8 +463,14 @@ body {
     height: 300px;
     overflow: hidden;
     border-radius: 16px;
-    margin-bottom: 25px;
+    margin: 0 auto 25px;      /* (แก้) auto ซ้ายขวา = จัดรูปให้อยู่กลางการ์ด */
     background: #f3f5f7;
+}
+
+/* (เพิ่ม) จัดป้ายขนาด + ชื่อไทย + ชื่ออังกฤษ ให้อยู่กลางการ์ด ใต้รูป */
+.main-info-card .card-header {
+    justify-content: center;
+    text-align: center;
 }
 
 .breed-image-wrapper img {
@@ -475,6 +481,7 @@ body {
 }
 
 .back-nav {
+    margin-top: 24px;         /* (เพิ่ม) เว้นระยะจากขอบบน ปุ่มจะได้ไม่ติดขอบจอ */
     margin-bottom: 16px;
 }
 

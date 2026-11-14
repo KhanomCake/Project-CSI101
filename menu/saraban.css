@@ -405,6 +405,84 @@ a {
     min-height: 77px;
 }
 
+/* ===== (เพิ่ม) การ์ดใหม่ + จัดให้ 4 การ์ดเรียงแถวเดียว ===== */
+
+/* ตอนนี้เหลือ 4 ฟีเจอร์ (สายพันธุ์, Dog Match, คู่มือ, คำนวณ) เลยแบ่งเป็น 4 คอลัมน์ การ์ดละ 1 ช่อง */
+.feature-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* การ์ดน้อยลง เลยขยายให้ใหญ่ขึ้น: พื้นที่กว้างขึ้น รูปสูงขึ้น ตัวหนังสือใหญ่ขึ้น
+   (จอมือถือยังใช้ค่าเดิมใน @media ด้านล่าง) */
+.features {
+    /* ความกว้างเท่ากับเนื้อหาในแถบหัวเรื่อง (.hero) ขอบซ้ายของการ์ดจะตรงกับหัวข้อด้านบน
+       .hero เว้นซ้ายขวาข้างละ 7.3% และกว้างไม่เกิน 1120px  ->  100% - 7.3% - 7.3% = 85.4% */
+    width: min(85.4%, 1120px);
+    margin-top: 36px;
+}
+
+.card-art {
+    height: 170px;
+}
+
+.card-copy {
+    min-height: 110px;
+    padding: 14px 44px 16px 18px;
+}
+
+.card-copy h3 {
+    font-size: 18px;
+}
+
+.card-copy p {
+    font-size: 13px;
+}
+
+.card-arrow {
+    width: 28px;
+    height: 28px;
+}
+
+.feature-card {
+    grid-column: span 1;
+}
+
+/* สีของการ์ดใหม่ (ปุ่มลูกศร + พื้นหลังรูป) */
+.match-card {
+    --card-color: #777df5;
+    --card-tint: #f0efff;
+}
+
+.budget-card {
+    --card-color: #65c88e;
+    --card-tint: #eaf8ef;
+}
+
+/* รูปบีเกิลเป็นรูปแนวนอน ใช้ cover ให้เต็มกรอบ */
+.match-card .card-art img {
+    object-fit: cover;
+    object-position: center 35%;
+}
+
+/* การ์ดคำนวณ: อีโมจิในวงกลมแทนรูป */
+.budget-art {
+    display: grid;
+    width: 100px;
+    height: 100px;
+    place-items: center;
+    border-radius: 50%;
+    background: #d4f1df;
+    font-size: 52px;
+}
+
+/* จอกลาง (แท็บเล็ต): 2 คอลัมน์ */
+@media (max-width: 900px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 @media (min-width: 1000px) {
     .feature-card {
         min-height: 200px;

@@ -114,6 +114,18 @@ body.mamha-themed {
 
 /* ===== 3. ซ่อนหัวเว็บ/หัวข้อเดิมที่ซ้ำกับแถบหัวเรื่อง ===== */
 
+/* Dog Match หน้าเลือกทาง (maindog.html): body เดิมเป็น flex จัดการ์ดไว้กลางจอแนวนอน
+   ทำให้ navbar กับแถบหัวเรื่องไปอยู่ข้างๆ การ์ด เลยเปลี่ยนเป็นเรียงลงมาปกติ แล้วจัดการ์ดให้อยู่กลางแทน */
+body.page-match:has(.choice-card) {
+    display: block;
+    padding: 0;
+}
+
+.page-match .container:has(.choice-card) {
+    margin: 40px auto;
+    padding: 0 30px;
+}
+
 /* สายพันธุ์: หัวข้อ h1 เดิม */
 .page-breeds .page-content > h1 {
     display: none;
